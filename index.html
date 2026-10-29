@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blocklate</title>
+<meta name="description" content="Translate Drupal Gutenberg XLIFF files without touching the page markup.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@600;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: sticky work bar on top, segment list on the left, live page preview on the right (stacks on phones). */
+:root {
+  --bg: #f3f5f8; --surface: #ffffff; --src-bg: #edf1f5; --ink: #17202b; --muted: #5a6674; --line: #d6dde5;
+  --accent: #0a5d8f; --accent-ink: #ffffff; --accent-soft: #dcebf5;
+  --tag-bg: #fdecc8; --tag-ink: #7a4300; --ok: #1d7a4b; --ok-soft: #dcf1e5; --bad: #b3261e; --bad-soft: #fbe3e1; --todo: #8a96a3;
+  --f-display: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --r: 6px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1319; --surface: #161d25; --src-bg: #1b242e; --ink: #e5eaf0; --muted: #98a5b3; --line: #2a3541;
+  --accent: #62b4e8; --accent-ink: #04121c; --accent-soft: #15324a;
+  --tag-bg: #3b2b10; --tag-ink: #ffc76e; --ok: #4fc68c; --ok-soft: #123526; --bad: #ff8b80; --bad-soft: #3d1a18; --todo: #6c7986;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1319; --surface: #161d25; --src-bg: #1b242e; --ink: #e5eaf0; --muted: #98a5b3; --line: #2a3541;
+  --accent: #62b4e8; --accent-ink: #04121c; --accent-soft: #15324a;
+  --tag-bg: #3b2b10; --tag-ink: #ffc76e; --ok: #4fc68c; --ok-soft: #123526; --bad: #ff8b80; --bad-soft: #3d1a18; --todo: #6c7986;
+  color-scheme: dark }
+
+* { box-sizing: border-box }
+[hidden] { display: none !important }
+html, body { height: 100% }
+body { background: var(--bg); color: var(--ink); font: 16px/1.5 var(--f-body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface) }
+button, input, select, textarea { font: inherit; color: inherit }
+button { cursor: pointer }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+
+/* Top bar */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line) }
+.bar-in { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding-block: 10px }
+.brand { font: 800 17px/1.1 var(--f-display); letter-spacing: -0.01em; display: flex; align-items: center; gap: 8px; margin: 0 }
+.brand svg { flex: none }
+.brand-sub { font: 400 13px var(--f-body); color: var(--muted); letter-spacing: 0 }
+.file { display: flex; flex-direction: column; min-width: 0; flex: 1 1 220px }
+.file b { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.file span { color: var(--muted); font-size: 13px }
+.progress { display: flex; flex-direction: column; gap: 4px; min-width: 160px; flex: 0 1 220px }
+.progress-label { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums }
+.progress-label strong { color: var(--ink) }
+.meter { height: 6px; background: var(--src-bg); border-radius: 3px; overflow: hidden }
+.meter i { display: block; height: 100%; width: 0; background: var(--ok); transition: width .25s }
+.actions { display: flex; gap: 8px; flex-wrap: wrap }
+.btn { border: 1px solid var(--line); background: var(--surface); padding: 7px 14px; border-radius: var(--r); font-weight: 700; font-size: 14px; white-space: nowrap }
+.btn:hover { border-color: var(--muted) }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink) }
+.btn-primary:hover { filter: brightness(1.08); border-color: var(--accent) }
+.btn-quiet { border-color: transparent; background: transparent; color: var(--accent); padding-inline: 8px }
+.btn-quiet:hover { border-color: transparent; text-decoration: underline }
+
+.tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding-block: 8px; border-top: 1px solid var(--line) }
+.seg-filter { display: inline-flex; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden }
+.seg-filter button { border: 0; background: transparent; padding: 5px 12px; font-size: 14px; border-right: 1px solid var(--line) }
+.seg-filter button:last-child { border-right: 0 }
+.seg-filter button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); font-weight: 700 }
+.seg-filter .n { font-variant-numeric: tabular-nums; opacity: .75; margin-left: 4px }
+.search { flex: 1 1 180px; max-width: 320px; padding: 5px 10px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); font-size: 14px }
+.check { display: inline-flex; gap: 6px; align-items: center; font-size: 14px; color: var(--muted) }
+
+/* Notices */
+.notice { margin-top: 14px; padding: 10px 14px; border-radius: var(--r); background: var(--accent-soft); display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: 15px }
+.notice.bad { background: var(--bad-soft) }
+.notice.good { background: var(--ok-soft) }
+.notice p { margin: 0; flex: 1 1 260px; min-width: 0 }
+
+/* Workspace */
+.work { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; padding-block: 16px 60px }
+.work.with-preview { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) }
+@media (max-width: 900px) { .work.with-preview { grid-template-columns: minmax(0, 1fr) } }
+.list { min-width: 0; display: flex; flex-direction: column; gap: 22px }
+.group h2 { font: 600 13px/1.2 var(--f-display); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 8px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap }
+.group h2 small { font: 400 12px var(--f-mono); letter-spacing: 0; text-transform: none; opacity: .8 }
+.rows { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); overflow: hidden }
+
+.seg { display: grid; grid-template-columns: 34px minmax(0, 1fr) minmax(0, 1fr); border-top: 1px solid var(--line); scroll-margin-top: 140px }
+.seg:first-child { border-top: 0 }
+.seg.active { box-shadow: inset 3px 0 0 var(--accent) }
+@media (max-width: 640px) { .seg { grid-template-columns: 28px minmax(0, 1fr) } .seg-tgt { grid-column: 2 } }
+.seg-num { padding: 12px 0 0; text-align: center; font: 500 11px var(--f-mono); color: var(--muted); display: flex; flex-direction: column; align-items: center; gap: 6px }
+.dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--todo) }
+.seg[data-status="done"] .dot { background: var(--ok); border-color: var(--ok) }
+.seg[data-status="bad"] .dot { background: var(--bad); border-color: var(--bad) }
+.seg-src { padding: 10px 14px 12px; background: var(--src-bg); min-width: 0; overflow-wrap: anywhere }
+.ctx { display: block; font: 600 11px/1.2 var(--f-display); text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 4px }
+.seg-tgt { padding: 8px 10px 8px; min-width: 0; display: flex; flex-direction: column; gap: 4px }
+.seg-tgt textarea { width: 100%; resize: vertical; min-height: 2.6em; border: 1px solid var(--line); border-radius: var(--r); padding: 7px 9px; background: var(--surface); line-height: 1.45; overflow-wrap: anywhere }
+.seg-tgt textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 2px var(--accent-soft) }
+.seg[data-status="bad"] textarea { border-color: var(--bad) }
+.seg-foot { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; font-size: 13px; color: var(--muted); min-height: 22px }
+.seg-foot .btn-quiet { font-size: 13px; padding: 0 2px; font-weight: 700 }
+.seg-foot .msg { color: var(--bad); flex: 1 1 100%; order: 3 }
+.seg-foot .count { margin-left: auto; font-variant-numeric: tabular-nums }
+.seg-foot .count.over { color: var(--bad); font-weight: 700 }
+
+.chip { display: inline-block; font: 500 11px/1.5 var(--f-mono); background: var(--tag-bg); color: var(--tag-ink); border-radius: 4px; padding: 0 5px; margin: 0 1px; vertical-align: 1px; cursor: pointer; border: 0; white-space: nowrap }
+.chip:hover { outline: 1px solid var(--tag-ink) }
+.hint { font-size: 13px; color: var(--muted) }
+.hint .chip { cursor: default }
+
+details.tech { border: 1px dashed var(--line); border-radius: var(--r); padding: 10px 14px; background: var(--surface) }
+details.tech summary { cursor: pointer; font-weight: 700 }
+details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
+.tech-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 6px 12px; font-size: 14px; align-items: center }
+.tech-grid .h { font: 600 11px var(--f-display); text-transform: uppercase; letter-spacing: .07em; color: var(--muted) }
+.tech-grid code { font: 500 12px var(--f-mono); overflow-wrap: anywhere }
+.tech-grid input { width: 100%; border: 1px solid var(--line); border-radius: 4px; padding: 3px 6px; font: 500 12px var(--f-mono); background: var(--bg) }
+@media (max-width: 640px) { .tech-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) } .tech-grid .lbl { grid-column: 1 / -1; margin-top: 6px } }
+
+.preview { position: sticky; top: 150px; align-self: start; min-width: 0; display: flex; flex-direction: column; gap: 8px }
+@media (max-width: 900px) { .preview { position: static } }
+.preview-head { display: flex; gap: 8px; align-items: center; justify-content: space-between; flex-wrap: wrap }
+.preview-head h2 { font: 600 13px var(--f-display); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 }
+.preview iframe { width: 100%; height: calc(100vh - 230px); min-height: 380px; border: 1px solid var(--line); border-radius: var(--r); background: #fff }
+.preview .hint { margin: 0 }
+
+.empty { text-align: center; padding: 50px 16px; color: var(--muted) }
+.drop-cover { position: fixed; inset: 0; z-index: 50; background: color-mix(in srgb, var(--accent) 18%, transparent); border: 4px dashed var(--accent); display: grid; place-items: center; font: 800 24px var(--f-display); color: var(--accent) }
+
+.help { margin-top: 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); padding: 12px 16px }
+.help summary { cursor: pointer; font-weight: 700 }
+.help ol { margin: 8px 0 4px; padding-left: 22px; max-width: 72ch }
+.help li { margin-bottom: 4px }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-in">
+    <h1 class="brand">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="9" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="13" y="3" width="9" height="18" rx="2" fill="var(--accent)"/><path d="M5 8h3M5 12h3M5 16h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 8h3M16 12h3M16 16h2" stroke="var(--accent-ink)" stroke-width="2" stroke-linecap="round"/></svg>
+      Blocklate <span class="brand-sub">Gutenberg XLIFF editor</span>
+    </h1>
+    <div class="file" id="fileInfo"><b>No file open</b><span>Open an .xlf file exported from Drupal</span></div>
+    <div class="progress" aria-live="polite">
+      <div class="progress-label" id="progLabel">0 of 0 translated</div>
+      <div class="meter"><i id="progBar"></i></div>
+    </div>
+    <div class="actions">
+      <input type="file" id="fileInput" accept=".xlf,.xliff,.xml,.txt,application/xml,text/xml" hidden>
+      <select class="btn" id="exampleSelect" aria-label="Load an example file"><option value="">Examples…</option></select>
+      <button class="btn" id="openBtn" type="button">Open file…</button>
+      <button class="btn btn-primary" id="saveBtn" type="button" disabled>Download translated file</button>
+    </div>
+  </div>
+  <div class="wrap tools" id="tools" hidden>
+    <div class="seg-filter" role="group" aria-label="Show">
+      <button type="button" data-f="all" aria-pressed="true">All<span class="n" id="nAll"></span></button>
+      <button type="button" data-f="todo" aria-pressed="false">To translate<span class="n" id="nTodo"></span></button>
+      <button type="button" data-f="bad" aria-pressed="false">Needs fixing<span class="n" id="nBad"></span></button>
+    </div>
+    <input class="search" id="search" type="search" placeholder="Search text…" aria-label="Search text">
+    <label class="check"><input type="checkbox" id="previewToggle" checked> Page preview</label>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="notices"></div>
+  <details class="help" id="help">
+    <summary>How to use this</summary>
+    <ol>
+      <li><b>Open</b> the .xlf file you were sent (or drag it onto this page). Nothing is uploaded: the file stays on your computer.</li>
+      <li><b>Type your translation</b> in the box next to each English line. Page layout code is hidden from you and put back automatically.</li>
+      <li>Some lines contain small orange markers like <span class="chip">1</span>…<span class="chip">/1</span>. They mark a link or bold text. Keep the markers in your translation, around the words that should be linked or bold. Click a marker on the English side to insert it.</li>
+      <li>Your work is saved in this browser as you type. When you are done, press <b>Download translated file</b> and send that file back.</li>
+    </ol>
+    <p class="hint">Tip: Ctrl + Enter (⌘ + Enter on Mac) jumps to the next line that still needs translating.</p>
+  </details>
+  <div class="work" id="work">
+    <section class="list" id="list" aria-label="Text to translate"><div class="empty">Open an XLIFF file to begin.</div></section>
+    <aside class="preview" id="preview" hidden>
+      <div class="preview-head"><h2>Page preview</h2><select id="previewUnit" aria-label="Field to preview" hidden></select></div>
+      <iframe id="previewFrame" title="Preview of the translated page" sandbox="allow-same-origin"></iframe>
+      <p class="hint">A rough preview without the site's styling. Click any text in it to jump to that line.</p>
+    </aside>
+  </div>
+</main>
+<div class="drop-cover" id="dropCover" hidden>Drop the .xlf file to open it</div>
+
+<script>
+"use strict";
+/* ===================== Engine: XLIFF 1.2 parsing, segmentation, rebuild ===================== */
+const XE = (() => {
+  const XML_NS = "http://www.w3.org/XML/1998/namespace";
+  // Tags that live inside a sentence. Everything else (div, p, h2, img, Gutenberg comments...) splits text into separate lines.
+  const INLINE = new Set("a abbr b bdi bdo cite code data dfn em i kbd mark q s samp small span strong sub sup time u var br wbr font del ins".split(" "));
+  const RAWTEXT = new Set(["style", "script"]);
+  const VOID = new Set("area base br col embed hr img input link meta source track wbr".split(" "));
+  const RAW_RE = /<!--[\s\S]*?-->|<\/?[A-Za-z][^<>]*>/g;
+
+  const decoder = document.createElement("textarea");
+  const decode = (s) => { if (!/&/.test(s)) return s; decoder.innerHTML = s; return decoder.value; };
+  const encodeText = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const encodeAttr = (s) => encodeText(s).replace(/"/g, "&quot;");
+
+  function pushText(toks, s) {
+    let last = 0, m;
+    RAW_RE.lastIndex = 0;
+    const addText = (t) => {
+      if (!t) return;
+      const prev = toks[toks.length - 1];
+      if (prev && prev.t === "text") prev.raw += t; else toks.push({ t: "text", raw: t });
+    };
+    while ((m = RAW_RE.exec(s))) {
+      addText(s.slice(last, m.index));
+      const raw = m[0];
+      if (raw.startsWith("<!--")) {
+        const wp = /^<!--\s*(\/?)wp:([\w\/-]+)/.exec(raw);
+        toks.push({ t: "tag", role: "empty", name: wp ? "#block" : "#comment", block: wp ? wp[2] : null, raw });
+      } else {
+        const mm = /^<(\/)?([A-Za-z][\w:-]*)/.exec(raw);
+        const name = mm[2].toLowerCase();
+        const role = mm[1] ? "close" : (VOID.has(name) || /\/>$/.test(raw)) ? "empty" : "open";
+        toks.push({ t: "tag", role, name, raw });
+      }
+      last = RAW_RE.lastIndex;
+    }
+    addText(s.slice(last));
+  }
+
+  function tagNameFrom(text, close) {
+    const m = (close ? /^\s*<\s*\/\s*([A-Za-z][\w:-]*)/ : /^\s*<\s*([A-Za-z][\w:-]*)/).exec(text || "");
+    return m ? m[1].toLowerCase() : "?";
+  }
+
+  function tokenize(el) {
+    const toks = [];
+    for (const n of el.childNodes) {
+      if (n.nodeType === 3 || n.nodeType === 4) pushText(toks, n.nodeValue);
+      else if (n.nodeType === 1) {
+        const ln = n.localName, id = n.getAttribute("rid") || n.getAttribute("id");
+        if (ln === "bpt") toks.push({ t: "tag", role: "open", name: tagNameFrom(n.textContent), node: n, key: id, html: n.textContent });
+        else if (ln === "ept") toks.push({ t: "tag", role: "close", name: tagNameFrom(n.textContent, true), node: n, key: id, html: n.textContent });
+        else {
+          const ctype = n.getAttribute("ctype") || "";
+          let name = ctype === "lb" ? "br" : ctype === "image" ? "img" : tagNameFrom(n.textContent);
+          if (name === "?") name = ln;
+          toks.push({ t: "tag", role: "empty", name, node: n, html: n.textContent });
+        }
+      } else toks.push({ t: "tag", role: "empty", name: "#xml", node: n });
+    }
+    // pair open/close
+    toks.forEach((t) => (t.partner = -1));
+    const byKey = new Map(), stack = [];
+    toks.forEach((t, i) => {
+      if (t.t !== "tag") return;
+      if (t.key != null) {
+        if (t.role === "open") byKey.set(t.key, i);
+        else if (t.role === "close" && byKey.has(t.key)) { const j = byKey.get(t.key); toks[j].partner = i; t.partner = j; byKey.delete(t.key); }
+      } else if (t.role === "open") stack.push(i);
+      else if (t.role === "close") {
+        for (let k = stack.length - 1; k >= 0; k--) {
+          if (toks[stack[k]].name === t.name) { const j = stack[k]; toks[j].partner = i; t.partner = j; stack.length = k; break; }
+        }
+      }
+    });
+    // text inside <style>/<script> is never translated
+    toks.forEach((t, i) => {
+      if (t.t === "tag" && t.role === "open" && RAWTEXT.has(t.name) && t.partner > i)
+        for (let k = i + 1; k < t.partner; k++) toks[k].fixed = true;
+    });
+    return toks;
+  }
+
+  const isInline = (t) => t.t === "tag" && !t.fixed && INLINE.has(t.name);
+  const isWs = (t) => t.t === "text" && !/\S/.test(decode(t.raw));
+  const hasWords = (s) => /\p{L}/u.test(s) && !/^\s*(https?:\/\/|www\.)\S+\s*$/i.test(s);
+
+  function attrOf(tok, name) {
+    if (tok.node && tok.node.nodeType === 1 && tok.node.localName === "ph") return tok.node.getAttribute(name);
+    const src = tok.raw || tok.html || "";
+    const m = new RegExp("\\s" + name + "\\s*=\\s*\"([^\"]*)\"", "i").exec(src);
+    return m ? decode(m[1]) : null;
+  }
+  function attrSummary(tok) {
+    const href = attrOf(tok, "href");
+    const cls = attrOf(tok, "class") || "";
+    return { href, cls };
+  }
+
+  function describe(tok) {
+    const n = tok.name;
+    if (n === "a") { const h = attrOf(tok, "href"); return "Link" + (h ? ": " + h : ""); }
+    if (n === "strong" || n === "b") return "Bold";
+    if (n === "em" || n === "i") return "Italic";
+    if (n === "br") return "Line break";
+    if (n === "sup") return "Superscript";
+    if (n === "sub") return "Subscript";
+    if (n === "small") return "Small text";
+    if (n === "span") return "Styled text";
+    if (n === "code") return "Code";
+    return "<" + n + ">";
+  }
+
+  const CTX = { h1: "Main heading", h2: "Heading", h3: "Heading", h4: "Heading", h5: "Heading", h6: "Heading", p: "Paragraph", li: "List item",
+    button: "Button", figcaption: "Caption", blockquote: "Quote", td: "Table cell", th: "Table header", label: "Form label",
+    header: "Title", cite: "Citation", summary: "Summary", dt: "Term", dd: "Definition", option: "Option" };
+  function ctxLabel(stackTop, peeled) {
+    for (let k = peeled.length - 1; k >= 0; k--) {
+      const t = peeled[k];
+      if (t.name === "a") { const c = attrOf(t, "class") || ""; return /button/.test(c) || attrOf(t, "role") === "button" ? "Button" : "Link"; }
+    }
+    if (!stackTop) return "Text";
+    if (CTX[stackTop.name]) {
+      const c = attrOf(stackTop, "class") || "";
+      if (/label/.test(c)) return "Label";
+      return CTX[stackTop.name];
+    }
+    const c = attrOf(stackTop, "class") || "";
+    if (/title/.test(c)) return "Title";
+    if (/summary|text|desc/i.test(c)) return "Text";
+    if (/label|meta/.test(c)) return "Label";
+    return "Text";
+  }
+
+  // Number the inline tags in toks[a..b]. ref = source segment, used to give matching tags the same numbers when reading a target.
+  function placeholders(toks, a, b, ref) {
+    let n = 0; const ph = []; const openNum = new Map(); let text = "";
+    const refByKey = new Map(), refSeqByName = {};
+    if (ref) ref.ph.forEach((p) => { if (p.key != null) refByKey.set(p.role + ":" + p.key, p); (refSeqByName[p.role + ":" + p.name] ||= []).push(p); });
+    const used = {};
+    const fromRef = (t) => {
+      if (!ref) return null;
+      if (t.key != null && refByKey.has(t.role + ":" + t.key)) return refByKey.get(t.role + ":" + t.key);
+      const k = t.role + ":" + t.name; used[k] = (used[k] || 0) + 1;
+      const list = refSeqByName[k]; return list && list[used[k] - 1] || null;
+    };
+    for (let i = a; i <= b; i++) {
+      const t = toks[i];
+      if (t.t === "text") { text += decode(t.raw); continue; }
+      let label;
+      if (t.name === "br") label = "{br}";
+      else if (t.role === "open" && t.partner >= a && t.partner <= b) { const r = fromRef(t); const num = r ? r.num : ++n; openNum.set(i, num); label = "{" + num + "}"; }
+      else if (t.role === "close" && t.partner >= a && t.partner <= b && openNum.has(t.partner)) label = "{/" + openNum.get(t.partner) + "}";
+      else { const r = fromRef(t); const num = r ? r.num : ++n; label = "{" + num + "}"; }
+      const num = +((/\d+/.exec(label) || [0])[0]);
+      if (!ref) n = Math.max(n, num);
+      ph.push({ label, idx: i, role: t.name === "br" ? "br" : (label.startsWith("{/") ? "close" : (t.role === "open" && t.partner >= a && t.partner <= b) ? "open" : "solo"), num, key: t.key, name: t.name, desc: describe(t) });
+      text += label;
+    }
+    return { text, ph };
+  }
+
+  function segment(toks, ref) {
+    const segs = []; const stack = []; let run = [];
+    const flush = () => { if (run.length) { const a = run[0], b = run[run.length - 1]; run = []; flushRange(a, b); } };
+    const flushRange = (a, b) => {
+      // Sibling links/buttons with no sentence text between them become separate lines.
+      const pieces = []; let topWords = false;
+      for (let k = a; k <= b; k++) {
+        const t = toks[k];
+        if (t.t === "text") { if (hasWords(decode(t.raw))) topWords = true; continue; }
+        if (t.role === "open" && t.partner > k && t.partner <= b) { pieces.push([k, t.partner]); k = t.partner; }
+      }
+      if (!topWords && pieces.length > 1) { pieces.forEach(([x, y]) => flushRange(x, y)); return; }
+      const peeled = [];
+      const onlyWs = (x, y) => { for (let k = x; k <= y; k++) if (!isWs(toks[k])) return false; return true; };
+      let changed = true;
+      while (changed && a <= b) {
+        changed = false;
+        const A = toks[a], B = toks[b];
+        if (isWs(A)) { a++; changed = true; continue; }
+        if (isWs(B)) { b--; changed = true; continue; }
+        if (A.t === "tag" && A.role !== "open") { a++; changed = true; continue; }
+        if (B.t === "tag" && B.role !== "close") { b--; changed = true; continue; }
+        if (A.t === "tag") {
+          if (A.partner === b) { peeled.push(A); a++; b--; changed = true; continue; }
+          if (A.partner < 0 || A.partner > b) { a++; changed = true; continue; }
+          if (onlyWs(a + 1, A.partner - 1)) { a = A.partner + 1; changed = true; continue; }
+        }
+        if (B.t === "tag") {
+          if (B.partner < a) { b--; changed = true; continue; }
+          if (onlyWs(B.partner + 1, b - 1)) { b = B.partner - 1; changed = true; continue; }
+        }
+      }
+      if (a > b) return;
+      let plain = "";
+      for (let k = a; k <= b; k++) if (toks[k].t === "text") plain += decode(toks[k].raw);
+      if (!hasWords(plain)) return;
+      const refSeg = ref ? ref.find((s) => s.kind === "text" && s._order === segs.filter((x) => x.kind === "text").length) : null;
+      const p = placeholders(toks, a, b, refSeg);
+      const lead = toks[a].t === "text" ? (/^\s+/.exec(toks[a].raw) || [""])[0] : "";
+      const trail = toks[b].t === "text" && (a !== b || !lead || toks[b].raw.trim()) ? (/\s+$/.exec(toks[b].raw) || [""])[0] : "";
+      segs.push({ kind: "text", a, b, src: p.text.trim(), lead, trail, ph: p.ph, ctx: ctxLabel(stack[stack.length - 1], peeled), _order: segs.filter((x) => x.kind === "text").length });
+    };
+    toks.forEach((t, i) => {
+      if ((t.t === "text" && !t.fixed) || isInline(t)) { run.push(i); return; }
+      flush();
+      if (t.t !== "tag") return;
+      if (t.name === "img") {
+        const alt = attrOf(t, "alt");
+        if (alt && hasWords(alt)) segs.push({ kind: "alt", idx: i, src: alt, ph: [], ctx: "Image description" });
+      }
+      if (t.role === "open" && !t.fixed) stack.push(t);
+      else if (t.role === "close" && !t.fixed) {
+        for (let k = stack.length - 1; k >= 0; k--) if (stack[k].name === t.name) { stack.length = k; break; }
+      }
+    });
+    flush();
+    return segs;
+  }
+
+  const PH_RE = /(\{\/?\d+\}|\{br\})/g;
+  function validate(seg, tr) {
+    if (!seg.ph.length) return /\{\/?\d+\}|\{br\}/.test(tr) ? ["Remove the {…} marker. This line has no markers in the English."] : [];
+    const problems = []; const want = new Map(); seg.ph.forEach((p) => want.set(p.label, (want.get(p.label) || 0) + 1));
+    const got = new Map(); const order = [];
+    for (const m of tr.matchAll(PH_RE)) { got.set(m[0], (got.get(m[0]) || 0) + 1); order.push(m[0]); }
+    for (const [lab, c] of want) {
+      const g = got.get(lab) || 0;
+      if (g < c) problems.push((lab === "{br}" ? "Line break marker {br}" : "Marker " + lab) + " is missing.");
+      if (g > c) problems.push("Marker " + lab + " appears " + (g === 1 ? "once" : g + " times") + " but should appear " + (c === 1 ? "once" : c + " times") + ".");
+    }
+    for (const lab of got.keys()) if (!want.has(lab)) problems.push("Marker " + lab + " is not in the English. Remove it.");
+    if (!problems.length) {
+      const st = [];
+      for (const lab of order) {
+        const m = /^\{(\/?)(\d+)\}$/.exec(lab); if (!m) continue;
+        const p = seg.ph.find((x) => x.label === lab);
+        if (p.role === "open") st.push(m[2]);
+        else if (p.role === "close") {
+          if (st[st.length - 1] !== m[2]) { problems.push("Marker {/" + m[2] + "} must come after {" + m[2] + "}" + (st.length ? " and after {/" + st[st.length - 1] + "}" : "") + "."); break; }
+          st.pop();
+        }
+      }
+    }
+    return problems;
+  }
+
+  function rebuildSegTokens(toks, seg, tr) {
+    const out = seg.lead ? [{ t: "text", raw: seg.lead }] : []; const br = seg.ph.filter((p) => p.role === "br"); let bi = 0;
+    for (const piece of tr.split(PH_RE)) {
+      if (!piece) continue;
+      if (piece === "{br}") { out.push(toks[br[bi++].idx]); continue; }
+      const p = /^\{\/?\d+\}$/.test(piece) && seg.ph.find((x) => x.label === piece);
+      if (p) out.push(toks[p.idx]); else out.push({ t: "text", raw: encodeText(piece) });
+    }
+    if (seg.trail) out.push({ t: "text", raw: seg.trail });
+    return out;
+  }
+
+  function withAlt(tok, value) {
+    if (tok.node) {
+      const c = tok.node.cloneNode(true); const old = c.getAttribute("alt");
+      c.setAttribute("alt", value);
+      if (c.getAttribute("title") && c.getAttribute("title") === old) c.setAttribute("title", value);
+      return { t: "tag", role: "empty", name: "img", node: c };
+    }
+    const raw = tok.raw.replace(/(\salt\s*=\s*")[^"]*(")/i, (_, p, q) => p + encodeAttr(value) + q);
+    return { ...tok, raw };
+  }
+
+  // translations: array (parallel to unit.segs) of strings; empty = keep English.
+  function buildTokens(unit, translations, opts = {}) {
+    const toks = unit.toks, out = [];
+    const byStart = new Map(), byIdx = new Map();
+    unit.segs.forEach((s, n) => (s.kind === "text" ? byStart.set(s.a, n) : byIdx.set(s.idx, n)));
+    for (let i = 0; i < toks.length; i++) {
+      if (byStart.has(i)) {
+        const n = byStart.get(i), s = unit.segs[n], tr = (translations[n] || "").trim();
+        const body = tr && !validate(s, tr).length ? rebuildSegTokens(toks, s, tr) : toks.slice(s.a, s.b + 1);
+        if (opts.mark) out.push({ t: "mark", open: true, n });
+        out.push(...body);
+        if (opts.mark) out.push({ t: "mark", open: false, n });
+        i = s.b; continue;
+      }
+      if (byIdx.has(i)) { const n = byIdx.get(i), tr = (translations[n] || "").trim(); out.push(tr ? withAlt(toks[i], tr) : toks[i]); continue; }
+      out.push(toks[i]);
+    }
+    return out;
+  }
+
+  function writeTarget(file, unit, translations) {
+    const doc = file.doc;
+    let tgt = unit.target;
+    if (!tgt) {
+      tgt = doc.createElementNS(unit.source.namespaceURI, "target");
+      const ws = unit.source.previousSibling && unit.source.previousSibling.nodeType === 3 ? unit.source.previousSibling.nodeValue : "\n";
+      unit.source.after(doc.createTextNode(ws), tgt);
+      unit.target = tgt;
+    }
+    while (tgt.firstChild) tgt.removeChild(tgt.firstChild);
+    if (file.tgtLang) tgt.setAttributeNS(XML_NS, "xml:lang", file.tgtLang);
+    let buf = "";
+    const flush = () => {
+      if (!buf) return;
+      const parts = buf.split("]]>");
+      parts.forEach((p, j) => tgt.appendChild(doc.createCDATASection((j ? ">" : "") + p + (j < parts.length - 1 ? "]]" : ""))));
+      buf = "";
+    };
+    let toks;
+    if (unit.technical) toks = [{ t: "text", raw: encodeText(translations[0] != null && translations[0] !== "" ? translations[0] : decode(unit.techSrc)) }];
+    else toks = buildTokens(unit, translations);
+    for (const t of toks) {
+      if (t.node) { flush(); tgt.appendChild(t.node.cloneNode(true)); }
+      else buf += t.raw;
+    }
+    flush();
+  }
+
+  function serialize(file) {
+    let s = new XMLSerializer().serializeToString(file.doc);
+    if (!/^<\?xml/.test(s)) s = '<?xml version="1.0" encoding="UTF-8"?>\n' + s;
+    return s;
+  }
+
+  function toHtml(toks) {
+    let h = "", skip = 0;
+    for (const t of toks) {
+      if (t.t === "mark") { h += t.open ? '<span class="xe-seg" data-n="' + t.n + '">' : "</span>"; continue; }
+      if (t.t === "text") { if (!t.fixed) h += t.raw; continue; }
+      if (RAWTEXT.has(t.name) || t.name === "#block" || t.name === "#comment" || t.name === "#xml") continue;
+      if (t.name === "iframe") { h += t.role === "open" ? '<div class="xe-embed">' : t.role === "close" ? "</div>" : ""; continue; }
+      if (t.node && t.node.localName === "ph" && t.name === "img") {
+        const alt = t.node.getAttribute("alt") || "";
+        h += '<span class="xe-img" role="img">' + encodeText(alt ? "Image: " + alt : "Image") + "</span>"; continue;
+      }
+      if (t.name === "img") { const alt = attrOf(t, "alt") || ""; h += '<span class="xe-img">' + encodeText(alt ? "Image: " + alt : "Image") + "</span>"; continue; }
+      if (t.name === "br") { h += "<br>"; continue; }
+      h += (t.raw || t.html || "").replace(/\s(src|srcset|style)\s*=\s*"[^"]*"/gi, "");
+    }
+    return h;
+  }
+
+  function parse(text, fileName) {
+    const doc = new DOMParser().parseFromString(text, "application/xml");
+    if (doc.getElementsByTagName("parsererror").length) throw new Error("This file could not be read as XLIFF. It may be damaged or not an .xlf file.");
+    const root = doc.documentElement;
+    if (root.localName !== "xliff") throw new Error("This is an XML file, but not an XLIFF translation file.");
+    const version = root.getAttribute("version") || "";
+    if (/^2/.test(version)) throw new Error("This is an XLIFF 2 file. This editor supports XLIFF 1.2, which is what Drupal's translation tool exports.");
+    const fileEl = root.getElementsByTagNameNS("*", "file")[0];
+    const file = { doc, fileName, version, srcLang: fileEl && fileEl.getAttribute("source-language") || "", tgtLang: fileEl && fileEl.getAttribute("target-language") || "", units: [] };
+    const phase = doc.getElementsByTagNameNS("*", "phase")[0];
+    file.jobId = phase && phase.getAttribute("job-id") || "";
+    const tool = doc.getElementsByTagNameNS("*", "tool")[0];
+    file.tool = tool && tool.getAttribute("tool-name") || "";
+    const units = doc.getElementsByTagNameNS("*", "trans-unit");
+    for (const u of units) {
+      const source = [...u.children].find((c) => c.localName === "source");
+      if (!source) continue;
+      const target = [...u.children].find((c) => c.localName === "target") || null;
+      const note = [...u.children].filter((c) => c.localName === "note").map((n) => n.textContent.trim()).join(" · ");
+      const grp = u.parentElement && u.parentElement.localName === "group" ? u.parentElement : null;
+      const grpNote = grp ? ([...grp.children].find((c) => c.localName === "note") || {}).textContent || "" : "";
+      const id = u.getAttribute("id") || "";
+      const field = (/\]\[([^\]]+)\]\[/.exec(id) || [])[1] || "";
+      const label = note || (field === "title" ? "Title" : field ? field.replace(/_/g, " ") : id);
+      const toks = tokenize(source);
+      const unit = { id, label, groupNote: grpNote.trim(), source, target, toks, maxwidth: +u.getAttribute("maxwidth") || 0 };
+      const onlyText = toks.every((t) => t.t === "text");
+      const srcRaw = onlyText ? toks.map((t) => t.raw).join("") : "";
+      const plain = decode(srcRaw).trim();
+      if (onlyText && plain && !/\s/.test(plain) && (/[_\/]/.test(plain) || /^\d{4}-\d{2}-\d{2}/.test(plain) || /^[a-z]{2,3}(-[a-z]{2,4})?$/.test(plain) || /^[a-z0-9-]+$/.test(plain))) {
+        unit.technical = true; unit.techSrc = srcRaw.trim();
+        unit.isLangcode = /langcode/.test(id) && plain === file.srcLang;
+        unit.segs = [{ kind: "tech", src: plain, ph: [], ctx: "Technical" }];
+      } else {
+        unit.segs = segment(toks);
+        if (onlyText && unit.segs.length === 1) unit.segs[0].ctx = field === "title" ? "Page title" : (note.split(" > ").pop() || "Text");
+      }
+      // read an existing translation back in
+      unit.loaded = unit.segs.map(() => "");
+      if (target && target.childNodes.length && target.textContent.trim()) {
+        if (unit.technical) unit.loaded[0] = decode(target.textContent).trim();
+        else {
+          const ttoks = tokenize(target);
+          const tsegs = segment(ttoks, unit.segs);
+          const sText = unit.segs.filter((s) => s.kind === "text"), tText = tsegs.filter((s) => s.kind === "text");
+          const sAlt = unit.segs.filter((s) => s.kind === "alt"), tAlt = tsegs.filter((s) => s.kind === "alt");
+          if (sText.length === tText.length) sText.forEach((s, k) => { if (tText[k].src !== s.src) unit.loaded[unit.segs.indexOf(s)] = tText[k].src; });
+          if (sAlt.length === tAlt.length) sAlt.forEach((s, k) => { if (tAlt[k].src !== s.src) unit.loaded[unit.segs.indexOf(s)] = tAlt[k].src; });
+          unit.loadMismatch = sText.length !== tText.length;
+        }
+      }
+      file.units.push(unit);
+    }
+    return file;
+  }
+
+  return { parse, validate, buildTokens, writeTarget, serialize, toHtml, decode, encodeText };
+})();
+
+/* ===================== UI ===================== */
+const $ = (s) => document.querySelector(s);
+const state = { file: null, tr: [], filter: "all", q: "", activeUid: null, storeKey: null, isSample: false };
+const LANGS = { en: "English", fr: "French", es: "Spanish", ar: "Arabic", ru: "Russian", zh: "Chinese", pt: "Portuguese", de: "German", it: "Italian", ja: "Japanese", ko: "Korean", id: "Indonesian", tr: "Turkish", sw: "Swahili" };
+const langName = (c) => LANGS[(c || "").toLowerCase().split("-")[0]] || (c || "?").toUpperCase();
+const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function store(get, val) {
+  if (!state.storeKey || state.isSample) return null;
+  try {
+    if (get) return JSON.parse(localStorage.getItem(state.storeKey) || "null");
+    localStorage.setItem(state.storeKey, JSON.stringify(val));
+  } catch (e) { return null; }
+}
+
+function loadText(text, fileName, isSample) {
+  let file;
+  try { file = XE.parse(text, fileName); }
+  catch (e) { notice(e.message, "bad"); return; }
+  state.file = file; state.isSample = !!isSample;
+  state.storeKey = "xe:" + fileName + ":" + file.jobId + ":" + text.length;
+  state.tr = file.units.map((u) => u.segs.map((s, n) => u.loaded[n] || (u.technical && u.isLangcode && file.tgtLang ? file.tgtLang : u.technical ? u.segs[0].src : "")));
+  const saved = store(true);
+  $("#notices").innerHTML = "";
+  if (isSample) notice("You're looking at an example file" + (typeof isSample === "string" ? " (" + isSample + ")" : "") + ". Open your own .xlf file to start translating. Changes to examples are not saved.", "", [["Open my file", () => $("#fileInput").click()]]);
+  if (saved && saved.tr) {
+    let restored = 0;
+    saved.tr.forEach((arr, ui) => arr && arr.forEach((v, n) => { if (v && state.tr[ui] && n < state.tr[ui].length && file.units[ui].segs[n] && file.units[ui].segs[n].src === saved.src?.[ui]?.[n]) { state.tr[ui][n] = v; restored++; } }));
+    if (restored) notice("Restored " + restored + " translations you typed earlier in this browser (" + new Date(saved.at).toLocaleString() + ").", "good", [["Start over", () => { try { localStorage.removeItem(state.storeKey); } catch (e) {} loadText(text, fileName, isSample); }]]);
+  }
+  if (file.units.some((u) => u.loadMismatch)) notice("Part of the existing translation in this file didn't line up with the English, so some lines start empty.", "bad");
+  const allText = text;
+  if (!/<!--\s*wp:/.test(allText) && file.units.some((u) => u.toks.some((t) => t.node && t.node.localName === "bpt"))) {
+    // Drupal's "extended XLIFF processing" drops Gutenberg block comments. Worth flagging for whoever set up the export.
+    file.noBlockComments = true;
+  }
+  $("#fileInfo").innerHTML = "<b>" + esc(fileName) + "</b><span>" + esc(langName(file.srcLang) + " → " + langName(file.tgtLang) + (file.jobId ? " · Job " + file.jobId : "")) + "</span>";
+  $("#tools").hidden = false; $("#saveBtn").disabled = false;
+  $("#help").open = !!isSample;
+  render();
+}
+
+function notice(msg, kind, actions) {
+  const d = document.createElement("div"); d.className = "notice " + (kind || "");
+  const p = document.createElement("p"); p.textContent = msg; d.append(p);
+  (actions || []).forEach(([label, fn]) => { const b = document.createElement("button"); b.type = "button"; b.className = "btn"; b.textContent = label; b.onclick = () => { fn(); }; d.append(b); });
+  const x = document.createElement("button"); x.type = "button"; x.className = "btn-quiet btn"; x.textContent = "Dismiss"; x.onclick = () => d.remove(); d.append(x);
+  $("#notices").append(d);
+  return d;
+}
+
+function statusOf(ui, n) {
+  const u = state.file.units[ui], s = u.segs[n], v = (state.tr[ui][n] || "").trim();
+  if (!v) return "todo";
+  return XE.validate(s, v).length ? "bad" : "done";
+}
+
+function srcHtml(seg) {
+  if (!seg.ph.length) return esc(seg.src);
+  return seg.src.split(/(\{\/?\d+\}|\{br\})/g).map((piece) => {
+    const p = seg.ph.find((x) => x.label === piece);
+    if (!p) return esc(piece);
+    const txt = piece === "{br}" ? "↵" : piece.slice(1, -1);
+    return '<button type="button" class="chip" data-ins="' + esc(piece) + '" title="' + esc(p.desc + " (click to insert " + piece + ")") + '">' + esc(txt) + "</button>";
+  }).join("");
+}
+
+function render() {
+  const f = state.file, list = $("#list");
+  list.innerHTML = "";
+  let num = 0;
+  const tech = [];
+  f.units.forEach((u, ui) => {
+    if (u.technical) { tech.push(ui); return; }
+    if (!u.segs.length) return;
+    const g = document.createElement("section"); g.className = "group";
+    const h = document.createElement("h2"); h.textContent = u.label.replace(/ > /g, " › ");
+    if (u.maxwidth) { const sm = document.createElement("small"); sm.textContent = "max " + u.maxwidth + " characters"; h.append(sm); }
+    const rows = document.createElement("div"); rows.className = "rows";
+    u.segs.forEach((s, n) => {
+      num++;
+      const uid = ui + "-" + n;
+      const row = document.createElement("article"); row.className = "seg"; row.id = "row-" + uid; row.dataset.uid = uid;
+      row.innerHTML =
+        '<div class="seg-num"><span class="dot" aria-hidden="true"></span>' + num + '</div>' +
+        '<div class="seg-src" lang="' + esc(f.srcLang) + '"><span class="ctx">' + esc(s.ctx) + "</span>" + srcHtml(s) + "</div>" +
+        '<div class="seg-tgt"><textarea id="t-' + uid + '" lang="' + esc(f.tgtLang) + '" rows="2" spellcheck="true" aria-label="' + esc(langName(f.tgtLang) + " translation, line " + num) + '"></textarea>' +
+        '<div class="seg-foot"><button type="button" class="btn btn-quiet copy">Copy English</button>' +
+        (s.ph.length ? '<span class="hint">Keep the orange markers.</span>' : "") +
+        '<span class="count"></span><span class="msg" role="status"></span></div></div>';
+      const ta = row.querySelector("textarea");
+      ta.value = state.tr[ui][n] || "";
+      row._ui = ui; row._n = n; row._num = num;
+      rows.append(row);
+      refreshRow(row);
+    });
+    g.append(h, rows); list.append(g);
+  });
+  if (tech.length) {
+    const d = document.createElement("details"); d.className = "tech";
+    d.innerHTML = "<summary>Technical fields (" + tech.length + ") — kept as they are</summary><p>These are web addresses, site IDs and settings, not text for readers. They are copied into the translated file automatically. You don't need to change them.</p>";
+    const grid = document.createElement("div"); grid.className = "tech-grid";
+    grid.innerHTML = '<span class="h lbl">Field</span><span class="h">English file</span><span class="h">Translated file</span>';
+    tech.forEach((ui) => {
+      const u = f.units[ui];
+      const lbl = document.createElement("span"); lbl.className = "lbl"; lbl.textContent = u.label;
+      const src = document.createElement("code"); src.textContent = u.segs[0].src;
+      const inp = document.createElement("input"); inp.id = "t-" + ui + "-0"; inp.value = state.tr[ui][0]; inp.setAttribute("aria-label", u.label + " in translated file");
+      inp.oninput = () => { state.tr[ui][0] = inp.value; save(); };
+      grid.append(lbl, src, inp);
+    });
+    d.append(grid);
+    if (f.noBlockComments) {
+      const p = document.createElement("p");
+      p.textContent = "Note for site editors: this file has no Gutenberg block comments (<!-- wp:… -->). Drupal removed them during export, so the translated page may open as a single classic block in the editor.";
+      d.append(p);
+    }
+    list.append(d);
+  }
+  if (!num) list.insertAdjacentHTML("afterbegin", '<div class="empty">This file has no text to translate.</div>');
+  applyFilter(); updateProgress(); setupPreview();
+}
+
+function refreshRow(row) {
+  const ui = row._ui, n = row._n, u = state.file.units[ui], s = u.segs[n];
+  const v = (state.tr[ui][n] || "").trim();
+  const st = statusOf(ui, n);
+  row.dataset.status = st;
+  const msg = row.querySelector(".msg");
+  msg.textContent = st === "bad" ? XE.validate(s, v).join(" ") : "";
+  const count = row.querySelector(".count");
+  if (u.maxwidth && u.segs.length === 1) {
+    const len = v.length; count.textContent = len + " / " + u.maxwidth; count.classList.toggle("over", len > u.maxwidth);
+  } else count.textContent = "";
+}
+
+function counts() {
+  let all = 0, todo = 0, bad = 0;
+  state.file.units.forEach((u, ui) => { if (u.technical) return; u.segs.forEach((s, n) => { all++; const st = statusOf(ui, n); if (st === "todo") todo++; if (st === "bad") bad++; }); });
+  return { all, todo, bad, done: all - todo - bad };
+}
+function updateProgress() {
+  const c = counts();
+  $("#progLabel").innerHTML = "<strong>" + c.done + "</strong> of " + c.all + " lines translated" + (c.bad ? " · <span style=\"color:var(--bad)\">" + c.bad + " to fix</span>" : "");
+  $("#progBar").style.width = (c.all ? (100 * c.done / c.all) : 0) + "%";
+  $("#nAll").textContent = c.all; $("#nTodo").textContent = c.todo; $("#nBad").textContent = c.bad;
+}
+
+function applyFilter() {
+  const q = state.q.toLowerCase();
+  document.querySelectorAll(".seg").forEach((row) => {
+    const st = row.dataset.status;
+    const s = state.file.units[row._ui].segs[row._n];
+    let show = state.filter === "all" || state.filter === st;
+    if (show && q) show = s.src.toLowerCase().includes(q) || (state.tr[row._ui][row._n] || "").toLowerCase().includes(q);
+    row.hidden = !show;
+  });
+  document.querySelectorAll(".group").forEach((g) => { g.hidden = ![...g.querySelectorAll(".seg")].some((r) => !r.hidden); });
+}
+
+let saveTimer = 0, previewTimer = 0;
+function save() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => {
+    store(false, { at: Date.now(), tr: state.tr, src: state.file.units.map((u) => u.segs.map((s) => s.src)) });
+  }, 400);
+  clearTimeout(previewTimer); previewTimer = setTimeout(renderPreview, 500);
+}
+
+/* ---------- Preview ---------- */
+const PREVIEW_CSS = "body{font:15px/1.5 Georgia,serif;color:#1c2330;background:#fff;margin:0;padding:16px 20px;max-width:900px}h1,h2,h3{font-family:Arial,sans-serif;line-height:1.2}a{color:#0a5d8f}.xe-img{display:inline-block;margin:4px 0;padding:6px 10px;border:1px dashed #9aa7b4;color:#5a6674;font:12px Arial,sans-serif;border-radius:4px}.xe-embed{border:1px dashed #9aa7b4;padding:8px;color:#5a6674;font-size:12px}.xe-seg{cursor:pointer;border-radius:2px;transition:background .2s}.xe-seg:hover{background:#e6f0f7}.xe-seg.on{background:#fdecc8;outline:2px solid #e3a33b}.xe-seg.todo{background:#fff7e6}input,button{font:inherit}[class*=hidden]{display:block!important}";
+function previewUnits() { return state.file.units.map((u, ui) => ({ u, ui })).filter(({ u }) => !u.technical && u.toks.some((t) => t.t === "tag")); }
+function setupPreview() {
+  const units = previewUnits();
+  const on = $("#previewToggle").checked && units.length > 0;
+  $("#preview").hidden = !on; $("#work").classList.toggle("with-preview", on);
+  const sel = $("#previewUnit");
+  sel.innerHTML = units.map(({ u, ui }) => '<option value="' + ui + '">' + esc(u.label) + "</option>").join("");
+  sel.hidden = units.length < 2;
+  if (on) renderPreview();
+}
+function renderPreview() {
+  if ($("#preview").hidden || !state.file) return;
+  const ui = +$("#previewUnit").value;
+  const u = state.file.units[ui]; if (!u) return;
+  const fr = $("#previewFrame");
+  const y = fr.contentWindow ? fr.contentWindow.scrollY : 0;
+  const html = XE.toHtml(XE.buildTokens(u, state.tr[ui], { mark: true }));
+  fr.onload = () => {
+    const d = fr.contentDocument; if (!d) return;
+    fr.contentWindow.scrollTo(0, y);
+    d.querySelectorAll(".xe-seg").forEach((el) => { if (statusOf(ui, +el.dataset.n) === "todo") el.classList.add("todo"); });
+    d.addEventListener("click", (e) => {
+      e.preventDefault();
+      const seg = e.target.closest && e.target.closest(".xe-seg");
+      if (seg) focusSeg(ui + "-" + seg.dataset.n, true);
+    });
+    d.addEventListener("submit", (e) => e.preventDefault(), true);
+    highlightPreview();
+  };
+  fr.srcdoc = "<!doctype html><html><head><meta charset=utf-8><style>" + PREVIEW_CSS + "</style></head><body>" + html + "</body></html>";
+}
+function highlightPreview(scroll) {
+  const fr = $("#previewFrame"), d = fr.contentDocument; if (!d || !state.activeUid) return;
+  d.querySelectorAll(".xe-seg.on").forEach((el) => el.classList.remove("on"));
+  const [ui, n] = state.activeUid.split("-");
+  if (+ui !== +$("#previewUnit").value) return;
+  const el = d.querySelector('.xe-seg[data-n="' + n + '"]');
+  if (el) { el.classList.add("on"); if (scroll) el.scrollIntoView({ block: "center", behavior: "smooth" }); }
+}
+function focusSeg(uid, fromPreview) {
+  const row = document.getElementById("row-" + uid); if (!row) return;
+  if (row.hidden) { state.filter = "all"; syncFilterButtons(); applyFilter(); }
+  row.scrollIntoView({ block: "center", behavior: "smooth" });
+  row.querySelector("textarea").focus({ preventScroll: true });
+}
+
+/* ---------- Events ---------- */
+document.addEventListener("input", (e) => {
+  const ta = e.target; if (ta.tagName !== "TEXTAREA") return;
+  const row = ta.closest(".seg"); if (!row) return;
+  state.tr[row._ui][row._n] = ta.value;
+  refreshRow(row); updateProgress(); save();
+});
+document.addEventListener("focusin", (e) => {
+  const row = e.target.closest && e.target.closest(".seg"); if (!row) return;
+  document.querySelectorAll(".seg.active").forEach((r) => r.classList.remove("active"));
+  row.classList.add("active"); state.activeUid = row.dataset.uid;
+  const ui = row._ui;
+  if (!$("#preview").hidden && previewUnits().some((p) => p.ui === ui) && +$("#previewUnit").value !== ui) { $("#previewUnit").value = ui; renderPreview(); }
+  else highlightPreview(true);
+});
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "TEXTAREA" && e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
+    e.preventDefault();
+    const rows = [...document.querySelectorAll(".seg")];
+    const i = rows.indexOf(e.target.closest(".seg"));
+    const next = rows.slice(i + 1).concat(rows.slice(0, i)).find((r) => r.dataset.status !== "done");
+    if (next) focusSeg(next.dataset.uid);
+  }
+});
+document.addEventListener("click", (e) => {
+  const chip = e.target.closest(".chip[data-ins]");
+  if (chip) {
+    const row = chip.closest(".seg"), ta = row.querySelector("textarea");
+    const ins = chip.dataset.ins, st = ta.selectionStart ?? ta.value.length, en = ta.selectionEnd ?? st;
+    ta.focus(); ta.setRangeText(ins, st, en, "end"); ta.dispatchEvent(new Event("input", { bubbles: true }));
+    return;
+  }
+  const copy = e.target.closest(".copy");
+  if (copy) {
+    const row = copy.closest(".seg"), ta = row.querySelector("textarea");
+    ta.value = state.file.units[row._ui].segs[row._n].src; ta.focus(); ta.dispatchEvent(new Event("input", { bubbles: true }));
+  }
+});
+function syncFilterButtons() { document.querySelectorAll(".seg-filter button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.f === state.filter))); }
+document.querySelectorAll(".seg-filter button").forEach((b) => b.addEventListener("click", () => { state.filter = b.dataset.f; syncFilterButtons(); applyFilter(); }));
+$("#search").addEventListener("input", (e) => { state.q = e.target.value; applyFilter(); });
+$("#previewToggle").addEventListener("change", setupPreview);
+$("#previewUnit").addEventListener("change", renderPreview);
+$("#openBtn").addEventListener("click", () => $("#fileInput").click());
+$("#fileInput").addEventListener("change", (e) => { const f = e.target.files[0]; if (f) readFile(f); e.target.value = ""; });
+function readFile(f) { const r = new FileReader(); r.onload = () => loadText(String(r.result), f.name, false); r.onerror = () => notice("That file could not be opened.", "bad"); r.readAsText(f); }
+let dragDepth = 0;
+window.addEventListener("dragenter", (e) => { if ([...(e.dataTransfer?.types || [])].includes("Files")) { dragDepth++; $("#dropCover").hidden = false; } });
+window.addEventListener("dragleave", () => { if (--dragDepth <= 0) { dragDepth = 0; $("#dropCover").hidden = true; } });
+window.addEventListener("dragover", (e) => e.preventDefault());
+window.addEventListener("drop", (e) => { e.preventDefault(); dragDepth = 0; $("#dropCover").hidden = true; const f = e.dataTransfer.files[0]; if (f) readFile(f); });
+
+/* ---------- Export ---------- */
+function outName() {
+  const n = state.file.fileName.replace(/\.(xlf|xliff|xml|txt)$/i, "");
+  return n + (state.file.tgtLang && !n.endsWith("_" + state.file.tgtLang) ? "_" + state.file.tgtLang : "") + "_translated.xlf";
+}
+function buildXliff() {
+  const f = state.file;
+  f.units.forEach((u, ui) => XE.writeTarget(f, u, state.tr[ui]));
+  return XE.serialize(f);
+}
+let exportNotice = null;
+$("#saveBtn").addEventListener("click", () => {
+  if (!state.file) return;
+  if (exportNotice) exportNotice.remove();
+  const c = counts();
+  if (c.bad) {
+    exportNotice = notice(c.bad + (c.bad === 1 ? " line has" : " lines have") + " a problem with the orange markers. Fix " + (c.bad === 1 ? "it" : "them") + " before downloading, so the page layout stays intact.", "bad",
+      [["Show me", () => { state.filter = "bad"; syncFilterButtons(); applyFilter(); const r = document.querySelector('.seg[data-status="bad"]'); if (r) focusSeg(r.dataset.uid); }]]);
+    exportNotice.scrollIntoView({ block: "nearest" });
+    return;
+  }
+  if (c.todo) {
+    exportNotice = notice(c.todo + (c.todo === 1 ? " line is" : " lines are") + " still empty and will stay in " + langName(state.file.srcLang) + " in the downloaded file.", "",
+      [["Download anyway", doExport], ["Show empty lines", () => { state.filter = "todo"; syncFilterButtons(); applyFilter(); }]]);
+    exportNotice.scrollIntoView({ block: "nearest" });
+    return;
+  }
+  doExport();
+});
+async function doExport() {
+  if (exportNotice) { exportNotice.remove(); exportNotice = null; }
+  const xml = buildXliff(), name = outName();
+  // Inside the Claude viewer, files go through the platform's save dialog (which only accepts .txt here).
+  if (window.claude && window.claude.use) {
+    const dl = await window.claude.use("downloads").catch(() => null);
+    if (dl) {
+      try {
+        await dl.save({ filename: name + ".txt", data: xml });
+        notice("Saved as " + name + ".txt. Rename it to end in .xlf (remove “.txt”) before uploading it to Drupal.", "good", [["Copy file contents", () => copyText(xml)]]);
+      } catch (e) {
+        if (e && e.code === "declined") return;
+        notice("The file could not be saved from this preview. You can copy its contents instead and paste them into a text file named " + name + ".", "bad", [["Copy file contents", () => copyText(xml)]]);
+      }
+      return;
+    }
+  }
+  const url = URL.createObjectURL(new Blob([xml], { type: "application/xliff+xml" }));
+  const a = document.createElement("a"); a.href = url; a.download = name; document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 5000);
+  notice("Downloaded " + name + ". Send this file back, or upload it in Drupal on the job's Review page.", "good");
+}
+function copyText(t) {
+  navigator.clipboard.writeText(t).then(() => notice("Copied the file contents.", "good"), () => {
+    const ta = document.createElement("textarea"); ta.value = t; ta.style.cssText = "width:100%;height:200px"; const n = notice("Select all of this text and copy it:", ""); n.append(ta); ta.select();
+  });
+}
+
+/* ---------- Start ---------- */
+window.XE = XE; window.XEState = state; window.XEbuild = buildXliff; window.XEload = loadText;
+// Example files live in examples/ next to this page. Add an entry here to offer a new one.
+const EXAMPLES = [
+  { file: "examples/gutenberg-block-markup_en_es.xlf", label: "Synthetic example: Gutenberg block markup kept (processing off)" },
+  { file: "examples/undrr-homepage_en_fr.xlf", label: "UNDRR homepage, Drupal extended processing on" },
+  { file: "examples/undrr-homepage_en_fr_partial.xlf", label: "UNDRR homepage, partly translated" },
+];
+async function loadExample(ex) {
+  try {
+    const res = await fetch(ex.file);
+    if (!res.ok) throw new Error(res.status);
+    loadText(await res.text(), ex.file.split("/").pop(), ex.label);
+  } catch (e) {
+    notice("The example file could not be loaded. Open your own .xlf file instead.", "bad");
+  }
+}
+(function start() {
+  const sel = $("#exampleSelect");
+  EXAMPLES.forEach((ex, k) => { const o = document.createElement("option"); o.value = k; o.textContent = ex.label; sel.append(o); });
+  sel.addEventListener("change", () => { if (sel.value !== "") loadExample(EXAMPLES[+sel.value]); sel.value = ""; });
+  const el = document.getElementById("sampleXliff");
+  const b64 = el ? el.textContent.trim() : "";
+  if (b64 && !b64.startsWith("__")) {
+    // Single-file build with the example embedded (used where examples/ isn't served).
+    const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+    loadText(new TextDecoder().decode(bytes), EXAMPLES[0].file.split("/").pop(), EXAMPLES[0].label);
+    return;
+  }
+  const want = new URLSearchParams(location.search).get("example");
+  const k = want != null && EXAMPLES[+want] ? +want : 0;
+  if (!new URLSearchParams(location.search).has("blank")) loadExample(EXAMPLES[k]);
+})();
+</script>
+</body>
+</html>

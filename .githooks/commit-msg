@@ -1,0 +1,13 @@
+#!/bin/sh
+# Rejects commit messages that carry AI attribution trailers
+# (for example "Co-Authored-By: Claude ..." or "Claude-Session: ...").
+# Enable once per clone with:  git config core.hooksPath .githooks
+
+msg_file="$1"
+
+if grep -Eiq '^(co-authored-by:.*(claude|anthropic)|claude-session:|generated with \[?claude)' "$msg_file"; then
+  echo "commit-msg: remove the AI attribution lines from the commit message:" >&2
+  grep -Ein '^(co-authored-by:.*(claude|anthropic)|claude-session:|generated with \[?claude)' "$msg_file" >&2
+  exit 1
+fi
+exit 0

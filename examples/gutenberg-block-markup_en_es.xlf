@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-strict.xsd">
+ <file original="xliff-core-1.2-strict.xsd" source-language="en" target-language="es" datatype="plaintext" date="2026-10-29T12:00:00Z">
+  <header>
+   <phase-group>
+    <phase tool-id="tmgmt" phase-name="extraction" process-name="extraction" job-id="9001"/>
+   </phase-group>
+   <tool tool-id="tmgmt" tool-name="Drupal Translation Management Tools"/>
+  </header>
+  <body>
+   <!-- Example file written for Blocklate. It mimics a TMGMT export with "extended XLIFF processing" turned off, so the Gutenberg markup arrives as raw HTML with its block comments. -->
+   <group id="9001">
+    <note>Early warning for all</note>
+    <trans-unit id="9001][title][0][value" resname="9001][title][0][value" size-unit="char" maxwidth="255">
+     <source xml:lang="en"><![CDATA[Early warning for all]]></source>
+     <target xml:lang="es"/>
+    </trans-unit>
+    <trans-unit id="9001][path][0][alias" resname="9001][path][0][alias">
+     <source xml:lang="en"><![CDATA[/early-warning-for-all]]></source>
+     <target xml:lang="es"/>
+     <note>URL alias &gt; Path alias</note>
+    </trans-unit>
+    <trans-unit id="9001][body][0][value" resname="9001][body][0][value">
+     <source xml:lang="en"><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Early warning systems save lives</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Early warning systems are a <strong>proven, effective</strong> way to protect lives and livelihoods. Yet only half of all countries report having one in place.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":42,"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="/sites/default/files/example/warning-siren.jpg" alt="A tsunami warning siren on a beach at sunset" class="wp-image-42"/><figcaption class="wp-element-caption">Sirens are one of many ways to reach people quickly.</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The four pillars</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Disaster risk knowledge</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Detection, observation, monitoring, analysis and forecasting</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Warning dissemination and communication</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Preparedness and response capabilities</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Read the <a href="/publication/global-status-mhews-2025">Global Status of Multi-Hazard Early Warning Systems</a> report to see where progress is being made.<br>Figures are updated every year.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/early-warnings-for-all">Learn about the initiative</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/contact">Contact the team</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:html -->
+<style>.ew-note{border-left:4px solid #004f91;padding-left:1rem}</style>
+<!-- /wp:html -->
+
+<!-- wp:paragraph {"className":"ew-note"} -->
+<p class="ew-note">Questions &amp; feedback are welcome at <em>info@example.org</em>.</p>
+<!-- /wp:paragraph -->]]></source>
+     <target xml:lang="es"/>
+     <note>Body &gt; Text</note>
+    </trans-unit>
+    <trans-unit id="9001][body][0][summary" resname="9001][body][0][summary">
+     <source xml:lang="en"><![CDATA[Why early warning systems matter, and the four pillars that make them work.]]></source>
+     <target xml:lang="es"/>
+     <note>Body &gt; Summary</note>
+    </trans-unit>
+    <trans-unit id="9001][domain_path][0][langcode" resname="9001][domain_path][0][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="es"/>
+     <note>Domain URL alias &gt; Delta #0 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="9001][domain_path][0][domain_id" resname="9001][domain_path][0][domain_id">
+     <source xml:lang="en"><![CDATA[www_example_org]]></source>
+     <target xml:lang="es"/>
+     <note>Domain URL alias &gt; Delta #0 &gt; Domain id</note>
+    </trans-unit>
+   </group>
+  </body>
+ </file>
+</xliff>

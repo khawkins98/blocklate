@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="UTF-8"?><xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-strict.xsd">
+ <file original="xliff-core-1.2-strict.xsd" source-language="en" target-language="fr" datatype="plaintext" date="2026-10-29T03:10:35Z">
+  <header>
+   <phase-group>
+    <phase tool-id="tmgmt" phase-name="extraction" process-name="extraction" job-id="261"/>
+   </phase-group>
+   <tool tool-id="tmgmt" tool-name="Drupal Translation Management Tools"/>
+  </header>
+  <body>
+   <group id="439">
+    <note>UNDRR - Homepage</note>
+    <trans-unit id="439][title][0][value" resname="439][title][0][value" size-unit="char" maxwidth="255">
+     <source xml:lang="en"><![CDATA[UNDRR - Homepage]]></source>
+     <target xml:lang="fr"><![CDATA[UNDRR - Page d’accueil]]></target>
+    </trans-unit>
+    <trans-unit id="439][path][0][alias" resname="439][path][0][alias">
+     <source xml:lang="en"><![CDATA[/undrr-homepage]]></source>
+     <target xml:lang="fr"><![CDATA[/undrr-homepage]]></target>
+     <note>URL alias &gt; Path alias</note>
+    </trans-unit>
+    <trans-unit id="439][field_domain_access][0][target_id" resname="439][field_domain_access][0][target_id" size-unit="char" maxwidth="255">
+     <source xml:lang="en"><![CDATA[www_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[www_undrr_org]]></target>
+    </trans-unit>
+    <trans-unit id="439][body][0][value" resname="439][body][0][value">
+     <source xml:lang="en"><![CDATA[
+]]><bpt id="tjiid439-1">&lt;h1 class="wp-block-heading mg-u-sr-only"&gt;</bpt><![CDATA[United Nations Office for Disaster Risk Reduction - UNDRR]]><ept id="tjiid439-1">&lt;/h1&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-3">&lt;div class="wp-block-columns hidden has-white-color has-undrr-blue-background-color has-text-color has-background has-link-color mg-container-full-width"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-4">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:5%"&gt;</bpt><ept id="tjiid439-4">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-6">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-7">&lt;div style="height:100px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-7">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-9">&lt;h1 class="wp-block-heading has-huge-font-size has-large-font-size mg-u-font-size-500"&gt;</bpt><![CDATA[When disasters strike and systems fail, one signal often stays on and returns first: radio]]><ept id="tjiid439-9">&lt;/h1&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-11">&lt;p class="has-large-font-size has-medium-font-size mg-u-font-size-400"&gt;</bpt><![CDATA[A tried and tested formula, radio broadcasts have saved lives!]]><ept id="tjiid439-11">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-13">&lt;div style="height:100px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-13">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-6">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-16">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:5%"&gt;</bpt><ept id="tjiid439-16">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-18">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-19">&lt;figure class="wp-block-embed is-type-rich is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"&gt;</bpt><bpt id="tjiid439-20">&lt;div class="wp-block-embed__wrapper"&gt;</bpt><![CDATA[
+https://www.youtube.com/watch?v=WviLVdagG4A
+]]><ept id="tjiid439-20">&lt;/div&gt;</ept><ept id="tjiid439-19">&lt;/figure&gt;</ept><![CDATA[
+]]><ept id="tjiid439-18">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-3">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-25">&lt;section class="wp-block-undrr-undrr-hero-block mg-hero mg-hero--" style="background-image:url('/sites/default/files/styles/ultrawide_16_6/public/2026-09/tsunami-sign-driek-flickr.jpg?h=d7db1e3f&amp;itok=rHn5Ir8Q');background-position:50% 50%;background-size:cover"&gt;</bpt><bpt id="tjiid439-26">&lt;div class="mg-hero__overlay parent"&gt;</bpt><bpt id="tjiid439-27">&lt;article class="mg-hero__content"&gt;</bpt><bpt id="tjiid439-28">&lt;div class="mg-hero__meta"&gt;</bpt><bpt id="tjiid439-29">&lt;a href="https://tsunamiday.undrr.org/get-to-high-ground" target="_self" rel="noreferrer" class="mg-hero__label"&gt;</bpt><![CDATA[Get To High Ground]]><ept id="tjiid439-29">&lt;/a&gt;</ept><ept id="tjiid439-28">&lt;/div&gt;</ept><bpt id="tjiid439-32">&lt;header class="mg-hero__title"&gt;</bpt><bpt id="tjiid439-33">&lt;a href="https://tsunamiday.undrr.org/"&gt;</bpt><ept id="tjiid439-33">&lt;/a&gt;</ept><bpt id="tjiid439-35">&lt;a href="https://tsunamiday.undrr.org/get-to-high-ground"&gt;</bpt><bpt id="tjiid439-36">&lt;strong&gt;</bpt><![CDATA[World Tsunami Awareness Day 2026]]><ept id="tjiid439-36">&lt;/strong&gt;</ept><ept id="tjiid439-35">&lt;/a&gt;</ept><ept id="tjiid439-32">&lt;/header&gt;</ept><bpt id="tjiid439-40">&lt;div class="mg-hero__summaryText"&gt;</bpt><![CDATA[Be Tsunami Ready: Resilience starts with you]]><x id="tjiid439-41" ctype="lb"/><x id="tjiid439-42" ctype="lb"/><![CDATA[Happening on 5 November ]]><x id="tjiid439-43" ctype="lb"/><![CDATA[ ]]><ept id="tjiid439-40">&lt;/div&gt;</ept><bpt id="tjiid439-45">&lt;div class="mg-hero__buttons"&gt;</bpt><bpt id="tjiid439-46">&lt;a href="https://tsunamiday.undrr.org/" target="_self" rel="noreferrer" role="button" type="Primary" class="mg-button mg-button-primary mg-button-arrow"&gt;</bpt><![CDATA[Discover how resilience starts with you]]><ept id="tjiid439-46">&lt;/a&gt;</ept><bpt id="tjiid439-48">&lt;a href="https://tsunamiday.undrr.org/get-to-high-ground" target="_self" rel="noreferrer" role="button" type="Primary" class="mg-button mg-button-secondary mg-button-arrow"&gt;</bpt><![CDATA[Get To High Ground]]><ept id="tjiid439-48">&lt;/a&gt;</ept><ept id="tjiid439-45">&lt;/div&gt;</ept><ept id="tjiid439-27">&lt;/article&gt;</ept><ept id="tjiid439-26">&lt;/div&gt;</ept><ept id="tjiid439-25">&lt;/section&gt;</ept><ph id="tjiid439-54" ctype="image" class="mg-u-sr-only" src="/sites/default/files/styles/ultrawide_16_6/public/2026-09/tsunami-sign-driek-flickr.jpg?h=d7db1e3f&amp;itok=rHn5Ir8Q" alt="Tsunami warning - California USA" title="Tsunami warning - California USA" data-mg-media-id="121075" aria-hidden="true"/><![CDATA[
+
+
+
+]]><bpt id="tjiid439-55">&lt;div class="wp-block-columns hidden has-white-color has-undrr-blue-background-color has-text-color has-background has-link-color mg-container-full-width"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-56">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:55%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-57">&lt;p class="undefined"&gt;</bpt><ept id="tjiid439-57">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-59">&lt;h2 class="wp-block-heading has-larger-font-size"&gt;</bpt><![CDATA[281 Hazards]]><ept id="tjiid439-59">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-61">&lt;p class="has-large-font-size"&gt;</bpt><![CDATA[Experts worldwide have created a comprehensive list of 281 hazards — ranging from earthquakes, tsunamis, and floods to pandemics, chemical accidents, and even extraterrestrial events like solar storms. This shared framework helps countries, policymakers, and communities develop stronger disaster risk reduction (DRR) strategies.]]><ept id="tjiid439-61">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-63">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-64">&lt;div class="wp-block-button has-custom-font-size has-regular-font-size mg-u-font-size-300"&gt;</bpt><bpt id="tjiid439-65">&lt;a class="wp-block-button__link has-white-color has-link-blue-background-color has-text-color has-background has-link-color wp-element-button mg-button mg-button-primary" href="https://preventionweb.net/hips"&gt;</bpt><bpt id="tjiid439-66">&lt;strong&gt;</bpt><![CDATA[Learn more about the hazards]]><ept id="tjiid439-66">&lt;/strong&gt;</ept><ept id="tjiid439-65">&lt;/a&gt;</ept><ept id="tjiid439-64">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-70">&lt;div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size mg-u-font-size-250"&gt;</bpt><bpt id="tjiid439-71">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-secondary" href="https://www.youtube.com/@UNDRR"&gt;</bpt><![CDATA[Watch more UNDRR video content]]><ept id="tjiid439-71">&lt;/a&gt;</ept><ept id="tjiid439-70">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-63">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-56">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-76">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-77">&lt;div style="padding-bottom: 100%; position: relative;"&gt;</bpt><bpt id="tjiid439-78">&lt;iframe style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" width="100%" height="100%" src="https://www.youtube.com/embed/yQdYFA5TYpg?fs=0&amp;playsinline=1&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"&gt;</bpt><bpt id="tjiid439-79">&lt;small&gt;</bpt><![CDATA[Powered by ]]><bpt id="tjiid439-80">&lt;a href="https://embed.tube/embed-code-generator/youtube/"&gt;</bpt><![CDATA[youtube embed video]]><ept id="tjiid439-80">&lt;/a&gt;</ept><![CDATA[ generator]]><ept id="tjiid439-79">&lt;/small&gt;</ept><ept id="tjiid439-78">&lt;/iframe&gt;</ept><ept id="tjiid439-77">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-76">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-86">&lt;div class="wp-block-column" style="flex-basis:5%"&gt;</bpt><ept id="tjiid439-86">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-55">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-89">&lt;h2 class="wp-block-heading"&gt;</bpt><![CDATA[What's new]]><ept id="tjiid439-89">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-91">&lt;div class="wp-block-undrr-search-widget undrr-search-widget-container" data-undrr-search-widget="true" data-widget-id="search-widget-23b1a953-115c-40b9-a89c-2e9c587760a8" data-search-endpoint="/search-endpoint" data-results-per-page="4" data-facet-count-to-show="500" data-debounce-delay="750" data-default-filters="[{"key":"_language","value":"en","checked":true},{"key":"field_domain_access","value":"www_undrr_org","checked":true}]" data-visible-filters="{"field_domain_access":false,"type":true,"field_news_type":true,"year":true,"field_country_region":true,"field_hazard":true,"field_theme":true,"_language":false}" data-enable-hash-sync="auto" data-default-sort="newest" data-default-query="" data-show-search-box="false" data-show-results-count="false" data-show-search-timer="false" data-show-facets="false" data-show-pager="false" data-query-append="(type:news OR type:publication) AND field_syndication:1101" data-show-search-metrics="false" data-show-active-filters="false" data-display-mode="card" data-grid-columns="4" data-facets="false" data-visible-teaser-fields="{"siteName":false,"summary":false,"organization":false}" data-require-image="true" data-use-current-language="true" data-use-current-domain="true" data-ssr-query="{"v":1,"query":{"function_score":{"query":{"bool":{"must":{"query_string":{"query":"(type:news OR type:publication) AND field_syndication:1101","fields":["title^9","rendered_item^3","teaser^1.2","body^1","saa_field_attachment^0.1"],"default_operator":"AND","analyze_wildcard":true}},"filter":[{"bool":{"should":[{"term":{"status":"true"}},{"bool":{"must_not":{"exists":{"field":"status"}}}}],"minimum_should_match":1}},{"query_string":{"query":"has_image:true"}},{"bool":{"must":[]}}]}},"functions":[{"filter":{"terms":{"type":["landing"]}},"weight":5},{"filter":{"terms":{"type":["terminology"]}},"weight":1.5},{"script_score":{"script":{"source":"\n          double baseScale = 5000; // Default decay ~15 years\n\n          double longevity = (doc.containsKey('field_meta_longevity') &amp;&amp; doc['field_meta_longevity'].size() &gt; 0)\n                              ? doc['field_meta_longevity'].value\n                              : params.defaultLongevity;\n\n          if (longevity &lt;= params.today) baseScale = params.todayScale;\n          else if (longevity &lt;= params.days) baseScale = params.daysScale;\n          else if (longevity &lt;= params.week) baseScale = params.weekScale;\n          else if (longevity &lt;= params.month) baseScale = params.monthScale;\n          else if (longevity &lt;= params.year) baseScale = params.yearScale;\n          else if (longevity &lt;= params.longtime) baseScale = params.longtimeScale;\n          else baseScale = params.alwaysScale;\n\n          if (!doc.containsKey('published_at') || doc['published_at'].empty) return 1.0;\n          return Math.exp((doc['published_at'].value.toInstant().toEpochMilli() - params.now) / (baseScale * 86400000));\n        ","params":{"now":1793099487889,"defaultLongevity":80,"today":3,"todayScale":1,"days":20,"daysScale":5,"week":40,"weekScale":10,"month":65,"monthScale":45,"year":85,"yearScale":365,"longtime":95,"longtimeScale":3650,"alwaysScale":99999}}}},{"script_score":{"script":{"source":"\n          double interestingness = 1.0; // default\n          if (doc.containsKey('field_meta_interestingness') &amp;&amp; doc['field_meta_interestingness'].size() &gt; 0) {\n            double value = doc['field_meta_interestingness'].value;\n            if (value &lt;= params.demoted) interestingness = params.demotedWeight;\n            else if (value &lt;= params.deferred) interestingness = params.deferredWeight;\n            else if (value &lt;= params.average) interestingness = params.averageWeight;\n            else if (value &lt;= params.promoted) interestingness = params.promotedWeight;\n            else interestingness = params.announcedWeight;\n          }\n          return interestingness;\n        ","params":{"demoted":10,"demotedWeight":0.1,"deferred":30,"deferredWeight":0.3,"average":50,"averageWeight":1,"promoted":75,"promotedWeight":1.5,"announcedWeight":3}}}}],"score_mode":"multiply","boost_mode":"multiply"}},"sort":[{"published_at":{"order":"desc"}}]}"&gt;</bpt><ept id="tjiid439-91">&lt;/div&gt;</ept><bpt id="tjiid439-93">&lt;div id="search-widget-23b1a953-115c-40b9-a89c-2e9c587760a8" class="undrr-search-widget-target"&gt;</bpt><ept id="tjiid439-93">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-95">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-96">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-97">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="/news"&gt;</bpt><![CDATA[View more updates]]><ept id="tjiid439-97">&lt;/a&gt;</ept><ept id="tjiid439-96">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-95">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-101">&lt;div class="wp-block-columns hide has-medium-blue-background-color has-background mg-container-full-width"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-102">&lt;div class="wp-block-column" style="flex-basis:40%"&gt;</bpt><ept id="tjiid439-102">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-104">&lt;div class="wp-block-column" style="flex-basis:55%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-105">&lt;div class="wp-block-columns rp-container-inset has-white-background-color has-background"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-106">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-107">&lt;h2 class="wp-block-heading has-undrr-blue-color has-text-color has-link-color"&gt;</bpt><bpt id="tjiid439-108">&lt;a href="/implementing-sendai-framework/regional-platforms"&gt;</bpt><![CDATA[2024: Three Regional Platforms for Disaster Risk Reduction]]><ept id="tjiid439-108">&lt;/a&gt;</ept><ept id="tjiid439-107">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-111">&lt;p class="undefined"&gt;</bpt><![CDATA[From October to November, the Asia Pacific, Africa and Europe and Central Asia regional platforms will be held. ]]><ept id="tjiid439-111">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-113">&lt;p class="undefined"&gt;</bpt><![CDATA[These are a key opportunity to tackle trans-boundary issues around disaster prevention and preparedness, provide leadership and direction, and propose relevant solutions to address disaster risk and to build the resilience of communities and nations.]]><ept id="tjiid439-113">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-115">&lt;p class="undefined"&gt;</bpt><![CDATA[Building on these, the Eighth session of the ]]><bpt id="tjiid439-116">&lt;a href="https://www.undrr.org/event/eighth-session-global-platform-disaster-risk-reduction-gp2025"&gt;</bpt><![CDATA[Global Platform for Disaster Risk Reduction (GP2025) will be held in June 2025]]><ept id="tjiid439-116">&lt;/a&gt;</ept><![CDATA[.]]><ept id="tjiid439-115">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-119">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-120">&lt;div class="wp-block-button is-style-fill"&gt;</bpt><bpt id="tjiid439-121">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="/implementing-sendai-framework/regional-platforms"&gt;</bpt><![CDATA[Learn more and get involved]]><ept id="tjiid439-121">&lt;/a&gt;</ept><ept id="tjiid439-120">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-119">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-106">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-105">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-104">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-128">&lt;div class="wp-block-column" style="flex-basis:5%"&gt;</bpt><ept id="tjiid439-128">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-101">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-131">&lt;div style="height:36px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-131">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-133">&lt;div class="wp-block-columns has-undrr-light-grey-background-color has-background mg-container-full-width"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-134">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-135">&lt;h2 class="wp-block-heading pb-10"&gt;</bpt><![CDATA[From managing disasters to managing risk and safeguarding development ]]><ept id="tjiid439-135">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-137">&lt;p class="undefined"&gt;</bpt><![CDATA[We envision a world where disasters no longer threaten the well-being of people and the future of the planet. Sustainable development and the 2030 Agenda cannot be achieved without working towards building resilience.]]><ept id="tjiid439-137">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-139">&lt;form action="/search" class="mg-search--large"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-140">&lt;input name="text" aria-label="Search" placeholder="Search" type="text" class="textbox"&gt;</bpt><ept id="tjiid439-140">&lt;/input&gt;</ept><bpt id="tjiid439-142">&lt;button type="submit" class="mg-button mg-button-primary"&gt;</bpt><bpt id="tjiid439-143">&lt;i class="fa fa-search" aria-hidden="true"&gt;</bpt><ept id="tjiid439-143">&lt;/i&gt;</ept><![CDATA[ Search]]><ept id="tjiid439-142">&lt;/button&gt;</ept><![CDATA[
+]]><ept id="tjiid439-139">&lt;/form&gt;</ept><![CDATA[
+]]><bpt id="tjiid439-147">&lt;style&gt;</bpt><![CDATA[
+
+
+
+]]><bpt id="tjiid439-148">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-149">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-150">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-151">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-151">&lt;/div&gt;</ept><ph id="tjiid439-153" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-11/Implementing%20the%20SF%20-%203.jpg?h=3fbf1325&amp;itok=Ah1S4t5E" alt="Implementing the SF - 3" data-mg-media-id="24" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-154">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-155">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-156">&lt;a href="/implementing-sendai-framework"&gt;</bpt><![CDATA[Implementing the Sendai Framework]]><ept id="tjiid439-156">&lt;/a&gt;</ept><ept id="tjiid439-155">&lt;/header&gt;</ept><bpt id="tjiid439-159">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[UNDRR has been tasked to support the implementation, follow-up and review of the Sendai Framework and coordinates action within the UN system around disaster risk reduction to make this happen.]]><ept id="tjiid439-159">&lt;/div&gt;</ept><ept id="tjiid439-154">&lt;/div&gt;</ept><ept id="tjiid439-150">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-149">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-164">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-165">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-166">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-166">&lt;/div&gt;</ept><ph id="tjiid439-168" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2021-04/shutterstock_1495585427.jpg?itok=QT2YJ_7n" alt="Illustration of people working collaboratively in an office" data-mg-media-id="49123" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-169">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-170">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-171">&lt;a href="/implementing-sendai-framework/sendai-framework-action"&gt;</bpt><![CDATA[UNDRR thematic work on DRR]]><ept id="tjiid439-171">&lt;/a&gt;</ept><ept id="tjiid439-170">&lt;/header&gt;</ept><bpt id="tjiid439-174">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[The interactions between climate change trends, ecosystem fragility, disease outbreaks, rapid unplanned urbanization, mass displacement and geopolitical instability, fuelled by the interconnectivity of communications, trade, financial systems and politics, mean that shocks, stresses, and crises reverberate globally.]]><ept id="tjiid439-174">&lt;/div&gt;</ept><ept id="tjiid439-169">&lt;/div&gt;</ept><ept id="tjiid439-165">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-164">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-179">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-180">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-181">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-181">&lt;/div&gt;</ept><ph id="tjiid439-183" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2023-10/gears-in-the-hands-of-people-against-the-sky.png.jpg?itok=9JF0aCxQ" alt="Gears in the hands of people against the sky." data-mg-media-id="90934" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-184">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-185">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-186">&lt;a href="/our-work/engage-with-us"&gt;</bpt><![CDATA[Engage with UNDRR]]><ept id="tjiid439-186">&lt;/a&gt;</ept><ept id="tjiid439-185">&lt;/header&gt;</ept><bpt id="tjiid439-189">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Engage with UNDRR by collaborating across sectors to promote resilience and risk-informed decision-making, aligning with global frameworks.]]><ept id="tjiid439-189">&lt;/div&gt;</ept><ept id="tjiid439-184">&lt;/div&gt;</ept><ept id="tjiid439-180">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-179">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-148">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-195">&lt;div style="height:29px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-195">&lt;/div&gt;</ept><![CDATA[
+
+
+
+
+
+]]><bpt id="tjiid439-197">&lt;div class="wp-block-columns mg-container-full-width pt-30 pb-20 has-white-color has-undrr-blue-background-color has-text-color has-background mg-u-sr-only"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-198">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-199">&lt;div style="height:10px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-199">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-201">&lt;figure class="wp-block-embed is-type-rich is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"&gt;</bpt><bpt id="tjiid439-202">&lt;div class="wp-block-embed__wrapper"&gt;</bpt><![CDATA[
+https://www.youtube.com/watch?v=qN5A_t8ADks
+]]><ept id="tjiid439-202">&lt;/div&gt;</ept><ept id="tjiid439-201">&lt;/figure&gt;</ept><![CDATA[
+]]><ept id="tjiid439-198">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-206">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-207">&lt;div style="height:30px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-207">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-209">&lt;h2 class="wp-block-heading"&gt;</bpt><bpt id="tjiid439-210">&lt;strong&gt;</bpt><![CDATA[UNDRR is the lead UN agency for the coordination of disaster risk reduction]]><ept id="tjiid439-210">&lt;/strong&gt;</ept><ept id="tjiid439-209">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-213">&lt;p class="undefined"&gt;</bpt><![CDATA[We help decision makers across the globe better understand and change their attitude to risk.]]><ept id="tjiid439-213">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-215">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-216">&lt;div class="wp-block-button is-style-outline"&gt;</bpt><bpt id="tjiid439-217">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-secondary" href="https://www.undrr.org/about-undrr/our-work"&gt;</bpt><![CDATA[Learn more about our work]]><ept id="tjiid439-217">&lt;/a&gt;</ept><ept id="tjiid439-216">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-215">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-206">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-197">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-223">&lt;section class="wp-block-undrr-undrr-hero-block mg-hero mg-hero--split mg-hero--split-1-3 mg-hero--"&gt;</bpt><bpt id="tjiid439-224">&lt;div class="mg-hero__split-grid mg-container"&gt;</bpt><bpt id="tjiid439-225">&lt;article class="mg-hero__content"&gt;</bpt><bpt id="tjiid439-226">&lt;header class="mg-hero__title"&gt;</bpt><bpt id="tjiid439-227">&lt;h1 class="text-xxl"&gt;</bpt><bpt id="tjiid439-228">&lt;a href="https://www.preventionweb.net/m/hubs/disaster-risk-communication-hub/"&gt;</bpt><![CDATA[Disaster Risk Communication Hub]]><ept id="tjiid439-228">&lt;/a&gt;</ept><ept id="tjiid439-227">&lt;/h1&gt;</ept><ept id="tjiid439-226">&lt;/header&gt;</ept><bpt id="tjiid439-232">&lt;div class="mg-hero__summaryText"&gt;</bpt><x id="tjiid439-233" ctype="lb"/><![CDATA[The Disaster Risk Communication Hub supports practitioners across sectors to plan and deliver public risk communication that helps people understand risk and take informed action.]]><ept id="tjiid439-232">&lt;/div&gt;</ept><bpt id="tjiid439-235">&lt;div class="mg-hero__buttons"&gt;</bpt><bpt id="tjiid439-236">&lt;a href="https://www.preventionweb.net/m/hubs/disaster-risk-communication-hub/" target="_self" rel="noreferrer" role="button" type="Primary" class="mg-button mg-button-primary mg-button-arrow"&gt;</bpt><![CDATA[Explore the practical guidance and tools for effective risk communication]]><ept id="tjiid439-236">&lt;/a&gt;</ept><ept id="tjiid439-235">&lt;/div&gt;</ept><ept id="tjiid439-225">&lt;/article&gt;</ept><ept id="tjiid439-224">&lt;/div&gt;</ept><ept id="tjiid439-223">&lt;/section&gt;</ept><bpt id="tjiid439-242">&lt;div class="mg-hero__media"&gt;</bpt><ept id="tjiid439-242">&lt;/div&gt;</ept><ph id="tjiid439-244" ctype="image" src="/sites/default/files/styles/ultrawide_16_6/public/2024-10/Shutterstock_2187817601.jpg?itok=yZiFTH3U" alt="Collage of two big arms holding a dialogue bubble" class="mg-hero__media-img" data-mg-media-id="101253"/><![CDATA[
+
+
+
+]]><bpt id="tjiid439-245">&lt;h2 class="wp-block-heading"&gt;</bpt><![CDATA[Key publications]]><ept id="tjiid439-245">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-247">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-248">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-249">&lt;article class="wp-block-undrr-undrr-card mg-card__book mg-card"&gt;</bpt><bpt id="tjiid439-250">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-250">&lt;/div&gt;</ept><ph id="tjiid439-252" ctype="image" src="/sites/default/files/styles/por/public/2025-05/gar-2025-cover.jpg?itok=wQsyeV7f" alt="GAR 2025 Publication cover" data-mg-media-id="107059" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-253">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-254">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-255">&lt;a href="/gar"&gt;</bpt><![CDATA[GAR 2025: Resilience pays: financing and investing for our future]]><ept id="tjiid439-255">&lt;/a&gt;</ept><ept id="tjiid439-254">&lt;/header&gt;</ept><ept id="tjiid439-253">&lt;/div&gt;</ept><ept id="tjiid439-249">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-248">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-261">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-262">&lt;article class="wp-block-undrr-undrr-card mg-card__book mg-card"&gt;</bpt><bpt id="tjiid439-263">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-263">&lt;/div&gt;</ept><ph id="tjiid439-265" ctype="image" src="/sites/default/files/styles/por/public/document_thumbnails/96017.jpg?h=6a9e38f6&amp;itok=99kjs51A" alt="Global Status of Multi-Hazard Early Warning Systems 2025 thumbnail" data-mg-media-id="112481" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-266">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-267">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-268">&lt;a href="https://www.undrr.org/media/112480/download"&gt;</bpt><![CDATA[Global Status of Multi-Hazard Early Warning Systems 2025]]><ept id="tjiid439-268">&lt;/a&gt;</ept><ept id="tjiid439-267">&lt;/header&gt;</ept><ept id="tjiid439-266">&lt;/div&gt;</ept><ept id="tjiid439-262">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-261">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-274">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-275">&lt;article class="wp-block-undrr-undrr-card mg-card__book mg-card"&gt;</bpt><bpt id="tjiid439-276">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-276">&lt;/div&gt;</ept><ph id="tjiid439-278" ctype="image" src="/sites/default/files/styles/por/public/2025-02/SFDRR.JPG.jpg?itok=AnEnZ3V5" alt="Cover" data-mg-media-id="32779" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-279">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-280">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-281">&lt;a href="https://www.undrr.org/implementing-sendai-framework/what-sendai-framework"&gt;</bpt><![CDATA[Sendai Framework for Disaster Risk Reduction 2015-2030]]><ept id="tjiid439-281">&lt;/a&gt;</ept><ept id="tjiid439-280">&lt;/header&gt;</ept><ept id="tjiid439-279">&lt;/div&gt;</ept><ept id="tjiid439-275">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-274">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-287">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-288">&lt;article class="wp-block-undrr-undrr-card mg-card__book mg-card"&gt;</bpt><bpt id="tjiid439-289">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-289">&lt;/div&gt;</ept><ph id="tjiid439-291" ctype="image" src="/sites/default/files/styles/por/public/document_thumbnails/96640.jpg?h=6a9e38f6&amp;itok=UTXPRwTO" alt="UNDRR Strategic Framework 2026-2030 thumbnail" data-mg-media-id="113040" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-292">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-293">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-294">&lt;a href="/strategic-framework-2026-2030"&gt;</bpt><![CDATA[UNDRR Strategic Framework 2026-2030]]><ept id="tjiid439-294">&lt;/a&gt;</ept><ept id="tjiid439-293">&lt;/header&gt;</ept><ept id="tjiid439-292">&lt;/div&gt;</ept><ept id="tjiid439-288">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-287">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-300">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-301">&lt;article class="wp-block-undrr-undrr-card mg-card__book mg-card"&gt;</bpt><bpt id="tjiid439-302">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-302">&lt;/div&gt;</ept><ph id="tjiid439-304" ctype="image" src="/sites/default/files/styles/por/public/document_thumbnails/98142.jpg?h=6a9e38f6&amp;itok=-ouLpJu6" alt="UNDRR Work programme 2026-2027 thumbnail" data-mg-media-id="114403" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-305">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-306">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-307">&lt;a href="https://www.undrr.org/publication/documents-and-publications/undrr-work-programme-2026-27"&gt;</bpt><![CDATA[UNDRR Work Programme 2026-27]]><ept id="tjiid439-307">&lt;/a&gt;</ept><ept id="tjiid439-306">&lt;/header&gt;</ept><ept id="tjiid439-305">&lt;/div&gt;</ept><ept id="tjiid439-301">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-300">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-313">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-314">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__book"&gt;</bpt><bpt id="tjiid439-315">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-315">&lt;/div&gt;</ept><ph id="tjiid439-317" ctype="image" src="/sites/default/files/styles/por/public/document_thumbnails/101735.jpg?h=e591e645&amp;itok=jHAcvcu8" alt="UNDRR Annual Report 2025 thumbnail" data-mg-media-id="117388" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-318">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-319">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-320">&lt;a href="https://www.undrr.org/publication/documents-and-publications/undrr-annual-report-2025"&gt;</bpt><![CDATA[UNDRR Annual Report 2025]]><ept id="tjiid439-320">&lt;/a&gt;</ept><ept id="tjiid439-319">&lt;/header&gt;</ept><ept id="tjiid439-318">&lt;/div&gt;</ept><ept id="tjiid439-314">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-313">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-247">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-327">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-328">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-329">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.undrr.org/publications"&gt;</bpt><![CDATA[View all Publications]]><ept id="tjiid439-329">&lt;/a&gt;</ept><ept id="tjiid439-328">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-332">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-333">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.undrr.org/publications/policy-briefs"&gt;</bpt><![CDATA[View Policy briefs]]><ept id="tjiid439-333">&lt;/a&gt;</ept><ept id="tjiid439-332">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-327">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-337">&lt;div style="height:11px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-337">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-339">&lt;div class="wp-block-columns mg-container-full-width pb-30 has-white-color has-link-blue-background-color has-text-color has-background"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-340">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-341">&lt;h2 class="wp-block-heading has-text-align-center pt-10 pb-20"&gt;</bpt><![CDATA[It pays to invest in DRR]]><ept id="tjiid439-341">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-343">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-344">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-345">&lt;p class="mb-20 has-large-font-size mg-u-font-size-500"&gt;</bpt><bpt id="tjiid439-346">&lt;strong&gt;</bpt><![CDATA[1.5 a day]]><ept id="tjiid439-346">&lt;/strong&gt;</ept><ept id="tjiid439-345">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-349">&lt;p class="undefined"&gt;</bpt><![CDATA[The number of disaster events is projected to reach 560 a year – or 1.5 disasters a day – by 2030]]><ept id="tjiid439-349">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-351">&lt;p class="undefined"&gt;</bpt><![CDATA[ ]]><ept id="tjiid439-351">&lt;/p&gt;</ept><![CDATA[
+]]><ept id="tjiid439-344">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-354">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-355">&lt;p class="mb-20 has-large-font-size mg-u-font-size-500"&gt;</bpt><bpt id="tjiid439-356">&lt;strong&gt;</bpt><![CDATA[$1 into $4]]><ept id="tjiid439-356">&lt;/strong&gt;</ept><ept id="tjiid439-355">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-359">&lt;p class="undefined"&gt;</bpt><![CDATA[In low- and middle-income countries, investing in more resilient infrastructure yields US $4 in benefit for each $1 invested]]><ept id="tjiid439-359">&lt;/p&gt;</ept><![CDATA[
+]]><ept id="tjiid439-354">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-362">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-363">&lt;p class="mb-20 has-large-font-size mg-u-font-size-500"&gt;</bpt><bpt id="tjiid439-364">&lt;strong&gt;</bpt><![CDATA[$80 billion]]><ept id="tjiid439-364">&lt;/strong&gt;</ept><ept id="tjiid439-363">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-367">&lt;p class="undefined"&gt;</bpt><![CDATA[Mangrove forests provide more than US $80 billion per year in avoided losses from coastal flooding]]><ept id="tjiid439-367">&lt;/p&gt;</ept><![CDATA[
+]]><ept id="tjiid439-362">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-370">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-371">&lt;p class="mb-20 has-large-font-size mg-u-font-size-500"&gt;</bpt><bpt id="tjiid439-372">&lt;strong&gt;</bpt><![CDATA[30%]]><ept id="tjiid439-372">&lt;/strong&gt;</ept><ept id="tjiid439-371">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-375">&lt;p class="undefined"&gt;</bpt><![CDATA[Just 24 hours warning of a coming storm or heat wave can cut the ensuing damage by 30 percent]]><ept id="tjiid439-375">&lt;/p&gt;</ept><![CDATA[
+]]><ept id="tjiid439-370">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-343">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-379">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-380">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-381">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.preventionweb.net/understanding-disaster-risk/business-case-for-DRR"&gt;</bpt><![CDATA[Learn more about the business case for DRR]]><ept id="tjiid439-381">&lt;/a&gt;</ept><ept id="tjiid439-380">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-379">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-340">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-339">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-387">&lt;h2 class="wp-block-heading"&gt;</bpt><![CDATA[Get involved]]><ept id="tjiid439-387">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-389">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-390">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-391">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-392">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-392">&lt;/div&gt;</ept><ph id="tjiid439-394" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2021-07/5.%20Women%20training%20for%20solar%20engineering%20in%20India%20--%20Photo%20by%20UN%20Women%2C%20Gaganjit%20Singh%20%28CC%20BY-NC-ND%202.0%29.jpg?h=5990bf26&amp;itok=8zjixoK6" alt="Women training for solar engineering in India" data-mg-media-id="49437" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-395">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-396">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-397">&lt;a href="https://www.undrr.org/implementing-sendai-framework/partners-and-stakeholders"&gt;</bpt><![CDATA[Partners and stakeholders]]><ept id="tjiid439-397">&lt;/a&gt;</ept><ept id="tjiid439-396">&lt;/header&gt;</ept><bpt id="tjiid439-400">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Building resilience and promoting risk-informed decision-making and investment are collective challenges and responsibilities.]]><ept id="tjiid439-400">&lt;/div&gt;</ept><ept id="tjiid439-395">&lt;/div&gt;</ept><ept id="tjiid439-391">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-390">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-405">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-406">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-407">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-407">&lt;/div&gt;</ept><ph id="tjiid439-409" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2023-04/Work%20with%20us%20-%20header.jpg?h=3ced214d&amp;itok=5ODHPIZO" alt="Work with us - header" data-mg-media-id="63359" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-410">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-411">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-412">&lt;a href="https://www.undrr.org/about-undrr/work-us"&gt;</bpt><![CDATA[Work with us]]><ept id="tjiid439-412">&lt;/a&gt;</ept><ept id="tjiid439-411">&lt;/header&gt;</ept><bpt id="tjiid439-415">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[View our current vacancies and calls for proposals.]]><ept id="tjiid439-415">&lt;/div&gt;</ept><ept id="tjiid439-410">&lt;/div&gt;</ept><ept id="tjiid439-406">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-405">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-420">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-421">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-422">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-422">&lt;/div&gt;</ept><ph id="tjiid439-424" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2022-09/Shutterstock_1701403327-min.jpg?h=2cf907fb&amp;itok=XOWkuW-p" alt="Man delivering a parcel to a client." data-mg-media-id="83397" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-425">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-426">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-427">&lt;a href="https://www.undrr.org/subscribe-undrr-updates"&gt;</bpt><![CDATA[Newsletter and updates]]><ept id="tjiid439-427">&lt;/a&gt;</ept><ept id="tjiid439-426">&lt;/header&gt;</ept><bpt id="tjiid439-430">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Timely updates in your inbox on training, events, news and knowledge sharing.]]><ept id="tjiid439-430">&lt;/div&gt;</ept><ept id="tjiid439-425">&lt;/div&gt;</ept><ept id="tjiid439-421">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-420">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-435">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-436">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-437">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-437">&lt;/div&gt;</ept><ph id="tjiid439-439" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2023-12/as-somalia-faces-worst-drought-in-years-un-calls-for-urgent-help-to-stave-off-famine_51951752637_o_b.jpg?itok=YAoH-H5T" alt="Standing in front of his makeshift home in a camp for internally displaced people (IDP) in southern Somalia’s Luuq district" data-mg-media-id="92277" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-440">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-441">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-442">&lt;a href="https://www.undrr.org/our-work/engage-with-us"&gt;</bpt><![CDATA[Engage with us]]><ept id="tjiid439-442">&lt;/a&gt;</ept><ept id="tjiid439-441">&lt;/header&gt;</ept><bpt id="tjiid439-445">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[View the various ways to engage with us.]]><ept id="tjiid439-445">&lt;/div&gt;</ept><ept id="tjiid439-440">&lt;/div&gt;</ept><ept id="tjiid439-436">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-435">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-389">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-451">&lt;div style="height:27px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-451">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-453">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-454">&lt;div class="wp-block-column mg-container-full-width pb-30 pt-20 has-extra-light-blue-background-color has-background"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-455">&lt;h2 class="wp-block-heading pb-30"&gt;</bpt><![CDATA[Where we work]]><ept id="tjiid439-455">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-457">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-458">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-459">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-460">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-460">&lt;/div&gt;</ept><ph id="tjiid439-462" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-12/Africa-header.jpg?itok=kwjh_yz3" alt="Africa-header" data-mg-media-id="85" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-463">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-464">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-465">&lt;a href="/about-undrr-where-we-work/regional-office-africa"&gt;</bpt><![CDATA[Africa ]]><ept id="tjiid439-465">&lt;/a&gt;</ept><ept id="tjiid439-464">&lt;/header&gt;</ept><bpt id="tjiid439-468">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Based in Nairobi, Kenya, we coordinate DRR initiatives in support of 44 Member States in Sub-Saharan Africa.]]><ept id="tjiid439-468">&lt;/div&gt;</ept><ept id="tjiid439-463">&lt;/div&gt;</ept><ept id="tjiid439-459">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-458">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-473">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-474">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-475">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-475">&lt;/div&gt;</ept><ph id="tjiid439-477" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-12/Americas%20-%20header.jpg?itok=wspWihNz" alt="Americas - header" data-mg-media-id="123" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-478">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-479">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-480">&lt;a href="/about-undrr-where-we-work/regional-office-americas-and-caribbean"&gt;</bpt><![CDATA[Americas and the Caribbean ]]><ept id="tjiid439-480">&lt;/a&gt;</ept><ept id="tjiid439-479">&lt;/header&gt;</ept><bpt id="tjiid439-483">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[We foster a culture of disaster prevention and building disaster resilient nations and communities.]]><ept id="tjiid439-483">&lt;/div&gt;</ept><ept id="tjiid439-478">&lt;/div&gt;</ept><ept id="tjiid439-474">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-473">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-488">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-489">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-490">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-490">&lt;/div&gt;</ept><ph id="tjiid439-492" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2022-05/Egypt-Cairo-city.jpg?h=2cf907fb&amp;itok=mY35YR99" alt="Panoramic view of Cairo, Egypt" data-mg-media-id="80179" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-493">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-494">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-495">&lt;a href="/regional-office-arab-states"&gt;</bpt><![CDATA[Arab States]]><ept id="tjiid439-495">&lt;/a&gt;</ept><ept id="tjiid439-494">&lt;/header&gt;</ept><bpt id="tjiid439-498">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Based in Cairo, Egypt, we support the 22 Arab States and communities to build their resilience to disasters.]]><ept id="tjiid439-498">&lt;/div&gt;</ept><ept id="tjiid439-493">&lt;/div&gt;</ept><ept id="tjiid439-489">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-488">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-503">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-504">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-505">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-505">&lt;/div&gt;</ept><ph id="tjiid439-507" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2020-01/pexels-photo-415708.jpeg.jpg?itok=9M9VHnMW" alt="Image of Thailand" data-mg-media-id="46874" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-508">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-509">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-510">&lt;a href="/about-undrr-where-we-work/regional-office-asia-and-pacific"&gt;</bpt><![CDATA[Asia and Pacific]]><ept id="tjiid439-510">&lt;/a&gt;</ept><ept id="tjiid439-509">&lt;/header&gt;</ept><bpt id="tjiid439-513">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Based in Bangkok, Thailand, we support disaster risk reduction efforts across the Asia-Pacific region.]]><ept id="tjiid439-513">&lt;/div&gt;</ept><ept id="tjiid439-508">&lt;/div&gt;</ept><ept id="tjiid439-504">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-503">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-518">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-519">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-520">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-520">&lt;/div&gt;</ept><ph id="tjiid439-522" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-12/Europe-header.jpg?itok=MPw3MrQA" alt="Europe-header" data-mg-media-id="87" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-523">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-524">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-525">&lt;a href="/about-undrr-where-we-work/regional-office-europe-central-asia"&gt;</bpt><![CDATA[Europe and Central Asia ]]><ept id="tjiid439-525">&lt;/a&gt;</ept><ept id="tjiid439-524">&lt;/header&gt;</ept><bpt id="tjiid439-528">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Covering 55 countries, we support the development of policies and actions towards a more resilient future.]]><ept id="tjiid439-528">&lt;/div&gt;</ept><ept id="tjiid439-523">&lt;/div&gt;</ept><ept id="tjiid439-519">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-518">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-457">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-534">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-535">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-536">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-537">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-537">&lt;/div&gt;</ept><ph id="tjiid439-539" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-12/Bonn%20-%20header.jpg?itok=Xc_s97ge" alt="Bonn - header" data-mg-media-id="52" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-540">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-541">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-542">&lt;a href="/about-undrr-where-we-work/bonn-office"&gt;</bpt><![CDATA[Bonn, Germany]]><ept id="tjiid439-542">&lt;/a&gt;</ept><ept id="tjiid439-541">&lt;/header&gt;</ept><bpt id="tjiid439-545">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[We advocate and promote synergies between DRR, climate change and ultimately sustainable development.]]><ept id="tjiid439-545">&lt;/div&gt;</ept><ept id="tjiid439-540">&lt;/div&gt;</ept><ept id="tjiid439-536">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-535">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-550">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-551">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-552">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-552">&lt;/div&gt;</ept><ph id="tjiid439-554" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2022-01/Kobe%20Skyline_carousel%20IRP_0.jpg?h=56892e39&amp;itok=Inmrzv35" alt="Kobe, Japan skyline at the port and tower." data-mg-media-id="77022" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-555">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-556">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-557">&lt;a href="/about-undrr-where-we-work/kobe-liaison-office"&gt;</bpt><![CDATA[Kobe, Japan]]><ept id="tjiid439-557">&lt;/a&gt;</ept><ept id="tjiid439-556">&lt;/header&gt;</ept><bpt id="tjiid439-560">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[We offer DRR expertise and promote stakeholder engagement, supporting partners around the world to reduce disaster risk and build resilience.]]><ept id="tjiid439-560">&lt;/div&gt;</ept><ept id="tjiid439-555">&lt;/div&gt;</ept><ept id="tjiid439-551">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-550">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-565">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-566">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-567">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-567">&lt;/div&gt;</ept><ph id="tjiid439-569" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-12/New%20York%20-%20header.jpg?itok=IG5yyhV7" alt="New York - header" data-mg-media-id="55" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-570">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-571">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-572">&lt;a href="/about-undrr-where-we-work/new-york-liaison-office"&gt;</bpt><![CDATA[New York]]><ept id="tjiid439-572">&lt;/a&gt;</ept><ept id="tjiid439-571">&lt;/header&gt;</ept><bpt id="tjiid439-575">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[UNDRR’s New York Liaison Office (NYLO) provides policy advice and support to Member States and intergovernmental processes.]]><ept id="tjiid439-575">&lt;/div&gt;</ept><ept id="tjiid439-570">&lt;/div&gt;</ept><ept id="tjiid439-566">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-565">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-580">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-581">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-582">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-582">&lt;/div&gt;</ept><ph id="tjiid439-584" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2024-02/GTOWER.jpg?h=2d9d49e7&amp;itok=u0L3DaYs" alt="sunset view of G-Tower" data-mg-media-id="93235" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-585">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-586">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-587">&lt;a href="/about-undrr-where-we-work/incheon"&gt;</bpt><![CDATA[Incheon, Korea]]><ept id="tjiid439-587">&lt;/a&gt;</ept><ept id="tjiid439-586">&lt;/header&gt;</ept><bpt id="tjiid439-590">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[The UNDRR Office for Northeast Asia &amp; Global Education and Training Institute (UNDRR ONEA &amp; GETI).]]><ept id="tjiid439-590">&lt;/div&gt;</ept><ept id="tjiid439-585">&lt;/div&gt;</ept><ept id="tjiid439-581">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-580">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-595">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-596">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-597">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-597">&lt;/div&gt;</ept><ph id="tjiid439-599" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2023-03/Suva%2C_Fiji_52.jpg?h=86ded8ca&amp;itok=l6IxgT6g" alt="Suva, Fiji, street" data-mg-media-id="86492" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-600">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-601">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-602">&lt;a href="/about-undrr/where-we-work/regional-office-asia-and-pacific/suva-sub-regional-office"&gt;</bpt><![CDATA[Suva, Fiji]]><ept id="tjiid439-602">&lt;/a&gt;</ept><ept id="tjiid439-601">&lt;/header&gt;</ept><bpt id="tjiid439-605">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[The UNDRR Sub-Regional Office supports disaster risk reduction efforts across the Pacific.]]><ept id="tjiid439-605">&lt;/div&gt;</ept><ept id="tjiid439-600">&lt;/div&gt;</ept><ept id="tjiid439-596">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-595">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-534">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-454">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-453">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-613">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-614">&lt;div class="wp-block-column" style="flex-basis:66%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-615">&lt;h2 class="wp-block-heading"&gt;</bpt><![CDATA[UNDRR events and trainings]]><ept id="tjiid439-615">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-617">&lt;div class="wp-block-undrr-search-widget undrr-search-widget-container" data-undrr-search-widget="true" data-widget-id="search-widget-36a9fa30-181b-4a3f-b8cf-5018a80348c7" data-search-endpoint="/search-endpoint" data-results-per-page="4" data-facet-count-to-show="500" data-debounce-delay="750" data-default-filters="[{"key":"_language","value":"en","checked":true},{"key":"field_domain_access","value":"www_undrr_org","checked":true}]" data-visible-filters="{"field_domain_access":false,"type":true,"field_news_type":true,"year":true,"field_country_region":true,"field_hazard":true,"field_theme":true,"_language":false}" data-enable-hash-sync="auto" data-default-sort="newest" data-default-query="" data-show-search-box="false" data-show-results-count="false" data-show-search-timer="false" data-show-facets="false" data-show-pager="false" data-allowed-types="{"types":["event","resource"],"newsTypes":null,"publicationTypes":null,"vocabularies":null}" data-query-append="(type:event OR field_resource_type:61 OR field_resource_type:62)" data-show-search-metrics="false" data-show-active-filters="false" data-facets="false" data-visible-teaser-fields="{"siteName":false,"organization":false}" data-use-current-language="true" data-use-current-domain="true"&gt;</bpt><ept id="tjiid439-617">&lt;/div&gt;</ept><bpt id="tjiid439-619">&lt;div id="search-widget-36a9fa30-181b-4a3f-b8cf-5018a80348c7" class="undrr-search-widget-target"&gt;</bpt><ept id="tjiid439-619">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-621">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-622">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-623">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="/news-events/event-calendar"&gt;</bpt><![CDATA[View more events and meetings]]><ept id="tjiid439-623">&lt;/a&gt;</ept><ept id="tjiid439-622">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-626">&lt;div class="wp-block-button is-style-outline"&gt;</bpt><bpt id="tjiid439-627">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-secondary" href="/our-work/training"&gt;</bpt><![CDATA[View training]]><ept id="tjiid439-627">&lt;/a&gt;</ept><ept id="tjiid439-626">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-621">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-614">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-632">&lt;div class="wp-block-column is-vertically-aligned-top"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-633">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-634">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-634">&lt;/div&gt;</ept><ph id="tjiid439-636" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2022-01/screenshot%20HIPs%20webinar_0.PNG.jpg?itok=FjjqO_id" alt="Webinar: Advancing the Hazard Information Profiles (HIPs): Building a network to champion the HIPs in the DRR community and beyond" data-mg-media-id="49674" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-637">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-638">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-639">&lt;a href="/terminology"&gt;</bpt><![CDATA[DRR Terminologies]]><ept id="tjiid439-639">&lt;/a&gt;</ept><ept id="tjiid439-638">&lt;/header&gt;</ept><bpt id="tjiid439-642">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Definitions on disaster risk reduction for a common understanding on the subject for use by the public, authorities and practitioners.]]><ept id="tjiid439-642">&lt;/div&gt;</ept><ept id="tjiid439-637">&lt;/div&gt;</ept><ept id="tjiid439-633">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-632">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-613">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-648">&lt;h2 class="wp-block-heading"&gt;</bpt><![CDATA[UNDRR on social media]]><ept id="tjiid439-648">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-650">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-651">&lt;div class="wp-block-column" style="flex-basis:78%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-652">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-653">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-654">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.twitter.com/undrr"&gt;</bpt><![CDATA[Twitter]]><ept id="tjiid439-654">&lt;/a&gt;</ept><ept id="tjiid439-653">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-657">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-658">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.facebook.com/unisdr"&gt;</bpt><![CDATA[Facebook]]><ept id="tjiid439-658">&lt;/a&gt;</ept><ept id="tjiid439-657">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-661">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-662">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.linkedin.com/company/undrr"&gt;</bpt><![CDATA[LinkedIn]]><ept id="tjiid439-662">&lt;/a&gt;</ept><ept id="tjiid439-661">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-665">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-666">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.youtube.com/UNISDR"&gt;</bpt><![CDATA[YouTube]]><ept id="tjiid439-666">&lt;/a&gt;</ept><ept id="tjiid439-665">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-669">&lt;div class="wp-block-button is-style-outline"&gt;</bpt><bpt id="tjiid439-670">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-secondary" href="/connect-with-us"&gt;</bpt><![CDATA[And more]]><ept id="tjiid439-670">&lt;/a&gt;</ept><ept id="tjiid439-669">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-652">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-651">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-675">&lt;div class="wp-block-column" style="flex-basis:23%"&gt;</bpt><ept id="tjiid439-675">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-650">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-678">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-679">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-680">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__hc"&gt;</bpt><bpt id="tjiid439-681">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-681">&lt;/div&gt;</ept><ph id="tjiid439-683" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2020-01/Home---about-us_0.jpg?itok=KCJ7CSr0" alt="About us image" data-mg-media-id="19500" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-684">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-685">&lt;div class="mg-card__meta"&gt;</bpt><bpt id="tjiid439-686">&lt;a href="/our-work" class="mg-card__label"&gt;</bpt><![CDATA[Our work]]><ept id="tjiid439-686">&lt;/a&gt;</ept><ept id="tjiid439-685">&lt;/div&gt;</ept><bpt id="tjiid439-689">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-690">&lt;a href="/our-work"&gt;</bpt><![CDATA[UNDRR helps decision makers across the globe better understand and change their attitude to risk]]><ept id="tjiid439-690">&lt;/a&gt;</ept><ept id="tjiid439-689">&lt;/header&gt;</ept><bpt id="tjiid439-693">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[At UNDRR, we envision a world where disasters no longer threaten the well-being of people and the future of the planet. Sustainable development and the 2030 Agenda cannot be achieved without working towards that goal of building resilience.]]><ept id="tjiid439-693">&lt;/div&gt;</ept><bpt id="tjiid439-695">&lt;a href="/our-work" class="mg-button mg-button-primary mg-button-arrow" role="button" type="Primary"&gt;</bpt><![CDATA[Learn more about UNDRR's mission]]><ept id="tjiid439-695">&lt;/a&gt;</ept><ept id="tjiid439-684">&lt;/div&gt;</ept><ept id="tjiid439-680">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-679">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-678">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-701">&lt;style&gt;</bpt><![CDATA[
+]]></source>
+     <target xml:lang="fr"><![CDATA[
+]]><bpt id="tjiid439-1">&lt;h1 class="wp-block-heading mg-u-sr-only"&gt;</bpt><![CDATA[Bureau des Nations Unies pour la réduction des risques de catastrophe - UNDRR]]><ept id="tjiid439-1">&lt;/h1&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-3">&lt;div class="wp-block-columns hidden has-white-color has-undrr-blue-background-color has-text-color has-background has-link-color mg-container-full-width"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-4">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:5%"&gt;</bpt><ept id="tjiid439-4">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-6">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-7">&lt;div style="height:100px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-7">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-9">&lt;h1 class="wp-block-heading has-huge-font-size has-large-font-size mg-u-font-size-500"&gt;</bpt><![CDATA[Quand une catastrophe frappe et que les systèmes tombent en panne, un signal reste souvent allumé et revient en premier : la radio]]><ept id="tjiid439-9">&lt;/h1&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-11">&lt;p class="has-large-font-size has-medium-font-size mg-u-font-size-400"&gt;</bpt><![CDATA[Une formule éprouvée : la radio a sauvé des vies !]]><ept id="tjiid439-11">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-13">&lt;div style="height:100px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-13">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-6">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-16">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:5%"&gt;</bpt><ept id="tjiid439-16">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-18">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-19">&lt;figure class="wp-block-embed is-type-rich is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"&gt;</bpt><bpt id="tjiid439-20">&lt;div class="wp-block-embed__wrapper"&gt;</bpt><![CDATA[
+https://www.youtube.com/watch?v=WviLVdagG4A
+]]><ept id="tjiid439-20">&lt;/div&gt;</ept><ept id="tjiid439-19">&lt;/figure&gt;</ept><![CDATA[
+]]><ept id="tjiid439-18">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-3">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-25">&lt;section class="wp-block-undrr-undrr-hero-block mg-hero mg-hero--" style="background-image:url('/sites/default/files/styles/ultrawide_16_6/public/2026-09/tsunami-sign-driek-flickr.jpg?h=d7db1e3f&amp;itok=rHn5Ir8Q');background-position:50% 50%;background-size:cover"&gt;</bpt><bpt id="tjiid439-26">&lt;div class="mg-hero__overlay parent"&gt;</bpt><bpt id="tjiid439-27">&lt;article class="mg-hero__content"&gt;</bpt><bpt id="tjiid439-28">&lt;div class="mg-hero__meta"&gt;</bpt><bpt id="tjiid439-29">&lt;a href="https://tsunamiday.undrr.org/get-to-high-ground" target="_self" rel="noreferrer" class="mg-hero__label"&gt;</bpt><![CDATA[Get To High Ground]]><ept id="tjiid439-29">&lt;/a&gt;</ept><ept id="tjiid439-28">&lt;/div&gt;</ept><bpt id="tjiid439-32">&lt;header class="mg-hero__title"&gt;</bpt><bpt id="tjiid439-33">&lt;a href="https://tsunamiday.undrr.org/"&gt;</bpt><ept id="tjiid439-33">&lt;/a&gt;</ept><bpt id="tjiid439-35">&lt;a href="https://tsunamiday.undrr.org/get-to-high-ground"&gt;</bpt><bpt id="tjiid439-36">&lt;strong&gt;</bpt><![CDATA[Journée mondiale de sensibilisation aux tsunamis 2026]]><ept id="tjiid439-36">&lt;/strong&gt;</ept><ept id="tjiid439-35">&lt;/a&gt;</ept><ept id="tjiid439-32">&lt;/header&gt;</ept><bpt id="tjiid439-40">&lt;div class="mg-hero__summaryText"&gt;</bpt><![CDATA[Préparez-vous aux tsunamis : la résilience commence par vous]]><x id="tjiid439-41" ctype="lb"/><x id="tjiid439-42" ctype="lb"/><![CDATA[Le 5 novembre ]]><x id="tjiid439-43" ctype="lb"/><![CDATA[ ]]><ept id="tjiid439-40">&lt;/div&gt;</ept><bpt id="tjiid439-45">&lt;div class="mg-hero__buttons"&gt;</bpt><bpt id="tjiid439-46">&lt;a href="https://tsunamiday.undrr.org/" target="_self" rel="noreferrer" role="button" type="Primary" class="mg-button mg-button-primary mg-button-arrow"&gt;</bpt><![CDATA[Découvrez comment la résilience commence par vous]]><ept id="tjiid439-46">&lt;/a&gt;</ept><bpt id="tjiid439-48">&lt;a href="https://tsunamiday.undrr.org/get-to-high-ground" target="_self" rel="noreferrer" role="button" type="Primary" class="mg-button mg-button-secondary mg-button-arrow"&gt;</bpt><![CDATA[Get To High Ground]]><ept id="tjiid439-48">&lt;/a&gt;</ept><ept id="tjiid439-45">&lt;/div&gt;</ept><ept id="tjiid439-27">&lt;/article&gt;</ept><ept id="tjiid439-26">&lt;/div&gt;</ept><ept id="tjiid439-25">&lt;/section&gt;</ept><ph id="tjiid439-54" ctype="image" class="mg-u-sr-only" src="/sites/default/files/styles/ultrawide_16_6/public/2026-09/tsunami-sign-driek-flickr.jpg?h=d7db1e3f&amp;itok=rHn5Ir8Q" alt="Alerte au tsunami - Californie, États-Unis" title="Alerte au tsunami - Californie, États-Unis" data-mg-media-id="121075" aria-hidden="true"/><![CDATA[
+
+
+
+]]><bpt id="tjiid439-55">&lt;div class="wp-block-columns hidden has-white-color has-undrr-blue-background-color has-text-color has-background has-link-color mg-container-full-width"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-56">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:55%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-57">&lt;p class="undefined"&gt;</bpt><ept id="tjiid439-57">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-59">&lt;h2 class="wp-block-heading has-larger-font-size"&gt;</bpt><![CDATA[281 aléas]]><ept id="tjiid439-59">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-61">&lt;p class="has-large-font-size"&gt;</bpt><![CDATA[Experts worldwide have created a comprehensive list of 281 hazards — ranging from earthquakes, tsunamis, and floods to pandemics, chemical accidents, and even extraterrestrial events like solar storms. This shared framework helps countries, policymakers, and communities develop stronger disaster risk reduction (DRR) strategies.]]><ept id="tjiid439-61">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-63">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-64">&lt;div class="wp-block-button has-custom-font-size has-regular-font-size mg-u-font-size-300"&gt;</bpt><bpt id="tjiid439-65">&lt;a class="wp-block-button__link has-white-color has-link-blue-background-color has-text-color has-background has-link-color wp-element-button mg-button mg-button-primary" href="https://preventionweb.net/hips"&gt;</bpt><bpt id="tjiid439-66">&lt;strong&gt;</bpt><![CDATA[En savoir plus sur les aléas]]><ept id="tjiid439-66">&lt;/strong&gt;</ept><ept id="tjiid439-65">&lt;/a&gt;</ept><ept id="tjiid439-64">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-70">&lt;div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size mg-u-font-size-250"&gt;</bpt><bpt id="tjiid439-71">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-secondary" href="https://www.youtube.com/@UNDRR"&gt;</bpt><![CDATA[Watch more UNDRR video content]]><ept id="tjiid439-71">&lt;/a&gt;</ept><ept id="tjiid439-70">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-63">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-56">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-76">&lt;div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-77">&lt;div style="padding-bottom: 100%; position: relative;"&gt;</bpt><bpt id="tjiid439-78">&lt;iframe style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" width="100%" height="100%" src="https://www.youtube.com/embed/yQdYFA5TYpg?fs=0&amp;playsinline=1&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"&gt;</bpt><bpt id="tjiid439-79">&lt;small&gt;</bpt><![CDATA[Powered by ]]><bpt id="tjiid439-80">&lt;a href="https://embed.tube/embed-code-generator/youtube/"&gt;</bpt><![CDATA[youtube embed video]]><ept id="tjiid439-80">&lt;/a&gt;</ept><![CDATA[ generator]]><ept id="tjiid439-79">&lt;/small&gt;</ept><ept id="tjiid439-78">&lt;/iframe&gt;</ept><ept id="tjiid439-77">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-76">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-86">&lt;div class="wp-block-column" style="flex-basis:5%"&gt;</bpt><ept id="tjiid439-86">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-55">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-89">&lt;h2 class="wp-block-heading"&gt;</bpt><![CDATA[What's new]]><ept id="tjiid439-89">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-91">&lt;div class="wp-block-undrr-search-widget undrr-search-widget-container" data-undrr-search-widget="true" data-widget-id="search-widget-23b1a953-115c-40b9-a89c-2e9c587760a8" data-search-endpoint="/search-endpoint" data-results-per-page="4" data-facet-count-to-show="500" data-debounce-delay="750" data-default-filters="[{"key":"_language","value":"en","checked":true},{"key":"field_domain_access","value":"www_undrr_org","checked":true}]" data-visible-filters="{"field_domain_access":false,"type":true,"field_news_type":true,"year":true,"field_country_region":true,"field_hazard":true,"field_theme":true,"_language":false}" data-enable-hash-sync="auto" data-default-sort="newest" data-default-query="" data-show-search-box="false" data-show-results-count="false" data-show-search-timer="false" data-show-facets="false" data-show-pager="false" data-query-append="(type:news OR type:publication) AND field_syndication:1101" data-show-search-metrics="false" data-show-active-filters="false" data-display-mode="card" data-grid-columns="4" data-facets="false" data-visible-teaser-fields="{"siteName":false,"summary":false,"organization":false}" data-require-image="true" data-use-current-language="true" data-use-current-domain="true" data-ssr-query="{"v":1,"query":{"function_score":{"query":{"bool":{"must":{"query_string":{"query":"(type:news OR type:publication) AND field_syndication:1101","fields":["title^9","rendered_item^3","teaser^1.2","body^1","saa_field_attachment^0.1"],"default_operator":"AND","analyze_wildcard":true}},"filter":[{"bool":{"should":[{"term":{"status":"true"}},{"bool":{"must_not":{"exists":{"field":"status"}}}}],"minimum_should_match":1}},{"query_string":{"query":"has_image:true"}},{"bool":{"must":[]}}]}},"functions":[{"filter":{"terms":{"type":["landing"]}},"weight":5},{"filter":{"terms":{"type":["terminology"]}},"weight":1.5},{"script_score":{"script":{"source":"\n          double baseScale = 5000; // Default decay ~15 years\n\n          double longevity = (doc.containsKey('field_meta_longevity') &amp;&amp; doc['field_meta_longevity'].size() &gt; 0)\n                              ? doc['field_meta_longevity'].value\n                              : params.defaultLongevity;\n\n          if (longevity &lt;= params.today) baseScale = params.todayScale;\n          else if (longevity &lt;= params.days) baseScale = params.daysScale;\n          else if (longevity &lt;= params.week) baseScale = params.weekScale;\n          else if (longevity &lt;= params.month) baseScale = params.monthScale;\n          else if (longevity &lt;= params.year) baseScale = params.yearScale;\n          else if (longevity &lt;= params.longtime) baseScale = params.longtimeScale;\n          else baseScale = params.alwaysScale;\n\n          if (!doc.containsKey('published_at') || doc['published_at'].empty) return 1.0;\n          return Math.exp((doc['published_at'].value.toInstant().toEpochMilli() - params.now) / (baseScale * 86400000));\n        ","params":{"now":1793099487889,"defaultLongevity":80,"today":3,"todayScale":1,"days":20,"daysScale":5,"week":40,"weekScale":10,"month":65,"monthScale":45,"year":85,"yearScale":365,"longtime":95,"longtimeScale":3650,"alwaysScale":99999}}}},{"script_score":{"script":{"source":"\n          double interestingness = 1.0; // default\n          if (doc.containsKey('field_meta_interestingness') &amp;&amp; doc['field_meta_interestingness'].size() &gt; 0) {\n            double value = doc['field_meta_interestingness'].value;\n            if (value &lt;= params.demoted) interestingness = params.demotedWeight;\n            else if (value &lt;= params.deferred) interestingness = params.deferredWeight;\n            else if (value &lt;= params.average) interestingness = params.averageWeight;\n            else if (value &lt;= params.promoted) interestingness = params.promotedWeight;\n            else interestingness = params.announcedWeight;\n          }\n          return interestingness;\n        ","params":{"demoted":10,"demotedWeight":0.1,"deferred":30,"deferredWeight":0.3,"average":50,"averageWeight":1,"promoted":75,"promotedWeight":1.5,"announcedWeight":3}}}}],"score_mode":"multiply","boost_mode":"multiply"}},"sort":[{"published_at":{"order":"desc"}}]}"&gt;</bpt><ept id="tjiid439-91">&lt;/div&gt;</ept><bpt id="tjiid439-93">&lt;div id="search-widget-23b1a953-115c-40b9-a89c-2e9c587760a8" class="undrr-search-widget-target"&gt;</bpt><ept id="tjiid439-93">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-95">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-96">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-97">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="/news"&gt;</bpt><![CDATA[View more updates]]><ept id="tjiid439-97">&lt;/a&gt;</ept><ept id="tjiid439-96">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-95">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-101">&lt;div class="wp-block-columns hide has-medium-blue-background-color has-background mg-container-full-width"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-102">&lt;div class="wp-block-column" style="flex-basis:40%"&gt;</bpt><ept id="tjiid439-102">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-104">&lt;div class="wp-block-column" style="flex-basis:55%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-105">&lt;div class="wp-block-columns rp-container-inset has-white-background-color has-background"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-106">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-107">&lt;h2 class="wp-block-heading has-undrr-blue-color has-text-color has-link-color"&gt;</bpt><bpt id="tjiid439-108">&lt;a href="/implementing-sendai-framework/regional-platforms"&gt;</bpt><![CDATA[2024: Three Regional Platforms for Disaster Risk Reduction]]><ept id="tjiid439-108">&lt;/a&gt;</ept><ept id="tjiid439-107">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-111">&lt;p class="undefined"&gt;</bpt><![CDATA[From October to November, the Asia Pacific, Africa and Europe and Central Asia regional platforms will be held. ]]><ept id="tjiid439-111">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-113">&lt;p class="undefined"&gt;</bpt><![CDATA[These are a key opportunity to tackle trans-boundary issues around disaster prevention and preparedness, provide leadership and direction, and propose relevant solutions to address disaster risk and to build the resilience of communities and nations.]]><ept id="tjiid439-113">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-115">&lt;p class="undefined"&gt;</bpt><![CDATA[Building on these, the Eighth session of the ]]><bpt id="tjiid439-116">&lt;a href="https://www.undrr.org/event/eighth-session-global-platform-disaster-risk-reduction-gp2025"&gt;</bpt><![CDATA[Global Platform for Disaster Risk Reduction (GP2025) will be held in June 2025]]><ept id="tjiid439-116">&lt;/a&gt;</ept><![CDATA[.]]><ept id="tjiid439-115">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-119">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-120">&lt;div class="wp-block-button is-style-fill"&gt;</bpt><bpt id="tjiid439-121">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="/implementing-sendai-framework/regional-platforms"&gt;</bpt><![CDATA[Learn more and get involved]]><ept id="tjiid439-121">&lt;/a&gt;</ept><ept id="tjiid439-120">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-119">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-106">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-105">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-104">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-128">&lt;div class="wp-block-column" style="flex-basis:5%"&gt;</bpt><ept id="tjiid439-128">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-101">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-131">&lt;div style="height:36px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-131">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-133">&lt;div class="wp-block-columns has-undrr-light-grey-background-color has-background mg-container-full-width"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-134">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-135">&lt;h2 class="wp-block-heading pb-10"&gt;</bpt><![CDATA[From managing disasters to managing risk and safeguarding development ]]><ept id="tjiid439-135">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-137">&lt;p class="undefined"&gt;</bpt><![CDATA[We envision a world where disasters no longer threaten the well-being of people and the future of the planet. Sustainable development and the 2030 Agenda cannot be achieved without working towards building resilience.]]><ept id="tjiid439-137">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-139">&lt;form action="/search" class="mg-search--large"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-140">&lt;input name="text" aria-label="Search" placeholder="Search" type="text" class="textbox"&gt;</bpt><ept id="tjiid439-140">&lt;/input&gt;</ept><bpt id="tjiid439-142">&lt;button type="submit" class="mg-button mg-button-primary"&gt;</bpt><bpt id="tjiid439-143">&lt;i class="fa fa-search" aria-hidden="true"&gt;</bpt><ept id="tjiid439-143">&lt;/i&gt;</ept><![CDATA[ Search]]><ept id="tjiid439-142">&lt;/button&gt;</ept><![CDATA[
+]]><ept id="tjiid439-139">&lt;/form&gt;</ept><![CDATA[
+]]><bpt id="tjiid439-147">&lt;style&gt;</bpt><![CDATA[
+
+
+
+]]><bpt id="tjiid439-148">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-149">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-150">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-151">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-151">&lt;/div&gt;</ept><ph id="tjiid439-153" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-11/Implementing%20the%20SF%20-%203.jpg?h=3fbf1325&amp;itok=Ah1S4t5E" alt="Implementing the SF - 3" data-mg-media-id="24" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-154">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-155">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-156">&lt;a href="/implementing-sendai-framework"&gt;</bpt><![CDATA[Implementing the Sendai Framework]]><ept id="tjiid439-156">&lt;/a&gt;</ept><ept id="tjiid439-155">&lt;/header&gt;</ept><bpt id="tjiid439-159">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[UNDRR has been tasked to support the implementation, follow-up and review of the Sendai Framework and coordinates action within the UN system around disaster risk reduction to make this happen.]]><ept id="tjiid439-159">&lt;/div&gt;</ept><ept id="tjiid439-154">&lt;/div&gt;</ept><ept id="tjiid439-150">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-149">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-164">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-165">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-166">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-166">&lt;/div&gt;</ept><ph id="tjiid439-168" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2021-04/shutterstock_1495585427.jpg?itok=QT2YJ_7n" alt="Illustration of people working collaboratively in an office" data-mg-media-id="49123" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-169">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-170">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-171">&lt;a href="/implementing-sendai-framework/sendai-framework-action"&gt;</bpt><![CDATA[UNDRR thematic work on DRR]]><ept id="tjiid439-171">&lt;/a&gt;</ept><ept id="tjiid439-170">&lt;/header&gt;</ept><bpt id="tjiid439-174">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[The interactions between climate change trends, ecosystem fragility, disease outbreaks, rapid unplanned urbanization, mass displacement and geopolitical instability, fuelled by the interconnectivity of communications, trade, financial systems and politics, mean that shocks, stresses, and crises reverberate globally.]]><ept id="tjiid439-174">&lt;/div&gt;</ept><ept id="tjiid439-169">&lt;/div&gt;</ept><ept id="tjiid439-165">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-164">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-179">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-180">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-181">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-181">&lt;/div&gt;</ept><ph id="tjiid439-183" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2023-10/gears-in-the-hands-of-people-against-the-sky.png.jpg?itok=9JF0aCxQ" alt="Gears in the hands of people against the sky." data-mg-media-id="90934" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-184">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-185">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-186">&lt;a href="/our-work/engage-with-us"&gt;</bpt><![CDATA[Engage with UNDRR]]><ept id="tjiid439-186">&lt;/a&gt;</ept><ept id="tjiid439-185">&lt;/header&gt;</ept><bpt id="tjiid439-189">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Engage with UNDRR by collaborating across sectors to promote resilience and risk-informed decision-making, aligning with global frameworks.]]><ept id="tjiid439-189">&lt;/div&gt;</ept><ept id="tjiid439-184">&lt;/div&gt;</ept><ept id="tjiid439-180">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-179">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-148">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-195">&lt;div style="height:29px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-195">&lt;/div&gt;</ept><![CDATA[
+
+
+
+
+
+]]><bpt id="tjiid439-197">&lt;div class="wp-block-columns mg-container-full-width pt-30 pb-20 has-white-color has-undrr-blue-background-color has-text-color has-background mg-u-sr-only"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-198">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-199">&lt;div style="height:10px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-199">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-201">&lt;figure class="wp-block-embed is-type-rich is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"&gt;</bpt><bpt id="tjiid439-202">&lt;div class="wp-block-embed__wrapper"&gt;</bpt><![CDATA[
+https://www.youtube.com/watch?v=qN5A_t8ADks
+]]><ept id="tjiid439-202">&lt;/div&gt;</ept><ept id="tjiid439-201">&lt;/figure&gt;</ept><![CDATA[
+]]><ept id="tjiid439-198">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-206">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-207">&lt;div style="height:30px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-207">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-209">&lt;h2 class="wp-block-heading"&gt;</bpt><bpt id="tjiid439-210">&lt;strong&gt;</bpt><![CDATA[UNDRR is the lead UN agency for the coordination of disaster risk reduction]]><ept id="tjiid439-210">&lt;/strong&gt;</ept><ept id="tjiid439-209">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-213">&lt;p class="undefined"&gt;</bpt><![CDATA[We help decision makers across the globe better understand and change their attitude to risk.]]><ept id="tjiid439-213">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-215">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-216">&lt;div class="wp-block-button is-style-outline"&gt;</bpt><bpt id="tjiid439-217">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-secondary" href="https://www.undrr.org/about-undrr/our-work"&gt;</bpt><![CDATA[Learn more about our work]]><ept id="tjiid439-217">&lt;/a&gt;</ept><ept id="tjiid439-216">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-215">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-206">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-197">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-223">&lt;section class="wp-block-undrr-undrr-hero-block mg-hero mg-hero--split mg-hero--split-1-3 mg-hero--"&gt;</bpt><bpt id="tjiid439-224">&lt;div class="mg-hero__split-grid mg-container"&gt;</bpt><bpt id="tjiid439-225">&lt;article class="mg-hero__content"&gt;</bpt><bpt id="tjiid439-226">&lt;header class="mg-hero__title"&gt;</bpt><bpt id="tjiid439-227">&lt;h1 class="text-xxl"&gt;</bpt><bpt id="tjiid439-228">&lt;a href="https://www.preventionweb.net/m/hubs/disaster-risk-communication-hub/"&gt;</bpt><![CDATA[Disaster Risk Communication Hub]]><ept id="tjiid439-228">&lt;/a&gt;</ept><ept id="tjiid439-227">&lt;/h1&gt;</ept><ept id="tjiid439-226">&lt;/header&gt;</ept><bpt id="tjiid439-232">&lt;div class="mg-hero__summaryText"&gt;</bpt><x id="tjiid439-233" ctype="lb"/><![CDATA[The Disaster Risk Communication Hub supports practitioners across sectors to plan and deliver public risk communication that helps people understand risk and take informed action.]]><ept id="tjiid439-232">&lt;/div&gt;</ept><bpt id="tjiid439-235">&lt;div class="mg-hero__buttons"&gt;</bpt><bpt id="tjiid439-236">&lt;a href="https://www.preventionweb.net/m/hubs/disaster-risk-communication-hub/" target="_self" rel="noreferrer" role="button" type="Primary" class="mg-button mg-button-primary mg-button-arrow"&gt;</bpt><![CDATA[Explore the practical guidance and tools for effective risk communication]]><ept id="tjiid439-236">&lt;/a&gt;</ept><ept id="tjiid439-235">&lt;/div&gt;</ept><ept id="tjiid439-225">&lt;/article&gt;</ept><ept id="tjiid439-224">&lt;/div&gt;</ept><ept id="tjiid439-223">&lt;/section&gt;</ept><bpt id="tjiid439-242">&lt;div class="mg-hero__media"&gt;</bpt><ept id="tjiid439-242">&lt;/div&gt;</ept><ph id="tjiid439-244" ctype="image" src="/sites/default/files/styles/ultrawide_16_6/public/2024-10/Shutterstock_2187817601.jpg?itok=yZiFTH3U" alt="Collage of two big arms holding a dialogue bubble" class="mg-hero__media-img" data-mg-media-id="101253"/><![CDATA[
+
+
+
+]]><bpt id="tjiid439-245">&lt;h2 class="wp-block-heading"&gt;</bpt><![CDATA[Key publications]]><ept id="tjiid439-245">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-247">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-248">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-249">&lt;article class="wp-block-undrr-undrr-card mg-card__book mg-card"&gt;</bpt><bpt id="tjiid439-250">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-250">&lt;/div&gt;</ept><ph id="tjiid439-252" ctype="image" src="/sites/default/files/styles/por/public/2025-05/gar-2025-cover.jpg?itok=wQsyeV7f" alt="GAR 2025 Publication cover" data-mg-media-id="107059" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-253">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-254">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-255">&lt;a href="/gar"&gt;</bpt><![CDATA[GAR 2025: Resilience pays: financing and investing for our future]]><ept id="tjiid439-255">&lt;/a&gt;</ept><ept id="tjiid439-254">&lt;/header&gt;</ept><ept id="tjiid439-253">&lt;/div&gt;</ept><ept id="tjiid439-249">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-248">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-261">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-262">&lt;article class="wp-block-undrr-undrr-card mg-card__book mg-card"&gt;</bpt><bpt id="tjiid439-263">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-263">&lt;/div&gt;</ept><ph id="tjiid439-265" ctype="image" src="/sites/default/files/styles/por/public/document_thumbnails/96017.jpg?h=6a9e38f6&amp;itok=99kjs51A" alt="Global Status of Multi-Hazard Early Warning Systems 2025 thumbnail" data-mg-media-id="112481" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-266">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-267">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-268">&lt;a href="https://www.undrr.org/media/112480/download"&gt;</bpt><![CDATA[Global Status of Multi-Hazard Early Warning Systems 2025]]><ept id="tjiid439-268">&lt;/a&gt;</ept><ept id="tjiid439-267">&lt;/header&gt;</ept><ept id="tjiid439-266">&lt;/div&gt;</ept><ept id="tjiid439-262">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-261">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-274">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-275">&lt;article class="wp-block-undrr-undrr-card mg-card__book mg-card"&gt;</bpt><bpt id="tjiid439-276">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-276">&lt;/div&gt;</ept><ph id="tjiid439-278" ctype="image" src="/sites/default/files/styles/por/public/2025-02/SFDRR.JPG.jpg?itok=AnEnZ3V5" alt="Cover" data-mg-media-id="32779" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-279">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-280">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-281">&lt;a href="https://www.undrr.org/implementing-sendai-framework/what-sendai-framework"&gt;</bpt><![CDATA[Sendai Framework for Disaster Risk Reduction 2015-2030]]><ept id="tjiid439-281">&lt;/a&gt;</ept><ept id="tjiid439-280">&lt;/header&gt;</ept><ept id="tjiid439-279">&lt;/div&gt;</ept><ept id="tjiid439-275">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-274">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-287">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-288">&lt;article class="wp-block-undrr-undrr-card mg-card__book mg-card"&gt;</bpt><bpt id="tjiid439-289">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-289">&lt;/div&gt;</ept><ph id="tjiid439-291" ctype="image" src="/sites/default/files/styles/por/public/document_thumbnails/96640.jpg?h=6a9e38f6&amp;itok=UTXPRwTO" alt="UNDRR Strategic Framework 2026-2030 thumbnail" data-mg-media-id="113040" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-292">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-293">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-294">&lt;a href="/strategic-framework-2026-2030"&gt;</bpt><![CDATA[UNDRR Strategic Framework 2026-2030]]><ept id="tjiid439-294">&lt;/a&gt;</ept><ept id="tjiid439-293">&lt;/header&gt;</ept><ept id="tjiid439-292">&lt;/div&gt;</ept><ept id="tjiid439-288">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-287">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-300">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-301">&lt;article class="wp-block-undrr-undrr-card mg-card__book mg-card"&gt;</bpt><bpt id="tjiid439-302">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-302">&lt;/div&gt;</ept><ph id="tjiid439-304" ctype="image" src="/sites/default/files/styles/por/public/document_thumbnails/98142.jpg?h=6a9e38f6&amp;itok=-ouLpJu6" alt="UNDRR Work programme 2026-2027 thumbnail" data-mg-media-id="114403" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-305">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-306">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-307">&lt;a href="https://www.undrr.org/publication/documents-and-publications/undrr-work-programme-2026-27"&gt;</bpt><![CDATA[UNDRR Work Programme 2026-27]]><ept id="tjiid439-307">&lt;/a&gt;</ept><ept id="tjiid439-306">&lt;/header&gt;</ept><ept id="tjiid439-305">&lt;/div&gt;</ept><ept id="tjiid439-301">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-300">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-313">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-314">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__book"&gt;</bpt><bpt id="tjiid439-315">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-315">&lt;/div&gt;</ept><ph id="tjiid439-317" ctype="image" src="/sites/default/files/styles/por/public/document_thumbnails/101735.jpg?h=e591e645&amp;itok=jHAcvcu8" alt="UNDRR Annual Report 2025 thumbnail" data-mg-media-id="117388" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-318">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-319">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-320">&lt;a href="https://www.undrr.org/publication/documents-and-publications/undrr-annual-report-2025"&gt;</bpt><![CDATA[UNDRR Annual Report 2025]]><ept id="tjiid439-320">&lt;/a&gt;</ept><ept id="tjiid439-319">&lt;/header&gt;</ept><ept id="tjiid439-318">&lt;/div&gt;</ept><ept id="tjiid439-314">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-313">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-247">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-327">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-328">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-329">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.undrr.org/publications"&gt;</bpt><![CDATA[View all Publications]]><ept id="tjiid439-329">&lt;/a&gt;</ept><ept id="tjiid439-328">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-332">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-333">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.undrr.org/publications/policy-briefs"&gt;</bpt><![CDATA[View Policy briefs]]><ept id="tjiid439-333">&lt;/a&gt;</ept><ept id="tjiid439-332">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-327">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-337">&lt;div style="height:11px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-337">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-339">&lt;div class="wp-block-columns mg-container-full-width pb-30 has-white-color has-link-blue-background-color has-text-color has-background"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-340">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-341">&lt;h2 class="wp-block-heading has-text-align-center pt-10 pb-20"&gt;</bpt><![CDATA[It pays to invest in DRR]]><ept id="tjiid439-341">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-343">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-344">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-345">&lt;p class="mb-20 has-large-font-size mg-u-font-size-500"&gt;</bpt><bpt id="tjiid439-346">&lt;strong&gt;</bpt><![CDATA[1.5 a day]]><ept id="tjiid439-346">&lt;/strong&gt;</ept><ept id="tjiid439-345">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-349">&lt;p class="undefined"&gt;</bpt><![CDATA[The number of disaster events is projected to reach 560 a year – or 1.5 disasters a day – by 2030]]><ept id="tjiid439-349">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-351">&lt;p class="undefined"&gt;</bpt><![CDATA[ ]]><ept id="tjiid439-351">&lt;/p&gt;</ept><![CDATA[
+]]><ept id="tjiid439-344">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-354">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-355">&lt;p class="mb-20 has-large-font-size mg-u-font-size-500"&gt;</bpt><bpt id="tjiid439-356">&lt;strong&gt;</bpt><![CDATA[$1 into $4]]><ept id="tjiid439-356">&lt;/strong&gt;</ept><ept id="tjiid439-355">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-359">&lt;p class="undefined"&gt;</bpt><![CDATA[In low- and middle-income countries, investing in more resilient infrastructure yields US $4 in benefit for each $1 invested]]><ept id="tjiid439-359">&lt;/p&gt;</ept><![CDATA[
+]]><ept id="tjiid439-354">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-362">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-363">&lt;p class="mb-20 has-large-font-size mg-u-font-size-500"&gt;</bpt><bpt id="tjiid439-364">&lt;strong&gt;</bpt><![CDATA[$80 billion]]><ept id="tjiid439-364">&lt;/strong&gt;</ept><ept id="tjiid439-363">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-367">&lt;p class="undefined"&gt;</bpt><![CDATA[Mangrove forests provide more than US $80 billion per year in avoided losses from coastal flooding]]><ept id="tjiid439-367">&lt;/p&gt;</ept><![CDATA[
+]]><ept id="tjiid439-362">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-370">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-371">&lt;p class="mb-20 has-large-font-size mg-u-font-size-500"&gt;</bpt><bpt id="tjiid439-372">&lt;strong&gt;</bpt><![CDATA[30%]]><ept id="tjiid439-372">&lt;/strong&gt;</ept><ept id="tjiid439-371">&lt;/p&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-375">&lt;p class="undefined"&gt;</bpt><![CDATA[Just 24 hours warning of a coming storm or heat wave can cut the ensuing damage by 30 percent]]><ept id="tjiid439-375">&lt;/p&gt;</ept><![CDATA[
+]]><ept id="tjiid439-370">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-343">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-379">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-380">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-381">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.preventionweb.net/understanding-disaster-risk/business-case-for-DRR"&gt;</bpt><![CDATA[Learn more about the business case for DRR]]><ept id="tjiid439-381">&lt;/a&gt;</ept><ept id="tjiid439-380">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-379">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-340">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-339">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-387">&lt;h2 class="wp-block-heading"&gt;</bpt><![CDATA[Get involved]]><ept id="tjiid439-387">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-389">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-390">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-391">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-392">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-392">&lt;/div&gt;</ept><ph id="tjiid439-394" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2021-07/5.%20Women%20training%20for%20solar%20engineering%20in%20India%20--%20Photo%20by%20UN%20Women%2C%20Gaganjit%20Singh%20%28CC%20BY-NC-ND%202.0%29.jpg?h=5990bf26&amp;itok=8zjixoK6" alt="Women training for solar engineering in India" data-mg-media-id="49437" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-395">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-396">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-397">&lt;a href="https://www.undrr.org/implementing-sendai-framework/partners-and-stakeholders"&gt;</bpt><![CDATA[Partners and stakeholders]]><ept id="tjiid439-397">&lt;/a&gt;</ept><ept id="tjiid439-396">&lt;/header&gt;</ept><bpt id="tjiid439-400">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Building resilience and promoting risk-informed decision-making and investment are collective challenges and responsibilities.]]><ept id="tjiid439-400">&lt;/div&gt;</ept><ept id="tjiid439-395">&lt;/div&gt;</ept><ept id="tjiid439-391">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-390">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-405">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-406">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-407">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-407">&lt;/div&gt;</ept><ph id="tjiid439-409" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2023-04/Work%20with%20us%20-%20header.jpg?h=3ced214d&amp;itok=5ODHPIZO" alt="Work with us - header" data-mg-media-id="63359" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-410">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-411">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-412">&lt;a href="https://www.undrr.org/about-undrr/work-us"&gt;</bpt><![CDATA[Work with us]]><ept id="tjiid439-412">&lt;/a&gt;</ept><ept id="tjiid439-411">&lt;/header&gt;</ept><bpt id="tjiid439-415">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[View our current vacancies and calls for proposals.]]><ept id="tjiid439-415">&lt;/div&gt;</ept><ept id="tjiid439-410">&lt;/div&gt;</ept><ept id="tjiid439-406">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-405">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-420">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-421">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-422">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-422">&lt;/div&gt;</ept><ph id="tjiid439-424" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2022-09/Shutterstock_1701403327-min.jpg?h=2cf907fb&amp;itok=XOWkuW-p" alt="Man delivering a parcel to a client." data-mg-media-id="83397" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-425">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-426">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-427">&lt;a href="https://www.undrr.org/subscribe-undrr-updates"&gt;</bpt><![CDATA[Newsletter and updates]]><ept id="tjiid439-427">&lt;/a&gt;</ept><ept id="tjiid439-426">&lt;/header&gt;</ept><bpt id="tjiid439-430">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Timely updates in your inbox on training, events, news and knowledge sharing.]]><ept id="tjiid439-430">&lt;/div&gt;</ept><ept id="tjiid439-425">&lt;/div&gt;</ept><ept id="tjiid439-421">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-420">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-435">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-436">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-437">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-437">&lt;/div&gt;</ept><ph id="tjiid439-439" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2023-12/as-somalia-faces-worst-drought-in-years-un-calls-for-urgent-help-to-stave-off-famine_51951752637_o_b.jpg?itok=YAoH-H5T" alt="Standing in front of his makeshift home in a camp for internally displaced people (IDP) in southern Somalia’s Luuq district" data-mg-media-id="92277" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-440">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-441">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-442">&lt;a href="https://www.undrr.org/our-work/engage-with-us"&gt;</bpt><![CDATA[Engage with us]]><ept id="tjiid439-442">&lt;/a&gt;</ept><ept id="tjiid439-441">&lt;/header&gt;</ept><bpt id="tjiid439-445">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[View the various ways to engage with us.]]><ept id="tjiid439-445">&lt;/div&gt;</ept><ept id="tjiid439-440">&lt;/div&gt;</ept><ept id="tjiid439-436">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-435">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-389">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-451">&lt;div style="height:27px" aria-hidden="true" class="wp-block-spacer"&gt;</bpt><ept id="tjiid439-451">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-453">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-454">&lt;div class="wp-block-column mg-container-full-width pb-30 pt-20 has-extra-light-blue-background-color has-background"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-455">&lt;h2 class="wp-block-heading pb-30"&gt;</bpt><![CDATA[Where we work]]><ept id="tjiid439-455">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-457">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-458">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-459">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-460">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-460">&lt;/div&gt;</ept><ph id="tjiid439-462" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-12/Africa-header.jpg?itok=kwjh_yz3" alt="Africa-header" data-mg-media-id="85" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-463">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-464">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-465">&lt;a href="/about-undrr-where-we-work/regional-office-africa"&gt;</bpt><![CDATA[Africa ]]><ept id="tjiid439-465">&lt;/a&gt;</ept><ept id="tjiid439-464">&lt;/header&gt;</ept><bpt id="tjiid439-468">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Based in Nairobi, Kenya, we coordinate DRR initiatives in support of 44 Member States in Sub-Saharan Africa.]]><ept id="tjiid439-468">&lt;/div&gt;</ept><ept id="tjiid439-463">&lt;/div&gt;</ept><ept id="tjiid439-459">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-458">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-473">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-474">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-475">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-475">&lt;/div&gt;</ept><ph id="tjiid439-477" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-12/Americas%20-%20header.jpg?itok=wspWihNz" alt="Americas - header" data-mg-media-id="123" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-478">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-479">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-480">&lt;a href="/about-undrr-where-we-work/regional-office-americas-and-caribbean"&gt;</bpt><![CDATA[Americas and the Caribbean ]]><ept id="tjiid439-480">&lt;/a&gt;</ept><ept id="tjiid439-479">&lt;/header&gt;</ept><bpt id="tjiid439-483">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[We foster a culture of disaster prevention and building disaster resilient nations and communities.]]><ept id="tjiid439-483">&lt;/div&gt;</ept><ept id="tjiid439-478">&lt;/div&gt;</ept><ept id="tjiid439-474">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-473">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-488">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-489">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-490">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-490">&lt;/div&gt;</ept><ph id="tjiid439-492" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2022-05/Egypt-Cairo-city.jpg?h=2cf907fb&amp;itok=mY35YR99" alt="Panoramic view of Cairo, Egypt" data-mg-media-id="80179" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-493">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-494">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-495">&lt;a href="/regional-office-arab-states"&gt;</bpt><![CDATA[Arab States]]><ept id="tjiid439-495">&lt;/a&gt;</ept><ept id="tjiid439-494">&lt;/header&gt;</ept><bpt id="tjiid439-498">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Based in Cairo, Egypt, we support the 22 Arab States and communities to build their resilience to disasters.]]><ept id="tjiid439-498">&lt;/div&gt;</ept><ept id="tjiid439-493">&lt;/div&gt;</ept><ept id="tjiid439-489">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-488">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-503">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-504">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-505">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-505">&lt;/div&gt;</ept><ph id="tjiid439-507" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2020-01/pexels-photo-415708.jpeg.jpg?itok=9M9VHnMW" alt="Image of Thailand" data-mg-media-id="46874" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-508">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-509">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-510">&lt;a href="/about-undrr-where-we-work/regional-office-asia-and-pacific"&gt;</bpt><![CDATA[Asia and Pacific]]><ept id="tjiid439-510">&lt;/a&gt;</ept><ept id="tjiid439-509">&lt;/header&gt;</ept><bpt id="tjiid439-513">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Based in Bangkok, Thailand, we support disaster risk reduction efforts across the Asia-Pacific region.]]><ept id="tjiid439-513">&lt;/div&gt;</ept><ept id="tjiid439-508">&lt;/div&gt;</ept><ept id="tjiid439-504">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-503">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-518">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-519">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-520">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-520">&lt;/div&gt;</ept><ph id="tjiid439-522" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-12/Europe-header.jpg?itok=MPw3MrQA" alt="Europe-header" data-mg-media-id="87" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-523">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-524">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-525">&lt;a href="/about-undrr-where-we-work/regional-office-europe-central-asia"&gt;</bpt><![CDATA[Europe and Central Asia ]]><ept id="tjiid439-525">&lt;/a&gt;</ept><ept id="tjiid439-524">&lt;/header&gt;</ept><bpt id="tjiid439-528">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Covering 55 countries, we support the development of policies and actions towards a more resilient future.]]><ept id="tjiid439-528">&lt;/div&gt;</ept><ept id="tjiid439-523">&lt;/div&gt;</ept><ept id="tjiid439-519">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-518">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-457">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-534">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-535">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-536">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-537">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-537">&lt;/div&gt;</ept><ph id="tjiid439-539" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-12/Bonn%20-%20header.jpg?itok=Xc_s97ge" alt="Bonn - header" data-mg-media-id="52" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-540">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-541">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-542">&lt;a href="/about-undrr-where-we-work/bonn-office"&gt;</bpt><![CDATA[Bonn, Germany]]><ept id="tjiid439-542">&lt;/a&gt;</ept><ept id="tjiid439-541">&lt;/header&gt;</ept><bpt id="tjiid439-545">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[We advocate and promote synergies between DRR, climate change and ultimately sustainable development.]]><ept id="tjiid439-545">&lt;/div&gt;</ept><ept id="tjiid439-540">&lt;/div&gt;</ept><ept id="tjiid439-536">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-535">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-550">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-551">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-552">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-552">&lt;/div&gt;</ept><ph id="tjiid439-554" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2022-01/Kobe%20Skyline_carousel%20IRP_0.jpg?h=56892e39&amp;itok=Inmrzv35" alt="Kobe, Japan skyline at the port and tower." data-mg-media-id="77022" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-555">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-556">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-557">&lt;a href="/about-undrr-where-we-work/kobe-liaison-office"&gt;</bpt><![CDATA[Kobe, Japan]]><ept id="tjiid439-557">&lt;/a&gt;</ept><ept id="tjiid439-556">&lt;/header&gt;</ept><bpt id="tjiid439-560">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[We offer DRR expertise and promote stakeholder engagement, supporting partners around the world to reduce disaster risk and build resilience.]]><ept id="tjiid439-560">&lt;/div&gt;</ept><ept id="tjiid439-555">&lt;/div&gt;</ept><ept id="tjiid439-551">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-550">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-565">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-566">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-567">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-567">&lt;/div&gt;</ept><ph id="tjiid439-569" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2019-12/New%20York%20-%20header.jpg?itok=IG5yyhV7" alt="New York - header" data-mg-media-id="55" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-570">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-571">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-572">&lt;a href="/about-undrr-where-we-work/new-york-liaison-office"&gt;</bpt><![CDATA[New York]]><ept id="tjiid439-572">&lt;/a&gt;</ept><ept id="tjiid439-571">&lt;/header&gt;</ept><bpt id="tjiid439-575">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[UNDRR’s New York Liaison Office (NYLO) provides policy advice and support to Member States and intergovernmental processes.]]><ept id="tjiid439-575">&lt;/div&gt;</ept><ept id="tjiid439-570">&lt;/div&gt;</ept><ept id="tjiid439-566">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-565">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-580">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-581">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-582">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-582">&lt;/div&gt;</ept><ph id="tjiid439-584" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2024-02/GTOWER.jpg?h=2d9d49e7&amp;itok=u0L3DaYs" alt="sunset view of G-Tower" data-mg-media-id="93235" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-585">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-586">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-587">&lt;a href="/about-undrr-where-we-work/incheon"&gt;</bpt><![CDATA[Incheon, Korea]]><ept id="tjiid439-587">&lt;/a&gt;</ept><ept id="tjiid439-586">&lt;/header&gt;</ept><bpt id="tjiid439-590">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[The UNDRR Office for Northeast Asia &amp; Global Education and Training Institute (UNDRR ONEA &amp; GETI).]]><ept id="tjiid439-590">&lt;/div&gt;</ept><ept id="tjiid439-585">&lt;/div&gt;</ept><ept id="tjiid439-581">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-580">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-595">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-596">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-597">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-597">&lt;/div&gt;</ept><ph id="tjiid439-599" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2023-03/Suva%2C_Fiji_52.jpg?h=86ded8ca&amp;itok=l6IxgT6g" alt="Suva, Fiji, street" data-mg-media-id="86492" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-600">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-601">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-602">&lt;a href="/about-undrr/where-we-work/regional-office-asia-and-pacific/suva-sub-regional-office"&gt;</bpt><![CDATA[Suva, Fiji]]><ept id="tjiid439-602">&lt;/a&gt;</ept><ept id="tjiid439-601">&lt;/header&gt;</ept><bpt id="tjiid439-605">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[The UNDRR Sub-Regional Office supports disaster risk reduction efforts across the Pacific.]]><ept id="tjiid439-605">&lt;/div&gt;</ept><ept id="tjiid439-600">&lt;/div&gt;</ept><ept id="tjiid439-596">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-595">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-534">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-454">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-453">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-613">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-614">&lt;div class="wp-block-column" style="flex-basis:66%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-615">&lt;h2 class="wp-block-heading"&gt;</bpt><![CDATA[UNDRR events and trainings]]><ept id="tjiid439-615">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-617">&lt;div class="wp-block-undrr-search-widget undrr-search-widget-container" data-undrr-search-widget="true" data-widget-id="search-widget-36a9fa30-181b-4a3f-b8cf-5018a80348c7" data-search-endpoint="/search-endpoint" data-results-per-page="4" data-facet-count-to-show="500" data-debounce-delay="750" data-default-filters="[{"key":"_language","value":"en","checked":true},{"key":"field_domain_access","value":"www_undrr_org","checked":true}]" data-visible-filters="{"field_domain_access":false,"type":true,"field_news_type":true,"year":true,"field_country_region":true,"field_hazard":true,"field_theme":true,"_language":false}" data-enable-hash-sync="auto" data-default-sort="newest" data-default-query="" data-show-search-box="false" data-show-results-count="false" data-show-search-timer="false" data-show-facets="false" data-show-pager="false" data-allowed-types="{"types":["event","resource"],"newsTypes":null,"publicationTypes":null,"vocabularies":null}" data-query-append="(type:event OR field_resource_type:61 OR field_resource_type:62)" data-show-search-metrics="false" data-show-active-filters="false" data-facets="false" data-visible-teaser-fields="{"siteName":false,"organization":false}" data-use-current-language="true" data-use-current-domain="true"&gt;</bpt><ept id="tjiid439-617">&lt;/div&gt;</ept><bpt id="tjiid439-619">&lt;div id="search-widget-36a9fa30-181b-4a3f-b8cf-5018a80348c7" class="undrr-search-widget-target"&gt;</bpt><ept id="tjiid439-619">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-621">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-622">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-623">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="/news-events/event-calendar"&gt;</bpt><![CDATA[View more events and meetings]]><ept id="tjiid439-623">&lt;/a&gt;</ept><ept id="tjiid439-622">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-626">&lt;div class="wp-block-button is-style-outline"&gt;</bpt><bpt id="tjiid439-627">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-secondary" href="/our-work/training"&gt;</bpt><![CDATA[View training]]><ept id="tjiid439-627">&lt;/a&gt;</ept><ept id="tjiid439-626">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-621">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-614">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-632">&lt;div class="wp-block-column is-vertically-aligned-top"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-633">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__vc"&gt;</bpt><bpt id="tjiid439-634">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-634">&lt;/div&gt;</ept><ph id="tjiid439-636" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2022-01/screenshot%20HIPs%20webinar_0.PNG.jpg?itok=FjjqO_id" alt="Webinar: Advancing the Hazard Information Profiles (HIPs): Building a network to champion the HIPs in the DRR community and beyond" data-mg-media-id="49674" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-637">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-638">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-639">&lt;a href="/terminology"&gt;</bpt><![CDATA[DRR Terminologies]]><ept id="tjiid439-639">&lt;/a&gt;</ept><ept id="tjiid439-638">&lt;/header&gt;</ept><bpt id="tjiid439-642">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[Definitions on disaster risk reduction for a common understanding on the subject for use by the public, authorities and practitioners.]]><ept id="tjiid439-642">&lt;/div&gt;</ept><ept id="tjiid439-637">&lt;/div&gt;</ept><ept id="tjiid439-633">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-632">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-613">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-648">&lt;h2 class="wp-block-heading"&gt;</bpt><![CDATA[UNDRR on social media]]><ept id="tjiid439-648">&lt;/h2&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-650">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-651">&lt;div class="wp-block-column" style="flex-basis:78%"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-652">&lt;div class="wp-block-buttons"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-653">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-654">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.twitter.com/undrr"&gt;</bpt><![CDATA[Twitter]]><ept id="tjiid439-654">&lt;/a&gt;</ept><ept id="tjiid439-653">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-657">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-658">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.facebook.com/unisdr"&gt;</bpt><![CDATA[Facebook]]><ept id="tjiid439-658">&lt;/a&gt;</ept><ept id="tjiid439-657">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-661">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-662">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.linkedin.com/company/undrr"&gt;</bpt><![CDATA[LinkedIn]]><ept id="tjiid439-662">&lt;/a&gt;</ept><ept id="tjiid439-661">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-665">&lt;div class="wp-block-button"&gt;</bpt><bpt id="tjiid439-666">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-primary" href="https://www.youtube.com/UNISDR"&gt;</bpt><![CDATA[YouTube]]><ept id="tjiid439-666">&lt;/a&gt;</ept><ept id="tjiid439-665">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-669">&lt;div class="wp-block-button is-style-outline"&gt;</bpt><bpt id="tjiid439-670">&lt;a class="wp-block-button__link wp-element-button mg-button mg-button-secondary" href="/connect-with-us"&gt;</bpt><![CDATA[And more]]><ept id="tjiid439-670">&lt;/a&gt;</ept><ept id="tjiid439-669">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-652">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-651">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-675">&lt;div class="wp-block-column" style="flex-basis:23%"&gt;</bpt><ept id="tjiid439-675">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-650">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-678">&lt;div class="wp-block-columns"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-679">&lt;div class="wp-block-column"&gt;</bpt><![CDATA[
+]]><bpt id="tjiid439-680">&lt;article class="wp-block-undrr-undrr-card mg-card mg-card__hc"&gt;</bpt><bpt id="tjiid439-681">&lt;div class="mg-card__visual"&gt;</bpt><ept id="tjiid439-681">&lt;/div&gt;</ept><ph id="tjiid439-683" ctype="image" src="/sites/default/files/styles/landscape_16_9/public/2020-01/Home---about-us_0.jpg?itok=KCJ7CSr0" alt="About us image" data-mg-media-id="19500" class="mg-card__image" loading="lazy"/><bpt id="tjiid439-684">&lt;div class="mg-card__content"&gt;</bpt><bpt id="tjiid439-685">&lt;div class="mg-card__meta"&gt;</bpt><bpt id="tjiid439-686">&lt;a href="/our-work" class="mg-card__label"&gt;</bpt><![CDATA[Our work]]><ept id="tjiid439-686">&lt;/a&gt;</ept><ept id="tjiid439-685">&lt;/div&gt;</ept><bpt id="tjiid439-689">&lt;header class="mg-card__title"&gt;</bpt><bpt id="tjiid439-690">&lt;a href="/our-work"&gt;</bpt><![CDATA[UNDRR helps decision makers across the globe better understand and change their attitude to risk]]><ept id="tjiid439-690">&lt;/a&gt;</ept><ept id="tjiid439-689">&lt;/header&gt;</ept><bpt id="tjiid439-693">&lt;div class="mg-card__summary"&gt;</bpt><![CDATA[At UNDRR, we envision a world where disasters no longer threaten the well-being of people and the future of the planet. Sustainable development and the 2030 Agenda cannot be achieved without working towards that goal of building resilience.]]><ept id="tjiid439-693">&lt;/div&gt;</ept><bpt id="tjiid439-695">&lt;a href="/our-work" class="mg-button mg-button-primary mg-button-arrow" role="button" type="Primary"&gt;</bpt><![CDATA[Learn more about UNDRR's mission]]><ept id="tjiid439-695">&lt;/a&gt;</ept><ept id="tjiid439-684">&lt;/div&gt;</ept><ept id="tjiid439-680">&lt;/article&gt;</ept><![CDATA[
+]]><ept id="tjiid439-679">&lt;/div&gt;</ept><![CDATA[
+]]><ept id="tjiid439-678">&lt;/div&gt;</ept><![CDATA[
+
+
+
+]]><bpt id="tjiid439-701">&lt;style&gt;</bpt><![CDATA[
+]]></target>
+     <note>Body &gt; Text</note>
+    </trans-unit>
+    <trans-unit id="439][body][0][summary" resname="439][body][0][summary">
+     <source xml:lang="en"><![CDATA[UNDRR brings governments, partners, and communities together to reduce disaster risk and losses and to ensure a safer, sustainable future.]]></source>
+     <target xml:lang="fr"><![CDATA[L’UNDRR réunit gouvernements, partenaires et communautés pour réduire les risques et les pertes dus aux catastrophes et garantir un avenir plus sûr et durable.]]></target>
+     <note>Body &gt; Summary</note>
+    </trans-unit>
+    <trans-unit id="439][field_editorial_next_review][0][value" resname="439][field_editorial_next_review][0][value">
+     <source xml:lang="en"><![CDATA[2026-03-01]]></source>
+     <target xml:lang="fr"><![CDATA[2026-03-01]]></target>
+    </trans-unit>
+    <trans-unit id="439][field_editorial_group][0][value" resname="439][field_editorial_group][0][value" size-unit="char" maxwidth="1024">
+     <source xml:lang="en"><![CDATA[Comms]]></source>
+     <target xml:lang="fr"><![CDATA[Comms]]></target>
+    </trans-unit>
+    <trans-unit id="439][domain_path][0][langcode" resname="439][domain_path][0][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #0 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][0][domain_id" resname="439][domain_path][0][domain_id">
+     <source xml:lang="en"><![CDATA[www_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[www_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #0 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][1][langcode" resname="439][domain_path][1][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #1 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][1][domain_id" resname="439][domain_path][1][domain_id">
+     <source xml:lang="en"><![CDATA[www_preventionweb_net]]></source>
+     <target xml:lang="fr"><![CDATA[www_preventionweb_net]]></target>
+     <note>Domain URL alias &gt; Delta #1 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][2][langcode" resname="439][domain_path][2][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #2 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][2][domain_id" resname="439][domain_path][2][domain_id">
+     <source xml:lang="en"><![CDATA[iddrr_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[iddrr_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #2 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][3][langcode" resname="439][domain_path][3][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #3 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][3][domain_id" resname="439][domain_path][3][domain_id">
+     <source xml:lang="en"><![CDATA[mcr2030_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[mcr2030_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #3 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][4][langcode" resname="439][domain_path][4][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #4 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][4][domain_id" resname="439][domain_path][4][domain_id">
+     <source xml:lang="en"><![CDATA[tsunamiday_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[tsunamiday_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #4 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][5][langcode" resname="439][domain_path][5][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #5 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][5][domain_id" resname="439][domain_path][5][domain_id">
+     <source xml:lang="en"><![CDATA[efdrr_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[efdrr_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #5 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][6][langcode" resname="439][domain_path][6][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #6 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][6][domain_id" resname="439][domain_path][6][domain_id">
+     <source xml:lang="en"><![CDATA[recovery_preventionweb_net]]></source>
+     <target xml:lang="fr"><![CDATA[recovery_preventionweb_net]]></target>
+     <note>Domain URL alias &gt; Delta #6 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][7][langcode" resname="439][domain_path][7][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #7 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][7][domain_id" resname="439][domain_path][7][domain_id">
+     <source xml:lang="en"><![CDATA[rp_americas_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[rp_americas_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #7 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][8][langcode" resname="439][domain_path][8][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #8 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][8][domain_id" resname="439][domain_path][8][domain_id">
+     <source xml:lang="en"><![CDATA[rp_arabstates_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[rp_arabstates_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #8 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][9][langcode" resname="439][domain_path][9][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #9 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][9][domain_id" resname="439][domain_path][9][domain_id">
+     <source xml:lang="en"><![CDATA[afrp_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[afrp_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #9 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][10][langcode" resname="439][domain_path][10][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #10 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][10][domain_id" resname="439][domain_path][10][domain_id">
+     <source xml:lang="en"><![CDATA[gp_preventionweb_net]]></source>
+     <target xml:lang="fr"><![CDATA[gp_preventionweb_net]]></target>
+     <note>Domain URL alias &gt; Delta #10 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][11][langcode" resname="439][domain_path][11][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #11 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][11][domain_id" resname="439][domain_path][11][domain_id">
+     <source xml:lang="en"><![CDATA[sendaiframework_mtr_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[sendaiframework_mtr_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #11 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][12][langcode" resname="439][domain_path][12][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #12 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][12][domain_id" resname="439][domain_path][12][domain_id">
+     <source xml:lang="en"><![CDATA[apmcdrr_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[apmcdrr_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #12 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][13][langcode" resname="439][domain_path][13][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #13 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][13][domain_id" resname="439][domain_path][13][domain_id">
+     <source xml:lang="en"><![CDATA[coecdr_preventionweb_net]]></source>
+     <target xml:lang="fr"><![CDATA[coecdr_preventionweb_net]]></target>
+     <note>Domain URL alias &gt; Delta #13 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][14][langcode" resname="439][domain_path][14][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #14 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][14][domain_id" resname="439][domain_path][14][domain_id">
+     <source xml:lang="en"><![CDATA[g20drrwg_preventionweb_net]]></source>
+     <target xml:lang="fr"><![CDATA[g20drrwg_preventionweb_net]]></target>
+     <note>Domain URL alias &gt; Delta #14 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][15][langcode" resname="439][domain_path][15][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #15 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][15][domain_id" resname="439][domain_path][15][domain_id">
+     <source xml:lang="en"><![CDATA[ariseglobalnetwork_org]]></source>
+     <target xml:lang="fr"><![CDATA[ariseglobalnetwork_org]]></target>
+     <note>Domain URL alias &gt; Delta #15 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][16][langcode" resname="439][domain_path][16][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #16 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][16][domain_id" resname="439][domain_path][16][domain_id">
+     <source xml:lang="en"><![CDATA[sendaicommitments_undrr_org]]></source>
+     <target xml:lang="fr"><![CDATA[sendaicommitments_undrr_org]]></target>
+     <note>Domain URL alias &gt; Delta #16 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][17][langcode" resname="439][domain_path][17][langcode">
+     <source xml:lang="en"><![CDATA[en]]></source>
+     <target xml:lang="fr"><![CDATA[fr]]></target>
+     <note>Domain URL alias &gt; Delta #17 &gt; Language Code</note>
+    </trans-unit>
+    <trans-unit id="439][domain_path][17][domain_id" resname="439][domain_path][17][domain_id">
+     <source xml:lang="en"><![CDATA[syndication_preventionweb_net]]></source>
+     <target xml:lang="fr"><![CDATA[syndication_preventionweb_net]]></target>
+     <note>Domain URL alias &gt; Delta #17 &gt; Domain id</note>
+    </trans-unit>
+    <trans-unit id="439][rh_action][0][value" resname="439][rh_action][0][value" size-unit="char" maxwidth="255">
+     <source xml:lang="en"><![CDATA[bundle_default]]></source>
+     <target xml:lang="fr"><![CDATA[bundle_default]]></target>
+    </trans-unit>
+    <trans-unit id="439][rh_redirect_fallback_action][0][value" resname="439][rh_redirect_fallback_action][0][value" size-unit="char" maxwidth="255">
+     <source xml:lang="en"><![CDATA[bundle_default]]></source>
+     <target xml:lang="fr"><![CDATA[bundle_default]]></target>
+    </trans-unit>
+   </group>
+  </body>
+ </file>
+</xliff>
