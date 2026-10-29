@@ -4,6 +4,12 @@ All notable changes to Blocklate are listed here. The format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added
+
+- AI bulk translation stepper workflow ("Translate with AI…") to export translatable lines into an LLM-friendly prompt format and paste translated responses back.
+- HTML block context annotations (`<!-- Context: Heading -->`, `Button`, `Paragraph`, etc.) in exported prompts to give AI models layout awareness without exposing Gutenberg comments or XML tags.
+- Resilient response reconciliation engine that maps `[ID]` lines back to segments, validates `{1}` formatting markers, filters conversational intro/outro remarks, and highlights marker fixes.
+
 ### Changed
 
 - Default example is now the synthetic Gutenberg block markup file (`gutenberg-block-markup_en_es.xlf`) rather than the UNDRR homepage export.

@@ -45,6 +45,7 @@ Link straight to one with `?example=1` (counting from 0), or open a blank editor
 - Image alt text is offered for translation.
 - Technical fields (domain IDs, langcodes, path aliases) are hidden and copied as they are.
 - Markers are checked before download, so a broken tag can't reach Drupal.
+- AI translation stepper: exports clean lines with HTML block context annotations to copy into ChatGPT, Claude or Gemini, then maps the translated response back and validates inline markers.
 - Live page preview, autosave in the browser, and reopening a partly translated file.
 
 ## Known limits
