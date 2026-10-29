@@ -136,6 +136,59 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
 .help ol { margin: 8px 0 4px; padding-left: 22px; max-width: 72ch }
 .help li { margin-bottom: 4px }
 
+/* AI Stepper Dialog */
+.ai-dialog {
+  border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink);
+  width: min(720px, 94vw); max-height: 90vh; padding: 0; margin: auto; box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+}
+.ai-dialog::backdrop { background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(2px); }
+.ai-dialog[open] { display: flex; flex-direction: column; }
+.ai-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid var(--line); background: var(--src-bg); }
+.ai-head h2 { font: 800 16px/1.2 var(--f-display); margin: 0; display: flex; align-items: center; gap: 8px; color: var(--ink); }
+.ai-close { font-size: 22px; line-height: 1; padding: 2px 8px; font-weight: 700; color: var(--muted); }
+.ai-close:hover { color: var(--ink); text-decoration: none; }
+
+.ai-stepper { display: flex; border-bottom: 1px solid var(--line); background: var(--surface); overflow-x: auto; }
+.ai-step-tab { flex: 1 1 0; min-width: 80px; padding: 10px 6px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; transition: all .15s; }
+.ai-step-tab .num { width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid var(--line); display: grid; place-items: center; font: 700 11px var(--f-mono); color: var(--muted); }
+.ai-step-tab:hover { color: var(--ink); }
+.ai-step-tab[data-state="active"] { color: var(--accent); font-weight: 700; border-bottom-color: var(--accent); }
+.ai-step-tab[data-state="active"] .num { border-color: var(--accent); background: var(--accent); color: var(--accent-ink); }
+.ai-step-tab[data-state="done"] .num { border-color: var(--ok); background: var(--ok); color: #fff; }
+
+.ai-body { padding: 16px 20px; overflow-y: auto; flex: 1 1 auto; display: flex; flex-direction: column; gap: 14px; }
+.ai-pane { display: flex; flex-direction: column; gap: 12px; }
+.ai-pane-intro p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.45; }
+.ai-card { padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--src-bg); font-size: 14px; }
+.ai-card.good { background: var(--ok-soft); border-color: var(--ok); }
+.ai-summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; font-size: 14px; }
+.ai-summary-grid .lbl { display: block; font: 600 11px var(--f-display); text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 2px; }
+.ai-summary-grid strong { font-size: 14px; color: var(--ink); }
+
+.ai-form-group { display: flex; flex-direction: column; gap: 4px; }
+.ai-form-group .lbl { font: 600 12px var(--f-display); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.ai-select { padding: 7px 10px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink); font-size: 14px; }
+
+.ai-prompt-wrap { position: relative; }
+.ai-prompt-box { width: 100%; border: 1px solid var(--line); border-radius: var(--r); padding: 10px 12px; background: var(--bg); color: var(--ink); font: 500 13px/1.45 var(--f-mono); resize: vertical; overflow-wrap: anywhere; }
+.ai-prompt-box:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 2px var(--accent-soft); }
+.ai-prompt-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.ai-prompt-actions { display: flex; gap: 8px; }
+
+.ai-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
+.ai-link-btn { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 700; font-size: 14px; transition: all .15s; }
+.ai-link-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+
+.ai-reconcile-card { padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--src-bg); }
+.ai-stats-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.ai-badge { display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: 700; font-family: var(--f-mono); background: var(--src-bg); color: var(--muted); border: 1px solid var(--line); }
+.ai-badge.good { background: var(--ok-soft); color: var(--ok); border-color: var(--ok); }
+.ai-badge.warn { background: var(--tag-bg); color: var(--tag-ink); border-color: var(--tag-ink); }
+.ai-badge.bad { background: var(--bad-soft); color: var(--bad); border-color: var(--bad); }
+
+.ai-foot { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-top: 1px solid var(--line); background: var(--src-bg); gap: 10px; }
+.ai-foot-right { display: flex; gap: 8px; margin-left: auto; }
+
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important } }
 </style>
 </head>
@@ -155,6 +208,7 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
       <input type="file" id="fileInput" accept=".xlf,.xliff,.xml,.txt,application/xml,text/xml" hidden>
       <select class="btn" id="exampleSelect" aria-label="Load an example file"><option value="">Examples…</option></select>
       <button class="btn" id="openBtn" type="button">Open file…</button>
+      <button class="btn" id="aiBtn" type="button" disabled title="Translate lines in bulk with ChatGPT, Claude or Gemini">Translate with AI…</button>
       <button class="btn btn-primary" id="saveBtn" type="button" disabled>Download translated file</button>
     </div>
   </div>
@@ -190,6 +244,180 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
     </aside>
   </div>
 </main>
+
+<dialog id="aiDialog" class="ai-dialog" aria-labelledby="aiDialogTitle">
+  <div class="ai-head">
+    <h2 id="aiDialogTitle">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+      Translate with AI
+    </h2>
+    <button type="button" class="btn-quiet btn ai-close" id="aiCloseBtn" aria-label="Close dialog">&times;</button>
+  </div>
+
+  <nav class="ai-stepper" aria-label="Translation steps">
+    <button type="button" class="ai-step-tab" data-step="1" data-state="active">
+      <span class="num">1</span>
+      <span>Setup</span>
+    </button>
+    <button type="button" class="ai-step-tab" data-step="2">
+      <span class="num">2</span>
+      <span>Prompt</span>
+    </button>
+    <button type="button" class="ai-step-tab" data-step="3">
+      <span class="num">3</span>
+      <span>Run AI</span>
+    </button>
+    <button type="button" class="ai-step-tab" data-step="4">
+      <span class="num">4</span>
+      <span>Paste Back</span>
+    </button>
+    <button type="button" class="ai-step-tab" data-step="5">
+      <span class="num">5</span>
+      <span>Review</span>
+    </button>
+  </nav>
+
+  <div class="ai-body">
+    <!-- Step 1: Setup -->
+    <div class="ai-pane" id="aiPane1">
+      <div class="ai-card">
+        <div class="ai-summary-grid">
+          <div><span class="lbl">Language pair</span><strong id="aiLangPair">English → Spanish</strong></div>
+          <div><span class="lbl">Translatable segments</span><strong id="aiSegCount">0 lines</strong></div>
+          <div><span class="lbl">Estimated words</span><strong id="aiWordCount">~0 words</strong></div>
+        </div>
+      </div>
+
+      <div class="ai-form-group">
+        <label class="check">
+          <input type="checkbox" id="aiOptContext" checked>
+          <span><b>Include HTML block context annotations</b> (e.g. <code>&lt;!-- Context: Heading --&gt;</code>, <code>Button</code>, <code>Image description</code>) to give the AI layout awareness.</span>
+        </label>
+      </div>
+
+      <div class="ai-form-group">
+        <label class="check">
+          <input type="checkbox" id="aiOptOnlyTodo">
+          <span><b>Only include untranslated lines</b> (<span id="aiTodoCount">0</span> lines remaining)</span>
+        </label>
+      </div>
+
+      <div class="ai-form-group">
+        <label for="aiOptTone" class="lbl">Tone / Guidance Style</label>
+        <select id="aiOptTone" class="ai-select">
+          <option value="standard">Standard &amp; Natural (accurate institutional website tone)</option>
+          <option value="formal">Formal &amp; Official (governmental / policy language)</option>
+          <option value="direct">Direct &amp; Concise (accessible web writing)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Step 2: Prompt -->
+    <div class="ai-pane" id="aiPane2" hidden>
+      <div class="ai-pane-intro">
+        <p>Copy this prompt or download it as a text file. It contains only clean text and markers (Gutenberg layout code and Drupal technical IDs have been stripped).</p>
+      </div>
+      <div class="ai-prompt-wrap">
+        <textarea id="aiPromptText" class="ai-prompt-box" readonly rows="11" aria-label="Generated AI translation prompt"></textarea>
+      </div>
+      <div class="ai-prompt-bar">
+        <span class="hint" id="aiPromptStats">0 lines · ~0 tokens</span>
+        <div class="ai-prompt-actions">
+          <button type="button" class="btn" id="aiCopyBtn">Copy Prompt</button>
+          <button type="button" class="btn" id="aiDlBtn">Download .txt</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Run AI -->
+    <div class="ai-pane" id="aiPane3" hidden>
+      <div class="ai-pane-intro">
+        <p>Open your preferred AI assistant, paste the copied prompt, and copy its translated response.</p>
+      </div>
+      <div class="ai-links">
+        <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" class="ai-link-btn">
+          <span>ChatGPT</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+        </a>
+        <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="ai-link-btn">
+          <span>Claude</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+        </a>
+        <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="ai-link-btn">
+          <span>Google Gemini</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+        </a>
+        <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer" class="ai-link-btn">
+          <span>Copilot</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+        </a>
+      </div>
+      <div class="ai-card">
+        <b>Tips for best results:</b>
+        <ul style="margin:6px 0 0;padding-left:20px;font-size:13px;color:var(--muted)">
+          <li>Paste the whole prompt in one message.</li>
+          <li>If the model stops halfway on long text, simply reply <em>"continue"</em>.</li>
+          <li>Copy only the model's translated response lines when done.</li>
+          <li>Don't worry if the model adds intro text like <em>"Here is the translation:"</em> — Blocklate automatically filters it out.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Step 4: Paste Back -->
+    <div class="ai-pane" id="aiPane4" hidden>
+      <div class="ai-pane-intro">
+        <p>Paste the translated response from the AI below, or drop a text file.</p>
+      </div>
+      <div class="ai-paste-wrap" id="aiPasteWrap">
+        <textarea id="aiPasteText" class="ai-prompt-box" rows="9" placeholder="Paste the translation here (lines starting with [1], [2]...)" aria-label="Paste AI translation"></textarea>
+      </div>
+      <div class="ai-reconcile-card" id="aiReconcileCard">
+        <div class="ai-stats-row">
+          <span class="ai-badge" id="aiMatchBadge">0 lines detected</span>
+          <span class="ai-badge" id="aiMarkerBadge" hidden>0 marker issues</span>
+          <span class="ai-badge" id="aiMissingBadge" hidden>0 missing lines</span>
+        </div>
+        <p class="hint" id="aiReconcileMsg" style="margin:4px 0 0">Paste the AI response above to inspect matches.</p>
+      </div>
+      <div class="ai-form-group">
+        <label class="check">
+          <input type="checkbox" id="aiOptOverwrite" checked>
+          <span>Overwrite lines that already have text in the editor</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Step 5: Review / Finished -->
+    <div class="ai-pane" id="aiPane5" hidden>
+      <div class="ai-card good" id="aiSuccessCard">
+        <h3 style="margin:0 0 6px;font:700 15px var(--f-display);display:flex;align-items:center;gap:6px">
+          <span style="color:var(--ok)">✓</span> Translations Imported
+        </h3>
+        <p id="aiSuccessMsg" style="margin:0">0 lines were imported into the editor.</p>
+      </div>
+      <div id="aiWarningBlock" class="notice bad" style="margin-top:0" hidden>
+        <p id="aiWarningMsg"></p>
+      </div>
+      <div class="ai-card">
+        <b>What to do next:</b>
+        <ol style="margin:6px 0 0;padding-left:20px;font-size:13px;color:var(--muted)">
+          <li>Click <b>Review in Editor</b> to check your translations alongside the live page preview.</li>
+          <li>If any orange formatting markers like <code>{1}</code> were flagged, click the chip on the English side to insert it where it belongs.</li>
+          <li>When satisfied, press <b>Download translated file</b> to get your finalized XLIFF file for Drupal.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-foot">
+    <button type="button" class="btn" id="aiPrevBtn" disabled>&larr; Back</button>
+    <div class="ai-foot-right">
+      <button type="button" class="btn btn-quiet" id="aiCancelBtn">Cancel</button>
+      <button type="button" class="btn btn-primary" id="aiNextBtn">Next &rarr;</button>
+    </div>
+  </div>
+</dialog>
+
 <div class="drop-cover" id="dropCover" hidden>Drop the .xlf file to open it</div>
 
 <script>
@@ -633,7 +861,7 @@ function loadText(text, fileName, isSample) {
     file.noBlockComments = true;
   }
   $("#fileInfo").innerHTML = "<b>" + esc(fileName) + "</b><span>" + esc(langName(file.srcLang) + " → " + langName(file.tgtLang) + (file.jobId ? " · Job " + file.jobId : "")) + "</span>";
-  $("#tools").hidden = false; $("#saveBtn").disabled = false;
+  $("#tools").hidden = false; $("#saveBtn").disabled = false; $("#aiBtn").disabled = false;
   $("#help").open = !!isSample;
   render();
 }
@@ -922,8 +1150,421 @@ function copyText(t) {
   });
 }
 
+/* ---------- AI Translation Workflow ---------- */
+const aiState = {
+  step: 1,
+  prompt: "",
+  parsedResults: null,
+  pastedRaw: ""
+};
+
+function getTranslatableSegments(opts = {}) {
+  const segs = [];
+  let num = 0;
+  if (!state.file) return segs;
+  state.file.units.forEach((u, ui) => {
+    if (u.technical) return;
+    u.segs.forEach((s, n) => {
+      num++;
+      const tr = (state.tr[ui]?.[n] || "").trim();
+      if (opts.onlyTodo && tr) return;
+      segs.push({
+        num,
+        ui,
+        n,
+        unit: u,
+        seg: s,
+        src: s.src,
+        ctx: s.ctx || "Text",
+        tr: tr
+      });
+    });
+  });
+  return segs;
+}
+
+function countWords(str) {
+  const m = (str || "").trim().match(/[\p{L}\p{N}]+/gu);
+  return m ? m.length : 0;
+}
+
+function generateAIPrompt(opts = {}) {
+  const f = state.file;
+  if (!f) return "";
+  const srcName = langName(f.srcLang);
+  const tgtName = langName(f.tgtLang);
+  const includeCtx = opts.includeCtx !== false;
+  const tone = opts.tone || "standard";
+  const segs = getTranslatableSegments(opts);
+
+  let toneDesc = "Translate faithfully and accurately for an institutional website.";
+  if (tone === "formal") toneDesc = "Use formal, official terminology appropriate for government and policy documents.";
+  if (tone === "direct") toneDesc = "Use concise, direct language that is easily understood on web interfaces and mobile devices.";
+
+  let prompt = "Translate the following website content from " + srcName + " to " + tgtName + ".\n\n" +
+    "Tone: " + toneDesc + "\n\n" +
+    "Instructions:\n" +
+    "1. Preserve the line ID prefix at the beginning of each line exactly: e.g. [1], [2], [3]...\n";
+  if (includeCtx) {
+    prompt += "2. HTML comments like <!-- Context: ... --> indicate where the text appears on the page (e.g. Heading, Button, Image description). You may keep or omit these comments, but do NOT remove the [ID] prefix.\n";
+  }
+  prompt += "3. Preserve inline formatting markers like {1}...{/1} and {br} around the corresponding translated words. Do NOT translate or modify the numbers or brackets inside markers (keep {1}, do not write {one} or {uno}).\n" +
+    "4. Keep proper names, brand names, and untranslated technical terms intact where appropriate.\n" +
+    "5. Return ONLY the translated lines with their [ID] prefixes. Do not include any introductory or concluding conversational text.\n\n" +
+    "Content to translate:\n";
+
+  const lines = segs.map((item) => {
+    const ctxComment = includeCtx ? "<!-- Context: " + item.ctx + " --> " : "";
+    return "[" + item.num + "] " + ctxComment + item.src;
+  });
+
+  return prompt + lines.join("\n");
+}
+
+function parseAITranslation(pastedText, allSegs) {
+  let text = (pastedText || "").replace(/^[ \t]*[【(](\d+)[】)][ \t]*/gm, "[$1] ");
+  text = text.replace(/^```[a-z]*\r?\n/i, "").replace(/\r?\n```\s*$/i, "");
+
+  const LINE_RE = /^\s*\[(\d+)\]\s*(?:<!--[\s\S]*?-->\s*)?([\s\S]*)$/;
+  const OUTRO_RE = /^\s*(hope this helps|let me know|feel free|here is|here are|note:|please note|i have translated|best,|regards|all the best)/i;
+  const lines = text.split(/\r?\n/);
+
+  const parsed = new Map();
+  let currentNum = null;
+  let currentBuf = [];
+  let hadBlank = false;
+
+  const flush = () => {
+    if (currentNum != null) {
+      parsed.set(currentNum, currentBuf.join(" ").trim());
+      currentNum = null;
+      currentBuf = [];
+    }
+  };
+
+  for (const line of lines) {
+    const m = LINE_RE.exec(line);
+    if (m) {
+      flush();
+      currentNum = +m[1];
+      hadBlank = false;
+      if (m[2].trim()) currentBuf.push(m[2].trim());
+    } else if (!line.trim()) {
+      hadBlank = true;
+    } else if (currentNum != null) {
+      if (hadBlank || OUTRO_RE.test(line)) {
+        flush();
+      } else {
+        currentBuf.push(line.trim());
+      }
+    }
+  }
+  flush();
+
+  // Heuristic fallback if very few [ID] matches found:
+  let isFallback = false;
+  if (parsed.size < Math.min(3, allSegs.length) && lines.filter((l) => l.trim()).length >= allSegs.length * 0.5) {
+    const nonBlank = lines.map((l) => l.trim()).filter((l) => l && !l.startsWith("```") && !/^(here (is|are)|sure|translation:)/i.test(l));
+    if (nonBlank.length >= allSegs.length * 0.5) {
+      isFallback = true;
+      parsed.clear();
+      allSegs.forEach((s, idx) => {
+        if (idx < nonBlank.length) {
+          const cl = nonBlank[idx].replace(/^\s*\[?\d+\]?[.:\- ]\s*/, "").replace(/<!--[\s\S]*?-->\s*/, "").trim();
+          parsed.set(s.num, cl);
+        }
+      });
+    }
+  }
+
+  let matched = 0, badMarkers = 0, missing = 0;
+  const results = [];
+
+  allSegs.forEach((s) => {
+    if (parsed.has(s.num)) {
+      const trVal = parsed.get(s.num);
+      const problems = XE.validate(s.seg, trVal);
+      if (problems.length) badMarkers++;
+      matched++;
+      results.push({ ...s, trVal, problems, status: problems.length ? "bad" : "done" });
+    } else {
+      missing++;
+      results.push({ ...s, trVal: "", problems: [], status: "missing" });
+    }
+  });
+
+  return {
+    parsed,
+    results,
+    isFallback,
+    stats: {
+      total: allSegs.length,
+      matched,
+      badMarkers,
+      missing
+    }
+  };
+}
+
+function updateAiSetupSummary() {
+  if (!state.file) return;
+  const allSegs = getTranslatableSegments();
+  const c = counts();
+  $("#aiLangPair").textContent = langName(state.file.srcLang) + " → " + langName(state.file.tgtLang);
+  $("#aiSegCount").textContent = allSegs.length + " lines";
+  $("#aiTodoCount").textContent = c.todo;
+  const totalWords = allSegs.reduce((sum, s) => sum + countWords(s.src), 0);
+  $("#aiWordCount").textContent = "~" + totalWords + " words";
+
+  const optTodo = $("#aiOptOnlyTodo");
+  optTodo.disabled = c.todo === allSegs.length || c.todo === 0;
+  if (c.todo === 0) optTodo.checked = false;
+}
+
+function updateAiPrompt() {
+  const opts = {
+    includeCtx: $("#aiOptContext").checked,
+    onlyTodo: $("#aiOptOnlyTodo").checked,
+    tone: $("#aiOptTone").value
+  };
+  aiState.prompt = generateAIPrompt(opts);
+  $("#aiPromptText").value = aiState.prompt;
+  const segs = getTranslatableSegments(opts);
+  const totalWords = segs.reduce((sum, s) => sum + countWords(s.src), 0);
+  const estTokens = Math.round(aiState.prompt.length / 4);
+  $("#aiPromptStats").textContent = segs.length + " lines · ~" + totalWords + " words · ~" + estTokens + " est. tokens";
+}
+
+function openAiDialog(step = 1) {
+  if (!state.file) return;
+  const dlg = $("#aiDialog");
+  updateAiSetupSummary();
+  updateAiPrompt();
+  goToAiStep(step);
+  if (!dlg.open) dlg.showModal();
+}
+
+function closeAiDialog() {
+  const dlg = $("#aiDialog");
+  if (dlg.open) dlg.close();
+}
+
+function goToAiStep(step) {
+  aiState.step = step;
+  document.querySelectorAll(".ai-step-tab").forEach((tab) => {
+    const s = +tab.dataset.step;
+    tab.dataset.state = s === step ? "active" : s < step ? "done" : "";
+  });
+  for (let i = 1; i <= 5; i++) {
+    const pane = $("#aiPane" + i);
+    if (pane) pane.hidden = i !== step;
+  }
+  const prevBtn = $("#aiPrevBtn");
+  const nextBtn = $("#aiNextBtn");
+  prevBtn.disabled = step === 1;
+
+  if (step === 1) {
+    nextBtn.textContent = "Next: Generate Prompt →";
+    nextBtn.disabled = false;
+  } else if (step === 2) {
+    updateAiPrompt();
+    nextBtn.textContent = "Next: Open AI Tool →";
+    nextBtn.disabled = false;
+  } else if (step === 3) {
+    nextBtn.textContent = "Next: Paste Translation →";
+    nextBtn.disabled = false;
+  } else if (step === 4) {
+    nextBtn.textContent = "Apply Translations to Editor →";
+    updatePasteReconciliation();
+  } else if (step === 5) {
+    prevBtn.disabled = true;
+    nextBtn.textContent = "Review in Editor";
+    nextBtn.disabled = false;
+  }
+}
+
+function updatePasteReconciliation() {
+  const pasted = $("#aiPasteText").value;
+  aiState.pastedRaw = pasted;
+  const opts = {
+    onlyTodo: $("#aiOptOnlyTodo").checked
+  };
+  const targetSegs = getTranslatableSegments(opts);
+  const parsedRes = parseAITranslation(pasted, targetSegs);
+  aiState.parsedResults = parsedRes;
+
+  const nextBtn = $("#aiNextBtn");
+  const mb = $("#aiMatchBadge");
+  const wb = $("#aiMarkerBadge");
+  const sb = $("#aiMissingBadge");
+  const msg = $("#aiReconcileMsg");
+
+  if (!pasted.trim()) {
+    mb.textContent = "0 lines detected";
+    mb.className = "ai-badge";
+    wb.hidden = true;
+    sb.hidden = true;
+    msg.textContent = "Paste the AI response above to inspect line matching.";
+    if (aiState.step === 4) nextBtn.disabled = true;
+    return;
+  }
+
+  const { matched, badMarkers, missing, total } = parsedRes.stats;
+
+  mb.textContent = matched + " of " + total + " lines detected";
+  mb.className = "ai-badge " + (matched === total ? "good" : matched > 0 ? "warn" : "bad");
+
+  if (badMarkers > 0) {
+    wb.hidden = false;
+    wb.textContent = badMarkers + " marker issue" + (badMarkers === 1 ? "" : "s");
+    wb.className = "ai-badge warn";
+  } else {
+    wb.hidden = true;
+  }
+
+  if (missing > 0 && matched > 0) {
+    sb.hidden = false;
+    sb.textContent = missing + " missing line" + (missing === 1 ? "" : "s");
+    sb.className = "ai-badge bad";
+  } else {
+    sb.hidden = true;
+  }
+
+  if (parsedRes.isFallback) {
+    msg.textContent = "Note: No [ID] prefixes found. Matched sequentially line-by-line.";
+  } else if (matched === total && badMarkers === 0) {
+    msg.textContent = "✓ All lines matched cleanly with valid formatting markers.";
+  } else if (matched > 0) {
+    msg.textContent = "Ready to apply. You can fix any marker warnings in the editor with one click.";
+  } else {
+    msg.textContent = "No matching lines found. Make sure lines have [1], [2], ... prefixes.";
+  }
+
+  if (aiState.step === 4) {
+    nextBtn.disabled = matched === 0;
+  }
+}
+
+function applyAiTranslations() {
+  if (!aiState.parsedResults) return;
+  const overwrite = $("#aiOptOverwrite").checked;
+  let applied = 0;
+  aiState.parsedResults.results.forEach((r) => {
+    if (r.trVal) {
+      if (overwrite || !state.tr[r.ui][r.n]) {
+        state.tr[r.ui][r.n] = r.trVal;
+        applied++;
+      }
+    }
+  });
+
+  render();
+  save();
+
+  $("#aiSuccessMsg").textContent = "Successfully applied " + applied + " translation line" + (applied === 1 ? "" : "s") + " to the editor.";
+  const badCount = aiState.parsedResults.stats.badMarkers;
+  const warnBlock = $("#aiWarningBlock");
+  if (badCount > 0) {
+    warnBlock.hidden = false;
+    $("#aiWarningMsg").textContent = badCount + (badCount === 1 ? " line has" : " lines have") + " an orange marker issue (like missing or extra {1} tags). In the editor, click any marker chip on the English side to insert it into your translation.";
+  } else {
+    warnBlock.hidden = true;
+  }
+
+  goToAiStep(5);
+}
+
+function setupAiWorkflowEvents() {
+  $("#aiBtn").addEventListener("click", () => openAiDialog(1));
+  $("#aiCloseBtn").addEventListener("click", closeAiDialog);
+  $("#aiCancelBtn").addEventListener("click", closeAiDialog);
+
+  document.querySelectorAll(".ai-step-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const targetStep = +tab.dataset.step;
+      if (targetStep < 5 || (targetStep === 5 && aiState.parsedResults)) {
+        goToAiStep(targetStep);
+      }
+    });
+  });
+
+  $("#aiOptContext").addEventListener("change", updateAiPrompt);
+  $("#aiOptOnlyTodo").addEventListener("change", updateAiPrompt);
+  $("#aiOptTone").addEventListener("change", updateAiPrompt);
+
+  $("#aiPrevBtn").addEventListener("click", () => {
+    if (aiState.step > 1) goToAiStep(aiState.step - 1);
+  });
+
+  $("#aiNextBtn").addEventListener("click", () => {
+    if (aiState.step === 1) goToAiStep(2);
+    else if (aiState.step === 2) goToAiStep(3);
+    else if (aiState.step === 3) goToAiStep(4);
+    else if (aiState.step === 4) applyAiTranslations();
+    else if (aiState.step === 5) {
+      closeAiDialog();
+      const c = counts();
+      if (c.bad) {
+        state.filter = "bad"; syncFilterButtons(); applyFilter();
+        const r = document.querySelector('.seg[data-status="bad"]');
+        if (r) focusSeg(r.dataset.uid);
+      } else if (c.todo) {
+        state.filter = "todo"; syncFilterButtons(); applyFilter();
+      } else {
+        state.filter = "all"; syncFilterButtons(); applyFilter();
+      }
+    }
+  });
+
+  $("#aiCopyBtn").addEventListener("click", () => {
+    const btn = $("#aiCopyBtn");
+    navigator.clipboard.writeText(aiState.prompt).then(() => {
+      const old = btn.textContent;
+      btn.textContent = "Copied!";
+      setTimeout(() => (btn.textContent = old), 2000);
+    }, () => {
+      $("#aiPromptText").select();
+    });
+  });
+
+  $("#aiDlBtn").addEventListener("click", () => {
+    if (!state.file) return;
+    const base = state.file.fileName.replace(/\.[^.]+$/, "");
+    const dlName = base + "_translation_prompt_" + state.file.srcLang + "_to_" + state.file.tgtLang + ".txt";
+    const blob = new Blob([aiState.prompt], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = dlName;
+    document.body.append(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  });
+
+  $("#aiPasteText").addEventListener("input", updatePasteReconciliation);
+
+  const pasteWrap = $("#aiPasteWrap");
+  pasteWrap.addEventListener("dragover", (e) => { e.preventDefault(); pasteWrap.style.outline = "2px dashed var(--accent)"; });
+  pasteWrap.addEventListener("dragleave", () => { pasteWrap.style.outline = ""; });
+  pasteWrap.addEventListener("drop", (e) => {
+    e.preventDefault();
+    pasteWrap.style.outline = "";
+    const f = e.dataTransfer.files[0];
+    if (f) {
+      const r = new FileReader();
+      r.onload = () => {
+        $("#aiPasteText").value = String(r.result);
+        updatePasteReconciliation();
+      };
+      r.readAsText(f);
+    }
+  });
+}
+
 /* ---------- Start ---------- */
 window.XE = XE; window.XEState = state; window.XEbuild = buildXliff; window.XEload = loadText;
+window.XEaiPrompt = generateAIPrompt; window.XEaiParse = parseAITranslation; window.XEaiOpen = openAiDialog;
 // Example files live in examples/ next to this page. Add an entry here to offer a new one.
 const EXAMPLES = [
   { file: "examples/gutenberg-block-markup_en_es.xlf", label: "Synthetic example: Gutenberg block markup kept (processing off)" },
@@ -940,6 +1581,7 @@ async function loadExample(ex) {
   }
 }
 (function start() {
+  setupAiWorkflowEvents();
   const sel = $("#exampleSelect");
   EXAMPLES.forEach((ex, k) => { const o = document.createElement("option"); o.value = k; o.textContent = ex.label; sel.append(o); });
   sel.addEventListener("change", () => { if (sel.value !== "") loadExample(EXAMPLES[+sel.value]); sel.value = ""; });
