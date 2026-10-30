@@ -65,6 +65,16 @@ The whole app is `index.html`, with no build step. Serve the folder with any sta
 
 To add an example, put the file in `examples/` and add it to the `EXAMPLES` list near the end of `index.html`.
 
+### Testing
+
+Run the automated AI reconciliation and parser test suite:
+
+```sh
+npm test
+```
+
+Or open `test-runner.html` in any web browser via a local static server.
+
 ### Commit messages
 
 This repo keeps AI attribution trailers (such as `Co-Authored-By: Claude …`) out of commit messages. Turn on the hook once per clone:

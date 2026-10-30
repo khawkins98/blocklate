@@ -754,8 +754,8 @@ const XE = (() => {
     for (const m of tr.matchAll(PH_RE)) { got.set(m[0], (got.get(m[0]) || 0) + 1); order.push(m[0]); }
     for (const [lab, c] of want) {
       const g = got.get(lab) || 0;
-      if (g < c) problems.push((lab === "{br}" ? "Line break marker {br}" : "Marker " + lab) + " is missing.");
-      if (g > c) problems.push("Marker " + lab + " appears " + (g === 1 ? "once" : g + " times") + " but should appear " + (c === 1 ? "once" : c + " times") + ".");
+      if (g < c) problems.push(g === 0 ? ((lab === "{br}" ? "Line break marker {br}" : "Marker " + lab) + " is missing.") : ((lab === "{br}" ? "Line break marker {br}" : "Marker " + lab) + " appears " + (g === 1 ? "once" : g + " times") + " but should appear " + (c === 1 ? "once" : c + " times") + "."));
+      if (g > c) problems.push((lab === "{br}" ? "Line break marker {br}" : "Marker " + lab) + " appears " + (g === 1 ? "once" : g + " times") + " but should appear " + (c === 1 ? "once" : c + " times") + ".");
     }
     for (const lab of got.keys()) if (!want.has(lab)) problems.push("Marker " + lab + " is not in the English. Remove it.");
     if (!problems.length) {
@@ -1381,12 +1381,12 @@ function generateAIPrompt(opts = {}) {
 }
 
 function parseAITranslation(pastedText, allSegs) {
-  let text = (pastedText || "").replace(/^[ \t]*[【(](\d+)[】)][ \t]*/gm, "[$1] ");
-  text = text.replace(/^```[a-z]*\r?\n/i, "").replace(/\r?\n```\s*$/i, "");
+  // Strip code fence lines anywhere (start, end, or between appended chunks)
+  const cleaned = (pastedText || "").replace(/^[ \t]*```[a-zA-Z0-9_-]*[ \t]*$/gm, "");
 
-  const LINE_RE = /^\s*\[(\d+)\]\s*(?:<!--[\s\S]*?-->\s*)?([\s\S]*)$/;
-  const OUTRO_RE = /^\s*(hope this helps|let me know|feel free|here is|here are|note:|please note|i have translated|best,|regards|all the best)/i;
-  const lines = text.split(/\r?\n/);
+  const SEG_LINE_RE = /^\s*(?:[-*+]\s+)?(?:\*{1,2}|#{1,6}\s+)?(?:\[(\d+)\]|【(\d+)】|\((\d+)\)|(\d+)[.)]|(?:line|seg|segment)\s*(\d+)[:.]?)(?:\*{1,2})?\s*(?:[:\-.]|\s*-\s*)?\s*(?:\[(\d+)\])?\s*(?:<!--[\s\S]*?-->\s*)?([\s\S]*)$/i;
+  const OUTRO_RE = /^\s*(?:---|\*\*\*|___|hope this helps|let me know|feel free|here is|here are|here's|note\b|notes\b|please note|i have translated|i've translated|best regards|regards\b|best\b|all the best|sincerely|espero que|avísame|avisame|si necesitas|no dudes|aquí tienes|aqui tienes|aquí está|aqui esta|saludos|atentamente|un saludo|j'espère|jespere|n'hésitez pas|nhésitez pas|faites-moi savoir|voici la traduction|remarque\b|remarques\b|attention\b|cordialement|bien cordialement|ich hoffe|hinweis\b|bitte beachten|spero che|fammi sapere|espero que isto|observaciones?\b|nota\b)/i;
+  const lines = cleaned.split(/\r?\n/);
 
   const parsed = new Map();
   let currentNum = null;
@@ -1395,26 +1395,35 @@ function parseAITranslation(pastedText, allSegs) {
 
   const flush = () => {
     if (currentNum != null) {
-      parsed.set(currentNum, currentBuf.join(" ").trim());
+      const val = currentBuf.join(" ").trim();
+      if (val) parsed.set(currentNum, val);
       currentNum = null;
       currentBuf = [];
     }
   };
 
   for (const line of lines) {
-    const m = LINE_RE.exec(line);
+    const trimmed = line.trim();
+    if (!trimmed) {
+      hadBlank = true;
+      continue;
+    }
+
+    const m = SEG_LINE_RE.exec(line);
     if (m) {
       flush();
-      currentNum = +m[1];
+      currentNum = +(m[6] || m[1] || m[2] || m[3] || m[4] || m[5]);
       hadBlank = false;
-      if (m[2].trim()) currentBuf.push(m[2].trim());
-    } else if (!line.trim()) {
-      hadBlank = true;
+      if (m[7] && m[7].trim()) {
+        currentBuf.push(m[7].trim());
+      }
     } else if (currentNum != null) {
-      if (hadBlank || OUTRO_RE.test(line)) {
+      if (OUTRO_RE.test(trimmed) || (hadBlank && currentBuf.length > 0 && OUTRO_RE.test(trimmed))) {
+        flush();
+      } else if (hadBlank && currentBuf.length > 0 && /^\s*(?:nota|note|remarque|attention|observaci|tip|hint|warning|disclaimer)\b/i.test(trimmed)) {
         flush();
       } else {
-        currentBuf.push(line.trim());
+        currentBuf.push(trimmed);
       }
     }
   }
@@ -1423,13 +1432,16 @@ function parseAITranslation(pastedText, allSegs) {
   // Heuristic fallback if very few [ID] matches found:
   let isFallback = false;
   if (parsed.size < Math.min(3, allSegs.length) && lines.filter((l) => l.trim()).length >= allSegs.length * 0.5) {
-    const nonBlank = lines.map((l) => l.trim()).filter((l) => l && !l.startsWith("```") && !/^(here (is|are)|sure|translation:)/i.test(l));
+    const nonBlank = lines.map((l) => l.trim()).filter((l) => l && !/^\s*```/.test(l) && !OUTRO_RE.test(l) && !/^(here (is|are)|sure|translation:)/i.test(l));
     if (nonBlank.length >= allSegs.length * 0.5) {
       isFallback = true;
       parsed.clear();
       allSegs.forEach((s, idx) => {
         if (idx < nonBlank.length) {
-          const cl = nonBlank[idx].replace(/^\s*\[?\d+\]?[.:\- ]\s*/, "").replace(/<!--[\s\S]*?-->\s*/, "").trim();
+          const cl = nonBlank[idx]
+            .replace(/^\s*(?:[-*+]\s+)?(?:\*{1,2}|#{1,6}\s+)?(?:\[\d+\]|【\d+】|\(\d+\)|\d+[.)]|(?:line|seg|segment)\s*\d+[:.]?)(?:\*{1,2})?\s*(?:[:\-.]|\s*-\s*)?\s*(?:\[\d+\])?\s*/i, "")
+            .replace(/<!--[\s\S]*?-->\s*/, "")
+            .trim();
           parsed.set(s.num, cl);
         }
       });
@@ -1681,7 +1693,7 @@ function renderInspectorTable() {
     } else if (r.status === "bad") {
       rowClass = "row-bad";
       const issueDesc = r.problems.join("; ") || "Marker issue";
-      stHtml = '<span class="ai-badge warn" style="font-size:11px" title="' + esc(issueDesc) + '">⚠ ' + esc(r.problems[0] || "Marker issue") + '</span>';
+      stHtml = '<span class="ai-badge warn" style="font-size:11px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:inline-block;vertical-align:middle" title="' + esc(issueDesc) + '">⚠ ' + esc(r.problems[0] || "Marker issue") + '</span>';
     } else {
       rowClass = "row-missing";
       stHtml = '<span class="ai-badge bad" style="font-size:11px">✗ Missing</span>';
@@ -1852,11 +1864,15 @@ function setupAiWorkflowEvents() {
   if (recopyBtn) {
     recopyBtn.addEventListener("click", () => {
       const textToCopy = $("#aiPromptText").value || aiState.prompt;
-      navigator.clipboard.writeText(textToCopy).then(() => {
-        const orig = recopyBtn.textContent;
-        recopyBtn.textContent = "✓ Copied again!";
-        setTimeout(() => { recopyBtn.textContent = orig; }, 2000);
-      });
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          const orig = recopyBtn.textContent;
+          recopyBtn.textContent = "✓ Copied again!";
+          setTimeout(() => { recopyBtn.textContent = orig; }, 2000);
+        }).catch(() => {
+          $("#aiPromptText").select();
+        });
+      }
     });
   }
 
@@ -1938,7 +1954,7 @@ function setupAiWorkflowEvents() {
       const extra = appendInput.value.trim();
       if (extra) {
         const cur = $("#aiPasteText").value;
-        $("#aiPasteText").value = cur ? cur + "\n\n" + extra : extra;
+        $("#aiPasteText").value = cur ? cur.trim() + "\n\n" + extra : extra;
         appendInput.value = "";
         appendBox.hidden = true;
         updatePasteReconciliation();

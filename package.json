@@ -1,0 +1,16 @@
+{
+  "name": "blocklate",
+  "version": "0.2.0",
+  "description": "Translate Drupal Gutenberg XLIFF files without touching the page markup.",
+  "scripts": {
+    "test": "node test-runner.js"
+  },
+  "keywords": [
+    "drupal",
+    "gutenberg",
+    "xliff",
+    "translation",
+    "ai"
+  ],
+  "license": "MIT"
+}
