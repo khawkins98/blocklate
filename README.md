@@ -12,8 +12,12 @@ Everything runs in the browser. Files are never uploaded anywhere.
 
 1. Open the `.xlf` file you were sent, or drag it onto the page.
 2. Type your translation next to each English line.
-3. Small orange markers like `{1}…{/1}` mark links or bold text inside a sentence. Keep them around the words that should stay linked or bold. Click a marker on the English side to insert it.
+3. Small orange markers like `{1}…{/1}` mark links or bold text inside a sentence. Keep them around the words that should stay linked or bold. Click a marker on the English side to insert it; or select translated words and click `{1}` to wrap them (`{1}selected text{/1}`).
 4. Your work is saved in your browser as you type. When you're done, press **Download translated file** and send it back.
+
+Shortcut tips:
+- <kbd>Ctrl</kbd> + <kbd>Enter</kbd> (<kbd>⌘</kbd> + <kbd>Enter</kbd> on Mac) jumps to the next line needing translation.
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> (<kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> on Mac) opens the AI translation stepper.
 
 ## Getting a file out of Drupal
 
@@ -45,8 +49,9 @@ Link straight to one with `?example=1` (counting from 0), or open a blank editor
 - Image alt text is offered for translation.
 - Technical fields (domain IDs, langcodes, path aliases) are hidden and copied as they are.
 - Markers are checked before download, so a broken tag can't reach Drupal.
-- AI translation stepper: exports clean lines with HTML block context annotations to copy into ChatGPT, Claude or Gemini, then maps the translated response back and validates inline markers.
-- Live page preview, autosave in the browser, and reopening a partly translated file.
+- Smart tag wrapping: selecting words in the translation and clicking a marker chip `{1}` automatically wraps the selection into `{1}selected text{/1}`.
+- Guided AI translation stepper: exports clean lines with block context annotations and custom terminology rules for ChatGPT, Claude or Gemini; features air-gap clipboard bridging, line-by-line reconciliation inspector, continued chunk appending, manual translation preservation, and one-click undo in the editor.
+- Live page preview (highlighting formatting issues in dashed red), autosave in the browser, and reopening a partly translated file.
 
 ## Known limits
 

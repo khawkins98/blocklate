@@ -139,7 +139,7 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
 /* AI Stepper Dialog */
 .ai-dialog {
   border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink);
-  width: min(720px, 94vw); max-height: 90vh; padding: 0; margin: auto; box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+  width: min(760px, 95vw); max-height: 92vh; padding: 0; margin: auto; box-shadow: 0 16px 48px rgba(0,0,0,0.28);
 }
 .ai-dialog::backdrop { background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(2px); }
 .ai-dialog[open] { display: flex; flex-direction: column; }
@@ -165,6 +165,16 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
 .ai-summary-grid .lbl { display: block; font: 600 11px var(--f-display); text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 2px; }
 .ai-summary-grid strong { font-size: 14px; color: var(--ink); }
 
+.ai-comfort-indicator { margin-top: 10px; padding: 6px 10px; border-radius: 4px; font-size: 13px; display: flex; align-items: center; gap: 6px; }
+.ai-comfort-indicator.good { background: color-mix(in srgb, var(--ok-soft) 85%, transparent); color: var(--ok); font-weight: 600; }
+.ai-comfort-indicator.warn { background: color-mix(in srgb, var(--tag-bg) 85%, transparent); color: var(--tag-ink); font-weight: 600; }
+.ai-comfort-icon { font-weight: 800; font-family: var(--f-mono); }
+
+.ai-term-details { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); padding: 8px 12px; }
+.ai-term-details summary { cursor: pointer; font-weight: 700; font-size: 13px; color: var(--ink); }
+.ai-term-details textarea { width: 100%; margin-top: 8px; border: 1px solid var(--line); border-radius: var(--r); padding: 7px 9px; font: 500 13px/1.45 var(--f-mono); background: var(--bg); color: var(--ink); resize: vertical; min-height: 60px; }
+.ai-term-details textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 2px var(--accent-soft); }
+
 .ai-form-group { display: flex; flex-direction: column; gap: 4px; }
 .ai-form-group .lbl { font: 600 12px var(--f-display); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
 .ai-select { padding: 7px 10px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink); font-size: 14px; }
@@ -173,7 +183,7 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
 .ai-prompt-box { width: 100%; border: 1px solid var(--line); border-radius: var(--r); padding: 10px 12px; background: var(--bg); color: var(--ink); font: 500 13px/1.45 var(--f-mono); resize: vertical; overflow-wrap: anywhere; }
 .ai-prompt-box:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 2px var(--accent-soft); }
 .ai-prompt-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-.ai-prompt-actions { display: flex; gap: 8px; }
+.ai-prompt-actions { display: flex; gap: 8px; align-items: center; }
 
 .ai-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
 .ai-link-btn { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 700; font-size: 14px; transition: all .15s; }
@@ -185,6 +195,25 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
 .ai-badge.good { background: var(--ok-soft); color: var(--ok); border-color: var(--ok); }
 .ai-badge.warn { background: var(--tag-bg); color: var(--tag-ink); border-color: var(--tag-ink); }
 .ai-badge.bad { background: var(--bad-soft); color: var(--bad); border-color: var(--bad); }
+
+.ai-filter-pills { display: inline-flex; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: var(--surface); }
+.ai-pill { border: 0; background: transparent; padding: 3px 10px; font-size: 12px; border-right: 1px solid var(--line); color: var(--muted); cursor: pointer; }
+.ai-pill:last-child { border-right: 0; }
+.ai-pill:hover { color: var(--ink); }
+.ai-pill.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+
+.ai-inspector-wrap { max-height: 200px; overflow-y: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); margin-top: 4px; }
+.ai-inspector-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.ai-inspector-table th { position: sticky; top: 0; background: var(--src-bg); color: var(--muted); font: 600 11px var(--f-display); text-transform: uppercase; letter-spacing: .06em; padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--line); z-index: 1; }
+.ai-inspector-table td { padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+.ai-inspector-table tr:last-child td { border-bottom: 0; }
+.ai-inspector-table tr:hover { background: var(--src-bg); }
+.ai-inspector-table tr.row-bad { background: color-mix(in srgb, var(--bad-soft) 40%, transparent); }
+.ai-inspector-table tr.row-missing { opacity: 0.75; }
+
+.btn.btn-ok { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
+.ai-draft-badge { display: inline-flex; align-items: center; align-self: flex-start; font: 700 10px var(--f-mono); text-transform: uppercase; letter-spacing: .06em; padding: 1px 5px; border-radius: 3px; background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); margin-bottom: 2px; }
+.seg[data-ai="draft"] { background: color-mix(in srgb, var(--accent-soft) 18%, transparent); }
 
 .ai-foot { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-top: 1px solid var(--line); background: var(--src-bg); gap: 10px; }
 .ai-foot-right { display: flex; gap: 8px; margin-left: auto; }
@@ -255,7 +284,7 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
   </div>
 
   <nav class="ai-stepper" aria-label="Translation steps">
-    <button type="button" class="ai-step-tab" data-step="1" data-state="active">
+    <button type="button" class="ai-step-tab" data-step="1" data-state="active" aria-current="step">
       <span class="num">1</span>
       <span>Setup</span>
     </button>
@@ -286,6 +315,10 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
           <div><span class="lbl">Translatable segments</span><strong id="aiSegCount">0 lines</strong></div>
           <div><span class="lbl">Estimated words</span><strong id="aiWordCount">~0 words</strong></div>
         </div>
+        <div class="ai-comfort-indicator good" id="aiComfortIndicator" aria-live="polite">
+          <span class="ai-comfort-icon" aria-hidden="true">✓</span>
+          <span id="aiComfortText">0 lines · ~0 words · Fits comfortably in free ChatGPT, Claude, and Gemini</span>
+        </div>
       </div>
 
       <div class="ai-form-group">
@@ -308,21 +341,29 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
           <option value="standard">Standard &amp; Natural (accurate institutional website tone)</option>
           <option value="formal">Formal &amp; Official (governmental / policy language)</option>
           <option value="direct">Direct &amp; Concise (accessible web writing)</option>
+          <option value="technical">Technical &amp; Precise (engineering / documentation)</option>
+          <option value="friendly">Friendly &amp; Engaging (marketing / community outreach)</option>
         </select>
       </div>
+
+      <details class="ai-term-details" id="aiTermDetails">
+        <summary>Custom Terminology &amp; Brand Rules (Optional)</summary>
+        <textarea id="aiCustomRules" rows="3" placeholder="e.g. Do not translate 'UNDRR'; use Latin American Spanish; keep acronyms in English..."></textarea>
+      </details>
     </div>
 
     <!-- Step 2: Prompt -->
     <div class="ai-pane" id="aiPane2" hidden>
       <div class="ai-pane-intro">
-        <p>Copy this prompt or download it as a text file. It contains only clean text and markers (Gutenberg layout code and Drupal technical IDs have been stripped).</p>
+        <p>Copy this prompt or download it as a text file. You can also edit it directly before copying. It contains only clean text and markers (Gutenberg layout code and Drupal technical IDs have been stripped).</p>
       </div>
       <div class="ai-prompt-wrap">
-        <textarea id="aiPromptText" class="ai-prompt-box" readonly rows="11" aria-label="Generated AI translation prompt"></textarea>
+        <textarea id="aiPromptText" class="ai-prompt-box" rows="11" aria-label="Generated AI translation prompt"></textarea>
       </div>
       <div class="ai-prompt-bar">
         <span class="hint" id="aiPromptStats">0 lines · ~0 tokens</span>
         <div class="ai-prompt-actions">
+          <button type="button" class="btn btn-quiet" id="aiResetPromptBtn" title="Reset prompt to default based on Step 1 settings">Reset to default</button>
           <button type="button" class="btn" id="aiCopyBtn">Copy Prompt</button>
           <button type="button" class="btn" id="aiDlBtn">Download .txt</button>
         </div>
@@ -331,6 +372,16 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
 
     <!-- Step 3: Run AI -->
     <div class="ai-pane" id="aiPane3" hidden>
+      <div class="ai-card good ai-copied-card" id="aiCopiedCard">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="color:var(--ok);font-size:18px;font-weight:700" aria-hidden="true">✓</span>
+            <span><strong>Prompt ready on clipboard!</strong> Paste it directly into your AI tool below.</span>
+          </div>
+          <button type="button" class="btn btn-quiet" id="aiRecopyBtn" style="font-size:13px;font-weight:700">Copy prompt again</button>
+        </div>
+      </div>
+
       <div class="ai-pane-intro">
         <p>Open your preferred AI assistant, paste the copied prompt, and copy its translated response.</p>
       </div>
@@ -361,6 +412,16 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
           <li>Don't worry if the model adds intro text like <em>"Here is the translation:"</em> — Blocklate automatically filters it out.</li>
         </ul>
       </div>
+
+      <div class="ai-card" id="aiStep3QuickBox" style="border-style:dashed">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+          <span style="font-size:13px;color:var(--muted)">Already have the translation?</span>
+          <button type="button" class="btn btn-quiet" id="aiStep3QuickToggle" style="font-size:13px;font-weight:700">Paste here or drop a .txt file</button>
+        </div>
+        <div id="aiStep3QuickArea" hidden style="margin-top:8px">
+          <textarea id="aiStep3QuickInput" class="ai-prompt-box" rows="3" placeholder="Paste translation response here to jump straight to review..."></textarea>
+        </div>
+      </div>
     </div>
 
     <!-- Step 4: Paste Back -->
@@ -369,20 +430,60 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
         <p>Paste the translated response from the AI below, or drop a text file.</p>
       </div>
       <div class="ai-paste-wrap" id="aiPasteWrap">
-        <textarea id="aiPasteText" class="ai-prompt-box" rows="9" placeholder="Paste the translation here (lines starting with [1], [2]...)" aria-label="Paste AI translation"></textarea>
+        <textarea id="aiPasteText" class="ai-prompt-box" rows="7" placeholder="Paste the translation here (lines starting with [1], [2]...)" aria-label="Paste AI translation"></textarea>
       </div>
+      <div class="ai-paste-actions" style="display:flex;justify-content:space-between;align-items:center;margin-top:2px">
+        <button type="button" class="btn btn-quiet" id="aiAppendChunkBtn" style="font-weight:700;font-size:13px">+ Append Chunk (for long AI outputs)</button>
+        <button type="button" class="btn btn-quiet" id="aiClearPasteBtn" style="font-size:12px;color:var(--muted)">Clear text</button>
+      </div>
+      <div id="aiAppendChunkBox" class="ai-card" hidden style="border-style:dashed;margin-top:6px">
+        <label for="aiAppendInput" class="lbl" style="font-size:11px">Paste continued AI output below:</label>
+        <textarea id="aiAppendInput" class="ai-prompt-box" rows="3" placeholder="Paste continued lines starting with [X]..."></textarea>
+        <div style="display:flex;justify-content:flex-end;gap:6px;margin-top:6px">
+          <button type="button" class="btn btn-quiet" id="aiCancelAppendBtn">Cancel</button>
+          <button type="button" class="btn btn-primary" id="aiConfirmAppendBtn">Append Lines</button>
+        </div>
+      </div>
+
       <div class="ai-reconcile-card" id="aiReconcileCard">
         <div class="ai-stats-row">
           <span class="ai-badge" id="aiMatchBadge">0 lines detected</span>
           <span class="ai-badge" id="aiMarkerBadge" hidden>0 marker issues</span>
           <span class="ai-badge" id="aiMissingBadge" hidden>0 missing lines</span>
         </div>
-        <p class="hint" id="aiReconcileMsg" style="margin:4px 0 0">Paste the AI response above to inspect matches.</p>
+        <p class="hint" id="aiReconcileMsg" style="margin:4px 0 0" aria-live="polite">Paste the AI response above to inspect matches.</p>
       </div>
-      <div class="ai-form-group">
+
+      <div class="ai-inspector-section" id="aiInspectorSection">
+        <div class="ai-inspector-head" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-block:6px 4px">
+          <span class="lbl" style="font-size:12px;font-weight:700">Reconciliation Inspector</span>
+          <div class="ai-filter-pills" role="radiogroup" aria-label="Filter reconciled lines">
+            <button type="button" class="ai-pill active" data-filter="all" role="radio" aria-checked="true">All (<span id="aiPillAllCount">0</span>)</button>
+            <button type="button" class="ai-pill" data-filter="issues" role="radio" aria-checked="false">Issues only (<span id="aiPillIssuesCount">0</span>)</button>
+            <button type="button" class="ai-pill" data-filter="missing" role="radio" aria-checked="false">Missing (<span id="aiPillMissingCount">0</span>)</button>
+          </div>
+        </div>
+        <div class="ai-inspector-wrap" id="aiInspectorWrap">
+          <table class="ai-inspector-table" id="aiInspectorTable" aria-label="Reconciled lines">
+            <thead>
+              <tr>
+                <th scope="col" style="width:40px">#</th>
+                <th scope="col" style="width:38%">Source Text</th>
+                <th scope="col" style="width:42%">AI Translation</th>
+                <th scope="col" style="width:20%">Status</th>
+              </tr>
+            </thead>
+            <tbody id="aiInspectorBody">
+              <tr><td colspan="4" style="text-align:center;padding:20px;color:var(--muted)">Paste your translation above to inspect matched lines.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="ai-form-group" style="margin-top:6px">
         <label class="check">
-          <input type="checkbox" id="aiOptOverwrite" checked>
-          <span>Overwrite lines that already have text in the editor</span>
+          <input type="checkbox" id="aiOptPreserveManual" checked>
+          <span><b>Preserve existing manual translations in the editor</b> (do not overwrite lines you already translated)</span>
         </label>
       </div>
     </div>
@@ -391,7 +492,7 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
     <div class="ai-pane" id="aiPane5" hidden>
       <div class="ai-card good" id="aiSuccessCard">
         <h3 style="margin:0 0 6px;font:700 15px var(--f-display);display:flex;align-items:center;gap:6px">
-          <span style="color:var(--ok)">✓</span> Translations Imported
+          <span style="color:var(--ok)">✓</span> Translations Ready in Editor
         </h3>
         <p id="aiSuccessMsg" style="margin:0">0 lines were imported into the editor.</p>
       </div>
@@ -402,7 +503,9 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
         <b>What to do next:</b>
         <ol style="margin:6px 0 0;padding-left:20px;font-size:13px;color:var(--muted)">
           <li>Click <b>Review in Editor</b> to check your translations alongside the live page preview.</li>
-          <li>If any orange formatting markers like <code>{1}</code> were flagged, click the chip on the English side to insert it where it belongs.</li>
+          <li>AI-imported segments are marked with an <b>AI Draft</b> badge, which automatically clears as you edit.</li>
+          <li>If any orange formatting markers like <code>{1}</code> were flagged, select the translated text and click the marker chip on the English side to wrap it.</li>
+          <li>You can click <b>Undo AI Import</b> in the top notification banner at any time if you want to revert back.</li>
           <li>When satisfied, press <b>Download translated file</b> to get your finalized XLIFF file for Drupal.</li>
         </ol>
       </div>
@@ -413,7 +516,7 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
     <button type="button" class="btn" id="aiPrevBtn" disabled>&larr; Back</button>
     <div class="ai-foot-right">
       <button type="button" class="btn btn-quiet" id="aiCancelBtn">Cancel</button>
-      <button type="button" class="btn btn-primary" id="aiNextBtn">Next &rarr;</button>
+      <button type="button" class="btn btn-primary" id="aiNextBtn">Next: Generate Prompt &rarr;</button>
     </div>
   </div>
 </dialog>
@@ -826,7 +929,7 @@ const XE = (() => {
 
 /* ===================== UI ===================== */
 const $ = (s) => document.querySelector(s);
-const state = { file: null, tr: [], filter: "all", q: "", activeUid: null, storeKey: null, isSample: false };
+const state = { file: null, tr: [], filter: "all", q: "", activeUid: null, storeKey: null, isSample: false, preAiSnapshot: null, aiDrafts: new Set() };
 const LANGS = { en: "English", fr: "French", es: "Spanish", ar: "Arabic", ru: "Russian", zh: "Chinese", pt: "Portuguese", de: "German", it: "Italian", ja: "Japanese", ko: "Korean", id: "Indonesian", tr: "Turkish", sw: "Swahili" };
 const langName = (c) => LANGS[(c || "").toLowerCase().split("-")[0]] || (c || "?").toUpperCase();
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -845,6 +948,8 @@ function loadText(text, fileName, isSample) {
   catch (e) { notice(e.message, "bad"); return; }
   state.file = file; state.isSample = !!isSample;
   state.storeKey = "xe:" + fileName + ":" + file.jobId + ":" + text.length;
+  state.preAiSnapshot = null;
+  state.aiDrafts = new Set();
   state.tr = file.units.map((u) => u.segs.map((s, n) => u.loaded[n] || (u.technical && u.isLangcode && file.tgtLang ? file.tgtLang : u.technical ? u.segs[0].src : "")));
   const saved = store(true);
   $("#notices").innerHTML = "";
@@ -906,11 +1011,15 @@ function render() {
     u.segs.forEach((s, n) => {
       num++;
       const uid = ui + "-" + n;
+      const isAiDraft = !!(state.aiDrafts && state.aiDrafts.has(uid));
       const row = document.createElement("article"); row.className = "seg"; row.id = "row-" + uid; row.dataset.uid = uid;
+      if (isAiDraft) row.dataset.ai = "draft";
       row.innerHTML =
         '<div class="seg-num"><span class="dot" aria-hidden="true"></span>' + num + '</div>' +
         '<div class="seg-src" lang="' + esc(f.srcLang) + '"><span class="ctx">' + esc(s.ctx) + "</span>" + srcHtml(s) + "</div>" +
-        '<div class="seg-tgt"><textarea id="t-' + uid + '" lang="' + esc(f.tgtLang) + '" rows="2" spellcheck="true" aria-label="' + esc(langName(f.tgtLang) + " translation, line " + num) + '"></textarea>' +
+        '<div class="seg-tgt">' +
+        (isAiDraft ? '<span class="ai-draft-badge" title="Imported from AI — review recommended">AI Draft</span>' : "") +
+        '<textarea id="t-' + uid + '" lang="' + esc(f.tgtLang) + '" rows="2" spellcheck="true" aria-label="' + esc(langName(f.tgtLang) + " translation, line " + num) + '"></textarea>' +
         '<div class="seg-foot"><button type="button" class="btn btn-quiet copy">Copy English</button>' +
         (s.ph.length ? '<span class="hint">Keep the orange markers.</span>' : "") +
         '<span class="count"></span><span class="msg" role="status"></span></div></div>';
@@ -994,7 +1103,7 @@ function save() {
 }
 
 /* ---------- Preview ---------- */
-const PREVIEW_CSS = "body{font:15px/1.5 Georgia,serif;color:#1c2330;background:#fff;margin:0;padding:16px 20px;max-width:900px}h1,h2,h3{font-family:Arial,sans-serif;line-height:1.2}a{color:#0a5d8f}.xe-img{display:inline-block;margin:4px 0;padding:6px 10px;border:1px dashed #9aa7b4;color:#5a6674;font:12px Arial,sans-serif;border-radius:4px}.xe-embed{border:1px dashed #9aa7b4;padding:8px;color:#5a6674;font-size:12px}.xe-seg{cursor:pointer;border-radius:2px;transition:background .2s}.xe-seg:hover{background:#e6f0f7}.xe-seg.on{background:#fdecc8;outline:2px solid #e3a33b}.xe-seg.todo{background:#fff7e6}input,button{font:inherit}[class*=hidden]{display:block!important}";
+const PREVIEW_CSS = "body{font:15px/1.5 Georgia,serif;color:#1c2330;background:#fff;margin:0;padding:16px 20px;max-width:900px}h1,h2,h3{font-family:Arial,sans-serif;line-height:1.2}a{color:#0a5d8f}.xe-img{display:inline-block;margin:4px 0;padding:6px 10px;border:1px dashed #9aa7b4;color:#5a6674;font:12px Arial,sans-serif;border-radius:4px}.xe-embed{border:1px dashed #9aa7b4;padding:8px;color:#5a6674;font-size:12px}.xe-seg{cursor:pointer;border-radius:2px;transition:background .2s}.xe-seg:hover{background:#e6f0f7}.xe-seg.on{background:#fdecc8;outline:2px solid #e3a33b}.xe-seg.todo{background:#fff7e6}.xe-seg.bad{background:#fee2e2;outline:2px dashed #b3261e;color:#b3261e}input,button{font:inherit}[class*=hidden]{display:block!important}";
 function previewUnits() { return state.file.units.map((u, ui) => ({ u, ui })).filter(({ u }) => !u.technical && u.toks.some((t) => t.t === "tag")); }
 function setupPreview() {
   const units = previewUnits();
@@ -1015,7 +1124,11 @@ function renderPreview() {
   fr.onload = () => {
     const d = fr.contentDocument; if (!d) return;
     fr.contentWindow.scrollTo(0, y);
-    d.querySelectorAll(".xe-seg").forEach((el) => { if (statusOf(ui, +el.dataset.n) === "todo") el.classList.add("todo"); });
+    d.querySelectorAll(".xe-seg").forEach((el) => {
+      const st = statusOf(ui, +el.dataset.n);
+      if (st === "todo") el.classList.add("todo");
+      if (st === "bad") el.classList.add("bad");
+    });
     d.addEventListener("click", (e) => {
       e.preventDefault();
       const seg = e.target.closest && e.target.closest(".xe-seg");
@@ -1045,6 +1158,13 @@ function focusSeg(uid, fromPreview) {
 document.addEventListener("input", (e) => {
   const ta = e.target; if (ta.tagName !== "TEXTAREA") return;
   const row = ta.closest(".seg"); if (!row) return;
+  const uid = row.dataset.uid;
+  if (state.aiDrafts && state.aiDrafts.has(uid)) {
+    state.aiDrafts.delete(uid);
+    delete row.dataset.ai;
+    const b = row.querySelector(".ai-draft-badge");
+    if (b) b.remove();
+  }
   state.tr[row._ui][row._n] = ta.value;
   refreshRow(row); updateProgress(); save();
 });
@@ -1057,6 +1177,21 @@ document.addEventListener("focusin", (e) => {
   else highlightPreview(true);
 });
 document.addEventListener("keydown", (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.shiftKey && (e.key === "a" || e.key === "A")) {
+    e.preventDefault();
+    if (state.file) {
+      const dlg = $("#aiDialog");
+      if (dlg.open) closeAiDialog();
+      else openAiDialog(1);
+    }
+    return;
+  }
+  if ($("#aiDialog")?.open && (e.metaKey || e.ctrlKey) && e.key === "Enter") {
+    e.preventDefault();
+    const nextBtn = $("#aiNextBtn");
+    if (nextBtn && !nextBtn.disabled) nextBtn.click();
+    return;
+  }
   if (e.target.tagName === "TEXTAREA" && e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
     e.preventDefault();
     const rows = [...document.querySelectorAll(".seg")];
@@ -1069,8 +1204,20 @@ document.addEventListener("click", (e) => {
   const chip = e.target.closest(".chip[data-ins]");
   if (chip) {
     const row = chip.closest(".seg"), ta = row.querySelector("textarea");
-    const ins = chip.dataset.ins, st = ta.selectionStart ?? ta.value.length, en = ta.selectionEnd ?? st;
-    ta.focus(); ta.setRangeText(ins, st, en, "end"); ta.dispatchEvent(new Event("input", { bubbles: true }));
+    const ins = chip.dataset.ins;
+    const st = ta.selectionStart ?? ta.value.length;
+    const en = ta.selectionEnd ?? st;
+    ta.focus();
+    const openTagMatch = /^\{(\d+)\}$/.exec(ins);
+    if (openTagMatch && en > st) {
+      const num = openTagMatch[1];
+      const selText = ta.value.substring(st, en);
+      const wrapped = "{" + num + "}" + selText + "{/" + num + "}";
+      ta.setRangeText(wrapped, st, en, "end");
+    } else {
+      ta.setRangeText(ins, st, en, "end");
+    }
+    ta.dispatchEvent(new Event("input", { bubbles: true }));
     return;
   }
   const copy = e.target.closest(".copy");
@@ -1155,7 +1302,11 @@ const aiState = {
   step: 1,
   prompt: "",
   parsedResults: null,
-  pastedRaw: ""
+  pastedRaw: "",
+  promptCustomized: false,
+  promptCopied: false,
+  inspectorFilter: "all",
+  lastAppliedCount: 0
 };
 
 function getTranslatableSegments(opts = {}) {
@@ -1195,11 +1346,14 @@ function generateAIPrompt(opts = {}) {
   const tgtName = langName(f.tgtLang);
   const includeCtx = opts.includeCtx !== false;
   const tone = opts.tone || "standard";
+  const customRules = (opts.customRules !== undefined ? opts.customRules : ($("#aiCustomRules") ? $("#aiCustomRules").value : "")).trim();
   const segs = getTranslatableSegments(opts);
 
   let toneDesc = "Translate faithfully and accurately for an institutional website.";
   if (tone === "formal") toneDesc = "Use formal, official terminology appropriate for government and policy documents.";
-  if (tone === "direct") toneDesc = "Use concise, direct language that is easily understood on web interfaces and mobile devices.";
+  else if (tone === "direct") toneDesc = "Use concise, direct language that is easily understood on web interfaces and mobile devices.";
+  else if (tone === "technical") toneDesc = "Use precise, consistent technical terminology suitable for technical documentation.";
+  else if (tone === "friendly") toneDesc = "Use an engaging, warm, and approachable tone suitable for community and public communications.";
 
   let prompt = "Translate the following website content from " + srcName + " to " + tgtName + ".\n\n" +
     "Tone: " + toneDesc + "\n\n" +
@@ -1208,9 +1362,14 @@ function generateAIPrompt(opts = {}) {
   if (includeCtx) {
     prompt += "2. HTML comments like <!-- Context: ... --> indicate where the text appears on the page (e.g. Heading, Button, Image description). You may keep or omit these comments, but do NOT remove the [ID] prefix.\n";
   }
-  prompt += "3. Preserve inline formatting markers like {1}...{/1} and {br} around the corresponding translated words. Do NOT translate or modify the numbers or brackets inside markers (keep {1}, do not write {one} or {uno}).\n" +
-    "4. Keep proper names, brand names, and untranslated technical terms intact where appropriate.\n" +
-    "5. Return ONLY the translated lines with their [ID] prefixes. Do not include any introductory or concluding conversational text.\n\n" +
+  prompt += "3. Preserve inline formatting markers like {1}...{/1} and {br} around the corresponding translated words. Do NOT translate or modify the numbers or brackets inside markers (keep {1}, do not write {one} or {uno}).\n";
+  if (customRules) {
+    const formattedRules = customRules.split(/\r?\n/).map((l) => l.trim()).filter(Boolean).map((l) => "   - " + l).join("\n");
+    prompt += "4. Keep proper names, brand names, and untranslated technical terms intact where appropriate. Adhere strictly to these project terminology and brand rules:\n" + formattedRules + "\n";
+  } else {
+    prompt += "4. Keep proper names, brand names, and untranslated technical terms intact where appropriate.\n";
+  }
+  prompt += "5. Return ONLY the translated lines with their [ID] prefixes. Do not include any introductory or concluding conversational text.\n\n" +
     "Content to translate:\n";
 
   const lines = segs.map((item) => {
@@ -1310,24 +1469,49 @@ function updateAiSetupSummary() {
   if (!state.file) return;
   const allSegs = getTranslatableSegments();
   const c = counts();
-  $("#aiLangPair").textContent = langName(state.file.srcLang) + " → " + langName(state.file.tgtLang);
-  $("#aiSegCount").textContent = allSegs.length + " lines";
-  $("#aiTodoCount").textContent = c.todo;
-  const totalWords = allSegs.reduce((sum, s) => sum + countWords(s.src), 0);
-  $("#aiWordCount").textContent = "~" + totalWords + " words";
-
   const optTodo = $("#aiOptOnlyTodo");
   optTodo.disabled = c.todo === allSegs.length || c.todo === 0;
   if (c.todo === 0) optTodo.checked = false;
+
+  const activeSegs = getTranslatableSegments({ onlyTodo: optTodo.checked });
+  const totalWords = activeSegs.reduce((sum, s) => sum + countWords(s.src), 0);
+  const estTokens = Math.round(totalWords * 1.35 + activeSegs.length * 8 + 150);
+
+  $("#aiLangPair").textContent = langName(state.file.srcLang) + " → " + langName(state.file.tgtLang);
+  $("#aiSegCount").textContent = allSegs.length + " lines";
+  $("#aiTodoCount").textContent = c.todo;
+  $("#aiWordCount").textContent = "~" + totalWords + " words";
+
+  const comfortInd = $("#aiComfortIndicator");
+  const comfortIcon = comfortInd ? comfortInd.querySelector(".ai-comfort-icon") : null;
+  const comfortText = $("#aiComfortText");
+  if (comfortInd && comfortText) {
+    if (estTokens < 12000) {
+      comfortInd.className = "ai-comfort-indicator good";
+      if (comfortIcon) comfortIcon.textContent = "✓";
+      comfortText.textContent = `✓ ${activeSegs.length} lines · ~${totalWords} words · Fits comfortably in free ChatGPT, Claude, and Gemini`;
+    } else if (estTokens < 40000) {
+      comfortInd.className = "ai-comfort-indicator good";
+      if (comfortIcon) comfortIcon.textContent = "✓";
+      comfortText.textContent = `✓ ${activeSegs.length} lines · ~${totalWords} words (~${estTokens.toLocaleString()} tokens) · Fits in Claude, ChatGPT Plus, and Gemini`;
+    } else {
+      comfortInd.className = "ai-comfort-indicator warn";
+      if (comfortIcon) comfortIcon.textContent = "⚠";
+      comfortText.textContent = `⚠ ${activeSegs.length} lines · ~${totalWords} words (~${estTokens.toLocaleString()} tokens) · Large document — recommend translating in chunks`;
+    }
+  }
 }
 
-function updateAiPrompt() {
+function updateAiPrompt(force = false) {
+  if (aiState.promptCustomized && !force) return;
   const opts = {
     includeCtx: $("#aiOptContext").checked,
     onlyTodo: $("#aiOptOnlyTodo").checked,
-    tone: $("#aiOptTone").value
+    tone: $("#aiOptTone").value,
+    customRules: $("#aiCustomRules") ? $("#aiCustomRules").value : ""
   };
   aiState.prompt = generateAIPrompt(opts);
+  aiState.promptCustomized = false;
   $("#aiPromptText").value = aiState.prompt;
   const segs = getTranslatableSegments(opts);
   const totalWords = segs.reduce((sum, s) => sum + countWords(s.src), 0);
@@ -1354,6 +1538,8 @@ function goToAiStep(step) {
   document.querySelectorAll(".ai-step-tab").forEach((tab) => {
     const s = +tab.dataset.step;
     tab.dataset.state = s === step ? "active" : s < step ? "done" : "";
+    if (s === step) tab.setAttribute("aria-current", "step");
+    else tab.removeAttribute("aria-current");
   });
   for (let i = 1; i <= 5; i++) {
     const pane = $("#aiPane" + i);
@@ -1371,6 +1557,11 @@ function goToAiStep(step) {
     nextBtn.textContent = "Next: Open AI Tool →";
     nextBtn.disabled = false;
   } else if (step === 3) {
+    if (!aiState.promptCopied && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(aiState.prompt || $("#aiPromptText").value).then(() => {
+        aiState.promptCopied = true;
+      }).catch(() => {});
+    }
     nextBtn.textContent = "Next: Paste Translation →";
     nextBtn.disabled = false;
   } else if (step === 4) {
@@ -1399,12 +1590,20 @@ function updatePasteReconciliation() {
   const sb = $("#aiMissingBadge");
   const msg = $("#aiReconcileMsg");
 
+  const pillAll = $("#aiPillAllCount");
+  const pillIssues = $("#aiPillIssuesCount");
+  const pillMissing = $("#aiPillMissingCount");
+
   if (!pasted.trim()) {
     mb.textContent = "0 lines detected";
     mb.className = "ai-badge";
     wb.hidden = true;
     sb.hidden = true;
     msg.textContent = "Paste the AI response above to inspect line matching.";
+    if (pillAll) pillAll.textContent = targetSegs.length;
+    if (pillIssues) pillIssues.textContent = "0";
+    if (pillMissing) pillMissing.textContent = targetSegs.length;
+    renderInspectorTable();
     if (aiState.step === 4) nextBtn.disabled = true;
     return;
   }
@@ -1430,6 +1629,10 @@ function updatePasteReconciliation() {
     sb.hidden = true;
   }
 
+  if (pillAll) pillAll.textContent = total;
+  if (pillIssues) pillIssues.textContent = badMarkers;
+  if (pillMissing) pillMissing.textContent = missing;
+
   if (parsedRes.isFallback) {
     msg.textContent = "Note: No [ID] prefixes found. Matched sequentially line-by-line.";
   } else if (matched === total && badMarkers === 0) {
@@ -1440,28 +1643,86 @@ function updatePasteReconciliation() {
     msg.textContent = "No matching lines found. Make sure lines have [1], [2], ... prefixes.";
   }
 
+  renderInspectorTable();
+
   if (aiState.step === 4) {
     nextBtn.disabled = matched === 0;
   }
 }
 
+function renderInspectorTable() {
+  const tbody = $("#aiInspectorBody");
+  if (!tbody) return;
+  if (!aiState.parsedResults || !$("#aiPasteText").value.trim()) {
+    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:20px;color:var(--muted)">Paste your translation above to inspect matched lines.</td></tr>';
+    return;
+  }
+  const filter = aiState.inspectorFilter || "all";
+  const results = aiState.parsedResults.results;
+  const filtered = results.filter((r) => {
+    if (filter === "issues") return r.status === "bad";
+    if (filter === "missing") return r.status === "missing";
+    return true;
+  });
+
+  if (!filtered.length) {
+    let emptyMsg = "No matching segments.";
+    if (filter === "issues") emptyMsg = "✓ No marker issues found!";
+    if (filter === "missing") emptyMsg = "✓ All lines accounted for!";
+    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:20px;color:var(--muted)">' + emptyMsg + '</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = filtered.map((r) => {
+    let stHtml = "";
+    let rowClass = "";
+    if (r.status === "done") {
+      stHtml = '<span class="ai-badge good" style="font-size:11px">✓ Valid</span>';
+    } else if (r.status === "bad") {
+      rowClass = "row-bad";
+      const issueDesc = r.problems.join("; ") || "Marker issue";
+      stHtml = '<span class="ai-badge warn" style="font-size:11px" title="' + esc(issueDesc) + '">⚠ ' + esc(r.problems[0] || "Marker issue") + '</span>';
+    } else {
+      rowClass = "row-missing";
+      stHtml = '<span class="ai-badge bad" style="font-size:11px">✗ Missing</span>';
+    }
+
+    const trText = r.trVal ? esc(r.trVal) : '<span style="color:var(--muted);font-style:italic">Not found in AI response</span>';
+    return '<tr class="' + rowClass + '">' +
+      '<td style="font-family:var(--f-mono);font-weight:700;color:var(--muted)">' + r.num + '</td>' +
+      '<td><span class="ctx" style="margin-bottom:2px">' + esc(r.ctx) + '</span>' + esc(r.src) + '</td>' +
+      '<td>' + trText + '</td>' +
+      '<td>' + stHtml + '</td>' +
+    '</tr>';
+  }).join("");
+}
+
 function applyAiTranslations() {
   if (!aiState.parsedResults) return;
-  const overwrite = $("#aiOptOverwrite").checked;
+  const preserveManual = $("#aiOptPreserveManual") ? $("#aiOptPreserveManual").checked : true;
+
+  // Store pre-AI snapshot for Undo
+  state.preAiSnapshot = JSON.parse(JSON.stringify(state.tr));
+  if (!state.aiDrafts) state.aiDrafts = new Set();
+
   let applied = 0;
   aiState.parsedResults.results.forEach((r) => {
     if (r.trVal) {
-      if (overwrite || !state.tr[r.ui][r.n]) {
+      const existing = (state.tr[r.ui]?.[r.n] || "").trim();
+      if (!preserveManual || !existing) {
         state.tr[r.ui][r.n] = r.trVal;
+        state.aiDrafts.add(r.ui + "-" + r.n);
         applied++;
       }
     }
   });
 
+  aiState.lastAppliedCount = applied;
+
   render();
   save();
 
-  $("#aiSuccessMsg").textContent = "Successfully applied " + applied + " translation line" + (applied === 1 ? "" : "s") + " to the editor.";
+  $("#aiSuccessMsg").textContent = "Successfully applied " + applied + " translation line" + (applied === 1 ? "" : "s") + " to the editor." + (preserveManual ? " (Protected lines you had already translated)." : "");
   const badCount = aiState.parsedResults.stats.badMarkers;
   const warnBlock = $("#aiWarningBlock");
   if (badCount > 0) {
@@ -1472,6 +1733,16 @@ function applyAiTranslations() {
   }
 
   goToAiStep(5);
+}
+
+function undoAiImport() {
+  if (!state.preAiSnapshot) return;
+  state.tr = JSON.parse(JSON.stringify(state.preAiSnapshot));
+  state.preAiSnapshot = null;
+  state.aiDrafts = new Set();
+  render();
+  save();
+  notice("AI import undone. Your previous translations have been restored.", "");
 }
 
 function setupAiWorkflowEvents() {
@@ -1488,9 +1759,23 @@ function setupAiWorkflowEvents() {
     });
   });
 
-  $("#aiOptContext").addEventListener("change", updateAiPrompt);
-  $("#aiOptOnlyTodo").addEventListener("change", updateAiPrompt);
-  $("#aiOptTone").addEventListener("change", updateAiPrompt);
+  $("#aiOptContext").addEventListener("change", () => {
+    updateAiPrompt(true);
+    updateAiSetupSummary();
+  });
+  $("#aiOptOnlyTodo").addEventListener("change", () => {
+    updateAiPrompt(true);
+    updateAiSetupSummary();
+  });
+  $("#aiOptTone").addEventListener("change", () => {
+    updateAiPrompt(true);
+  });
+  const customRulesEl = $("#aiCustomRules");
+  if (customRulesEl) {
+    customRulesEl.addEventListener("input", () => {
+      updateAiPrompt(true);
+    });
+  }
 
   $("#aiPrevBtn").addEventListener("click", () => {
     if (aiState.step > 1) goToAiStep(aiState.step - 1);
@@ -1513,17 +1798,172 @@ function setupAiWorkflowEvents() {
       } else {
         state.filter = "all"; syncFilterButtons(); applyFilter();
       }
+      if (aiState.lastAppliedCount > 0) {
+        notice(
+          "✓ " + aiState.lastAppliedCount + " translations applied from AI.",
+          "good",
+          [
+            ["Show All Lines", () => { state.filter = "all"; syncFilterButtons(); applyFilter(); }],
+            ["Undo AI Import", () => undoAiImport()]
+          ]
+        );
+      }
     }
   });
 
+  // Prompt editing & reset
+  $("#aiPromptText").addEventListener("input", () => {
+    aiState.prompt = $("#aiPromptText").value;
+    aiState.promptCustomized = true;
+    const lines = aiState.prompt.split("\n").filter((l) => /^\s*\[\d+\]/.test(l)).length;
+    const estTokens = Math.round(aiState.prompt.length / 4);
+    $("#aiPromptStats").textContent = lines + " lines · ~" + estTokens + " est. tokens (edited)";
+  });
+
+  const resetPromptBtn = $("#aiResetPromptBtn");
+  if (resetPromptBtn) {
+    resetPromptBtn.addEventListener("click", () => {
+      aiState.promptCustomized = false;
+      updateAiPrompt(true);
+      const orig = resetPromptBtn.textContent;
+      resetPromptBtn.textContent = "✓ Reset!";
+      setTimeout(() => { resetPromptBtn.textContent = orig; }, 1500);
+    });
+  }
+
   $("#aiCopyBtn").addEventListener("click", () => {
     const btn = $("#aiCopyBtn");
-    navigator.clipboard.writeText(aiState.prompt).then(() => {
+    const textToCopy = $("#aiPromptText").value || aiState.prompt;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      btn.classList.add("btn-ok");
       const old = btn.textContent;
-      btn.textContent = "Copied!";
-      setTimeout(() => (btn.textContent = old), 2000);
+      btn.textContent = "✓ Copied!";
+      aiState.promptCopied = true;
+      setTimeout(() => {
+        btn.classList.remove("btn-ok");
+        btn.textContent = old;
+      }, 2000);
     }, () => {
       $("#aiPromptText").select();
+    });
+  });
+
+  const recopyBtn = $("#aiRecopyBtn");
+  if (recopyBtn) {
+    recopyBtn.addEventListener("click", () => {
+      const textToCopy = $("#aiPromptText").value || aiState.prompt;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const orig = recopyBtn.textContent;
+        recopyBtn.textContent = "✓ Copied again!";
+        setTimeout(() => { recopyBtn.textContent = orig; }, 2000);
+      });
+    });
+  }
+
+  // Step 3 Quick Paste / Drop
+  const step3Toggle = $("#aiStep3QuickToggle");
+  const step3Area = $("#aiStep3QuickArea");
+  const step3Input = $("#aiStep3QuickInput");
+  if (step3Toggle && step3Area) {
+    step3Toggle.addEventListener("click", () => {
+      step3Area.hidden = !step3Area.hidden;
+      if (!step3Area.hidden && step3Input) step3Input.focus();
+    });
+  }
+  if (step3Input) {
+    step3Input.addEventListener("input", () => {
+      const val = step3Input.value.trim();
+      if (val) {
+        $("#aiPasteText").value = val;
+        step3Input.value = "";
+        step3Area.hidden = true;
+        goToAiStep(4);
+      }
+    });
+  }
+  const step3Box = $("#aiStep3QuickBox");
+  if (step3Box) {
+    step3Box.addEventListener("dragover", (e) => { e.preventDefault(); step3Box.style.outline = "2px dashed var(--accent)"; });
+    step3Box.addEventListener("dragleave", () => { step3Box.style.outline = ""; });
+    step3Box.addEventListener("drop", (e) => {
+      e.preventDefault();
+      step3Box.style.outline = "";
+      const f = e.dataTransfer.files[0];
+      if (f) {
+        const r = new FileReader();
+        r.onload = () => {
+          $("#aiPasteText").value = String(r.result);
+          goToAiStep(4);
+        };
+        r.readAsText(f);
+      }
+    });
+  }
+
+  // Step 3 Global Paste Event
+  window.addEventListener("paste", (e) => {
+    if (!$("#aiDialog")?.open || aiState.step !== 3) return;
+    const targetTag = e.target && e.target.tagName;
+    if (targetTag === "INPUT" || targetTag === "TEXTAREA") return;
+    const text = (e.clipboardData || window.clipboardData)?.getData("text");
+    if (text && text.trim()) {
+      e.preventDefault();
+      $("#aiPasteText").value = text;
+      goToAiStep(4);
+    }
+  });
+
+  // Step 4 Append chunk controls
+  const appendBtn = $("#aiAppendChunkBtn");
+  const appendBox = $("#aiAppendChunkBox");
+  const appendInput = $("#aiAppendInput");
+  const cancelAppendBtn = $("#aiCancelAppendBtn");
+  const confirmAppendBtn = $("#aiConfirmAppendBtn");
+  const clearPasteBtn = $("#aiClearPasteBtn");
+
+  if (appendBtn && appendBox) {
+    appendBtn.addEventListener("click", () => {
+      appendBox.hidden = !appendBox.hidden;
+      if (!appendBox.hidden && appendInput) appendInput.focus();
+    });
+  }
+  if (cancelAppendBtn && appendBox) {
+    cancelAppendBtn.addEventListener("click", () => {
+      appendBox.hidden = true;
+      if (appendInput) appendInput.value = "";
+    });
+  }
+  if (confirmAppendBtn && appendInput) {
+    confirmAppendBtn.addEventListener("click", () => {
+      const extra = appendInput.value.trim();
+      if (extra) {
+        const cur = $("#aiPasteText").value;
+        $("#aiPasteText").value = cur ? cur + "\n\n" + extra : extra;
+        appendInput.value = "";
+        appendBox.hidden = true;
+        updatePasteReconciliation();
+      }
+    });
+  }
+  if (clearPasteBtn) {
+    clearPasteBtn.addEventListener("click", () => {
+      $("#aiPasteText").value = "";
+      updatePasteReconciliation();
+      $("#aiPasteText").focus();
+    });
+  }
+
+  // Step 4 Inspector Filter Pills
+  document.querySelectorAll(".ai-pill").forEach((pill) => {
+    pill.addEventListener("click", () => {
+      document.querySelectorAll(".ai-pill").forEach((p) => {
+        p.classList.remove("active");
+        p.setAttribute("aria-checked", "false");
+      });
+      pill.classList.add("active");
+      pill.setAttribute("aria-checked", "true");
+      aiState.inspectorFilter = pill.dataset.filter;
+      renderInspectorTable();
     });
   });
 
@@ -1531,7 +1971,8 @@ function setupAiWorkflowEvents() {
     if (!state.file) return;
     const base = state.file.fileName.replace(/\.[^.]+$/, "");
     const dlName = base + "_translation_prompt_" + state.file.srcLang + "_to_" + state.file.tgtLang + ".txt";
-    const blob = new Blob([aiState.prompt], { type: "text/plain;charset=utf-8" });
+    const textToDl = $("#aiPromptText").value || aiState.prompt;
+    const blob = new Blob([textToDl], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
