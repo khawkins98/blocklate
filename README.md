@@ -75,13 +75,16 @@ npm test
 
 Or open `test-runner.html` in any web browser via a local static server.
 
-### Commit messages
+### Commit messages & Pull Requests
 
 This repo keeps AI attribution trailers (such as `Co-Authored-By: Claude …`) out of commit messages. Turn on the hook once per clone:
 
 ```sh
 git config core.hooksPath .githooks
 ```
+
+Since the repository uses squash merging into `main`, PR titles become the commit subject line on `main`. Keep PR titles in imperative mood (e.g. `Add ...`, `Fix ...`, `Enhance ...`) under 72 characters, without prefixes like `feature/` or `WIP:`.
+
 
 Record changes in [CHANGELOG.md](CHANGELOG.md).
 
