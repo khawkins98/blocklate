@@ -6,6 +6,10 @@ All notable changes to Blocklate are listed here. The format follows [Keep a Cha
 
 ### Added
 
+- Frontier LLM dogfooding test suite (`test-runner.html` and `test-runner.js`, runnable via `npm test`) covering marker permutation, realistic response formats from ChatGPT, Claude, and Gemini, and full end-to-end reconciliation and serialization on all 3 example files.
+- Expanded segment ID parsing in `parseAITranslation` supporting alternative LLM numbering formats: numbered lists (`1. ...`, `1) ...`), bracketed numbers (`1. [1] ...`), parenthesized (`(1) ...`), full-width (`【1】 ...`), bolded (`**[1]** ...`), colon/dash prefixes (`[1]: ...`, `[1] - ...`, `Line 1: ...`), and soft-wrapped multiline segments.
+- Multilingual conversational preamble and outro note filtering covering Spanish (`Nota:`, `Espero que...`, `Avísame...`), French (`Remarque:`, `Attention:`, `J'espère que...`, `N'hésitez pas...`), German (`Hinweis:`, `Ich hoffe...`), Italian, Portuguese, and Markdown dividers (`---`, `***`).
+- Automated multi-chunk append deduplication that cleanly strips intermediate code fences and updates overlapping lines from continuation responses.
 - AI bulk translation stepper workflow ("Translate with AI…") to export translatable lines into an LLM-friendly prompt format and paste translated responses back.
 - Expandable Custom Terminology & Brand Rules in Step 1, injecting project-specific rules into Section 4 of the generated AI prompt.
 - Estimated token & context comfort indicator in Step 1 showing model fit (free ChatGPT, Claude, and Gemini).
@@ -25,6 +29,9 @@ All notable changes to Blocklate are listed here. The format follows [Keep a Cha
 
 ### Changed
 
+- Fixed code fence stripping in `parseAITranslation` to strip fences anywhere in pasted text, preventing ` ``` ` and outro text from corrupting the final segment.
+- Clarified marker validation message for line break `{br}` count mismatches (e.g. "appears once but should appear 2 times" rather than reporting missing when partially present).
+- Added ellipsis truncation with full tooltip on Reconciliation Inspector marker issue badges to prevent table distortion on long warnings.
 - Inverted overwrite behavior in Step 4: existing manual translations in the editor are preserved by default (`Preserve existing manual translations in the editor`).
 - Default example is now the synthetic Gutenberg block markup file (`gutenberg-block-markup_en_es.xlf`) rather than the UNDRR homepage export.
 

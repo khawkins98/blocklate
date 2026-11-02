@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Blocklate AI Translation & Reconciliation Test Suite</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 24px; background: #fafafa; color: #1e293b; max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 20px; margin-bottom: 8px; }
+  .summary { font-weight: 700; padding: 12px 16px; border-radius: 6px; margin: 16px 0; }
+  .summary.pass { background: #dcfce7; color: #166534; }
+  .summary.fail { background: #fee2e2; color: #991b1b; }
+  .test-group { background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px; margin-bottom: 16px; }
+  .test-group h2 { font-size: 15px; margin-top: 0; color: #334155; }
+  .test-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid #f1f5f9; font-size: 13px; }
+  .test-item:last-child { border-bottom: 0; }
+  .badge { font-weight: 700; font-size: 11px; padding: 2px 6px; border-radius: 4px; }
+  .badge.pass { background: #dcfce7; color: #166534; }
+  .badge.fail { background: #fee2e2; color: #991b1b; }
+  pre.err { color: #dc2626; margin: 4px 0 0 24px; font-family: monospace; font-size: 12px; }
+</style>
+</head>
+<body>
+<h1>Blocklate AI Translation &amp; Reconciliation Test Suite</h1>
+<div id="summary" class="summary">Running tests...</div>
+<div id="results"></div>
+
+<!-- Load index.html DOM structure and scripts via iframe or inline -->
+<iframe id="testFrame" src="index.html" style="width:1px;height:1px;position:absolute;left:-9999px;opacity:0;"></iframe>
+
+<script>
+window.__TEST_RESULTS__ = { total: 0, passed: 0, failed: 0, tests: [] };
+
+function assert(condition, desc) {
+  window.__TEST_RESULTS__.total++;
+  if (condition) {
+    window.__TEST_RESULTS__.passed++;
+    window.__TEST_RESULTS__.tests.push({ desc, pass: true });
+    return true;
+  } else {
+    window.__TEST_RESULTS__.failed++;
+    window.__TEST_RESULTS__.tests.push({ desc, pass: false });
+    return false;
+  }
+}
+
+function assertEqual(actual, expected, desc) {
+  const match = JSON.stringify(actual) === JSON.stringify(expected);
+  if (!assert(match, desc)) {
+    console.error("FAIL:", desc, "\nActual:", actual, "\nExpected:", expected);
+  }
+}
+
+async function runTests() {
+  const frame = document.getElementById("testFrame");
+  await new Promise((resolve) => {
+    if (frame.contentWindow && frame.contentWindow.XE) {
+      resolve();
+    } else {
+      frame.addEventListener("load", () => {
+        // Poll for XE to be initialized if needed
+        const check = () => {
+          if (frame.contentWindow && frame.contentWindow.XE) resolve();
+          else setTimeout(check, 20);
+        };
+        check();
+      }, { once: true });
+    }
+  });
+
+  const win = frame.contentWindow;
+  const XE = win.XE;
+  const parseAI = win.XEaiParse;
+  const promptAI = win.XEaiPrompt;
+
+  const resultsDiv = document.getElementById("results");
+
+  function renderGroup(title, tests) {
+    const grp = document.createElement("div");
+    grp.className = "test-group";
+    grp.innerHTML = "<h2>" + title + "</h2>";
+    tests.forEach((t) => {
+      const item = document.createElement("div");
+      item.className = "test-item";
+      item.innerHTML = '<span class="badge ' + (t.pass ? "pass" : "fail") + '">' + (t.pass ? "PASS" : "FAIL") + '</span><span>' + t.desc + '</span>';
+      grp.appendChild(item);
+    });
+    resultsDiv.appendChild(grp);
+  }
+
+  // ----------------------------------------------------
+  // Test Group 1: Marker Validation & Clause Permutation
+  // ----------------------------------------------------
+  const g1Tests = [];
+  const startIdx1 = window.__TEST_RESULTS__.tests.length;
+
+  const seg1 = {
+    ph: [
+      { label: "{1}", role: "open" },
+      { label: "{/1}", role: "close" },
+      { label: "{2}", role: "open" },
+      { label: "{/2}", role: "close" }
+    ]
+  };
+
+  assertEqual(XE.validate(seg1, "{1}link{/1} and {2}bold{/2}"), [], "Standard marker order validated");
+  assertEqual(XE.validate(seg1, "{2}negrita{/2} y {1}enlace{/1}"), [], "Linguistic clause reordering ({2} before {1}) validated cleanly");
+  assertEqual(XE.validate(seg1, "{1}enlace sin cerrar y {2}negrita{/2}"), ["Marker {/1} is missing."], "Missing closing marker detected");
+  assertEqual(XE.validate(seg1, "{1}{2}cruzado{/1}{/2}"), ["Marker {/1} must come after {1} and after {/2}."], "Invalid tag nesting properly rejected");
+
+  const segBr = {
+    ph: [
+      { label: "{br}", role: "br" },
+      { label: "{br}", role: "br" }
+    ]
+  };
+  assertEqual(XE.validate(segBr, "L1{br}L2{br}L3"), [], "Multiple consecutive line breaks validated");
+  assertEqual(XE.validate(segBr, "L1{br}L2"), ["Line break marker {br} appears once but should appear 2 times."], "Line break count mismatch properly reported");
+
+  for (let i = startIdx1; i < window.__TEST_RESULTS__.tests.length; i++) g1Tests.push(window.__TEST_RESULTS__.tests[i]);
+  renderGroup("1. XE.validate & Linguistic Tag Permutation", g1Tests);
+
+  // ----------------------------------------------------
+  // Test Group 2: Model A (ChatGPT) Code Fences & Preamble/Outro
+  // ----------------------------------------------------
+  const g2Tests = [];
+  const startIdx2 = window.__TEST_RESULTS__.tests.length;
+
+  const modelAInput = `¡Hola! Aquí tienes la traducción solicitada manteniendo los identificadores:
+
+\`\`\`text
+[1] Alerta temprana para todos
+[2] Los sistemas de alerta temprana salvan vidas
+\`\`\`
+
+Espero que te sea de ayuda. Avísame si necesitas ajustes.`;
+
+  const dummySegs = [
+    { num: 1, seg: { ph: [] } },
+    { num: 2, seg: { ph: [] } }
+  ];
+
+  const parsedA = parseAI(modelAInput, dummySegs);
+  assertEqual(parsedA.parsed.get(1), "Alerta temprana para todos", "Model A segment 1 parsed cleanly without preamble");
+  assertEqual(parsedA.parsed.get(2), "Los sistemas de alerta temprana salvan vidas", "Model A segment 2 parsed cleanly without closing fence or outro remarks");
+  assertEqual(parsedA.stats.matched, 2, "Model A all lines matched");
+
+  for (let i = startIdx2; i < window.__TEST_RESULTS__.tests.length; i++) g2Tests.push(window.__TEST_RESULTS__.tests[i]);
+  renderGroup("2. Model A (ChatGPT) Code Fences & Spanish Chat Filtering", g2Tests);
+
+  // ----------------------------------------------------
+  // Test Group 3: Model B (Claude) Numbered & Omitted Comments
+  // ----------------------------------------------------
+  const g3Tests = [];
+  const startIdx3 = window.__TEST_RESULTS__.tests.length;
+
+  const modelBInput = `[1] Alerte précoce pour tous
+[2] Les systèmes d'alerte précoce sauvent des vies`;
+
+  const parsedB = parseAI(modelBInput, dummySegs);
+  assertEqual(parsedB.parsed.get(1), "Alerte précoce pour tous", "Model B segment 1 parsed without context comments");
+  assertEqual(parsedB.parsed.get(2), "Les systèmes d'alerte précoce sauvent des vies", "Model B segment 2 parsed");
+
+  for (let i = startIdx3; i < window.__TEST_RESULTS__.tests.length; i++) g3Tests.push(window.__TEST_RESULTS__.tests[i]);
+  renderGroup("3. Model B (Claude) Numbered List & Clean Parsing", g3Tests);
+
+  // ----------------------------------------------------
+  // Test Group 4: Model C (Gemini) Alternative Number Formats
+  // ----------------------------------------------------
+  const g4Tests = [];
+  const startIdx4 = window.__TEST_RESULTS__.tests.length;
+
+  const c1 = "1. [1] Premier élément\n2. [2] Deuxième élément";
+  const c2 = "1. Premier élément\n2. Deuxième élément";
+  const c3 = "(1) Premier élément\n(2) Deuxième élément";
+  const c4 = "【1】 Premier élément\n【2】 Deuxième élément";
+  const c5 = "**[1]** Premier élément\n**[2]** Deuxième élément";
+  const c6 = "[1]: Premier élément\n[2]: Deuxième élément";
+  const c7 = "[1] - Premier élément\n[2] - Deuxième élément";
+  const c8 = "[1] Premier élément avec\ntexte sur plusieurs lignes\n[2] Deuxième élément";
+
+  assertEqual(parseAI(c1, dummySegs).parsed.get(1), "Premier élément", "Model C format 1. [1]");
+  assertEqual(parseAI(c2, dummySegs).parsed.get(1), "Premier élément", "Model C format 1.");
+  assertEqual(parseAI(c3, dummySegs).parsed.get(1), "Premier élément", "Model C format (1)");
+  assertEqual(parseAI(c4, dummySegs).parsed.get(1), "Premier élément", "Model C format 【1】");
+  assertEqual(parseAI(c5, dummySegs).parsed.get(1), "Premier élément", "Model C format **[1]**");
+  assertEqual(parseAI(c6, dummySegs).parsed.get(1), "Premier élément", "Model C format [1]:");
+  assertEqual(parseAI(c7, dummySegs).parsed.get(1), "Premier élément", "Model C format [1] -");
+  assertEqual(parseAI(c8, dummySegs).parsed.get(1), "Premier élément avec texte sur plusieurs lignes", "Model C soft-wrapped multiline segment joined");
+
+  for (let i = startIdx4; i < window.__TEST_RESULTS__.tests.length; i++) g4Tests.push(window.__TEST_RESULTS__.tests[i]);
+  renderGroup("4. Model C (Gemini) Alternative ID Numbering & Wrapping", g4Tests);
+
+  // ----------------------------------------------------
+  // Test Group 5: Model D (Multi-chunk & Continued Outputs)
+  // ----------------------------------------------------
+  const g5Tests = [];
+  const startIdx5 = window.__TEST_RESULTS__.tests.length;
+
+  const chunk1 = "```text\n[1] Uno\n[2] Dos en proceso...\n```";
+  const chunk2 = "Continuing from line 2:\n```text\n[2] Dos completo y corregido\n[3] Tres\n```\nEspero que ayude.";
+  const combined = chunk1 + "\n\n" + chunk2;
+
+  const dummy3Segs = [
+    { num: 1, seg: { ph: [] } },
+    { num: 2, seg: { ph: [] } },
+    { num: 3, seg: { ph: [] } }
+  ];
+
+  const parsedD = parseAI(combined, dummy3Segs);
+  assertEqual(parsedD.parsed.get(1), "Uno", "Chunk 1 line preserved");
+  assertEqual(parsedD.parsed.get(2), "Dos completo y corregido", "Overlapping line 2 updated with Chunk 2 complete version");
+  assertEqual(parsedD.parsed.get(3), "Tres", "Chunk 2 new line appended cleanly");
+  assertEqual(parsedD.stats.matched, 3, "Multi-chunk all 3 lines matched cleanly");
+
+  for (let i = startIdx5; i < window.__TEST_RESULTS__.tests.length; i++) g5Tests.push(window.__TEST_RESULTS__.tests[i]);
+  renderGroup("5. Model D Multi-chunk Append & Deduplication", g5Tests);
+
+  // ----------------------------------------------------
+  // Test Group 6: Multilingual Preamble / Outro Notes
+  // ----------------------------------------------------
+  const g6Tests = [];
+  const startIdx6 = window.__TEST_RESULTS__.tests.length;
+
+  const spanishTrailing = "[1] Uno\n[2] Dos\nNota: He traducido 'early warning' como alerta temprana.";
+  assertEqual(parseAI(spanishTrailing, dummySegs).parsed.get(2), "Dos", "Spanish 'Nota:' trailing note discarded");
+
+  const frenchTrailing = "[1] Un\n[2] Deux\nRemarque: J'ai conservé le balisage HTML intact.";
+  assertEqual(parseAI(frenchTrailing, dummySegs).parsed.get(2), "Deux", "French 'Remarque:' trailing note discarded");
+
+  const germanTrailing = "[1] Eins\n[2] Zwei\nHinweis: Ich habe die Formatierung beibehalten.";
+  assertEqual(parseAI(germanTrailing, dummySegs).parsed.get(2), "Zwei", "German 'Hinweis:' trailing note discarded");
+
+  for (let i = startIdx6; i < window.__TEST_RESULTS__.tests.length; i++) g6Tests.push(window.__TEST_RESULTS__.tests[i]);
+  renderGroup("6. Multilingual Outro Notes Filtering", g6Tests);
+
+  // ----------------------------------------------------
+  // Test Group 7: End-to-End on Example 1 (Gutenberg en->es)
+  // ----------------------------------------------------
+  const g7Tests = [];
+  const startIdx7 = window.__TEST_RESULTS__.tests.length;
+
+  const res1 = await fetch("examples/gutenberg-block-markup_en_es.xlf");
+  const xml1 = await res1.text();
+  const file1 = XE.parse(xml1, "gutenberg-block-markup_en_es.xlf");
+  win.XEState.file = file1;
+  win.XEState.tr = file1.units.map(u => u.segs.map(s => ""));
+
+  const segs1 = win.getTranslatableSegments();
+  assertEqual(segs1.length, 15, "Example 1 has 15 translatable segments");
+
+  const esTranslationOutput = `¡Hola! Aquí tienes la traducción completa:
+\`\`\`text
+[1] Alerta temprana para todos
+[2] Los sistemas de alerta temprana salvan vidas
+[3] Los sistemas de alerta temprana son una forma {1}probada y eficaz{/1} de proteger vidas y medios de subsistencia. Sin embargo, solo la mitad de los países informan contar con uno.
+[4] Una sirena de alerta de tsunami en una playa al atardecer
+[5] Las sirenas son una de las muchas formas de llegar a la población rápidamente.
+[6] Los cuatro pilares
+[7] Conocimiento del riesgo de desastres
+[8] Detección, observación, vigilancia, análisis y predicción
+[9] Difusión y comunicación de alertas
+[10] Capacidades de preparación y respuesta
+[11] Las cifras se actualizan cada año.{br}Lea el informe sobre el {1}Estado global de los sistemas de alerta temprana multirriesgo{/1} para ver los avances.
+[12] Conozca la iniciativa
+[13] Póngase en contacto con el equipo
+[14] Las preguntas y comentarios son bienvenidos en {1}info@example.org{/1}.
+[15] Por qué son importantes los sistemas de alerta temprana y los cuatro pilares que los hacen funcionar.
+\`\`\`
+Espero que te sea de ayuda.`;
+
+  const parsedEx1 = parseAI(esTranslationOutput, segs1);
+  assertEqual(parsedEx1.stats.matched, 15, "Example 1: All 15 lines matched");
+  assertEqual(parsedEx1.stats.badMarkers, 0, "Example 1: 0 marker issues (including reordered {br} before {1})");
+  assertEqual(parsedEx1.stats.missing, 0, "Example 1: 0 missing lines");
+
+  // Apply translations to state
+  parsedEx1.results.forEach((r) => {
+    win.XEState.tr[r.ui][r.n] = r.trVal;
+  });
+
+  // Write target and serialize
+  file1.units.forEach((u, ui) => {
+    if (!u.technical) XE.writeTarget(file1, u, win.XEState.tr[ui]);
+  });
+  const serialized1 = XE.serialize(file1);
+  const reParsed1 = XE.parse(serialized1, "reparsed_es.xlf");
+  assert(reParsed1.units.length === file1.units.length, "Example 1 serialized and re-parsed cleanly with matching units");
+
+  for (let i = startIdx7; i < window.__TEST_RESULTS__.tests.length; i++) g7Tests.push(window.__TEST_RESULTS__.tests[i]);
+  renderGroup("7. End-to-End File 1 (gutenberg-block-markup_en_es.xlf)", g7Tests);
+
+  // ----------------------------------------------------
+  // Test Group 8: End-to-End on Example 2 (UNDRR Homepage en->fr)
+  // ----------------------------------------------------
+  const g8Tests = [];
+  const startIdx8 = window.__TEST_RESULTS__.tests.length;
+
+  const res2 = await fetch("examples/undrr-homepage_en_fr.xlf");
+  const xml2 = await res2.text();
+  const file2 = XE.parse(xml2, "undrr-homepage_en_fr.xlf");
+  win.XEState.file = file2;
+  win.XEState.tr = file2.units.map(u => u.segs.map(s => ""));
+
+  const segs2 = win.getTranslatableSegments();
+  assert(segs2.length === 128, "Example 2 has 128 translatable segments");
+
+  // Simulate prompt generation with custom rules
+  const prompt2 = win.XEaiPrompt({ includeCtx: true, onlyTodo: false, tone: "formal", customRules: "UNDRR = Bureau des Nations Unies pour la réduction des risques de catastrophe" });
+  assert(prompt2.includes("UNDRR = Bureau des Nations Unies"), "Prompt includes custom brand terminology rule");
+
+  for (let i = startIdx8; i < window.__TEST_RESULTS__.tests.length; i++) g8Tests.push(window.__TEST_RESULTS__.tests[i]);
+  renderGroup("8. End-to-End File 2 (undrr-homepage_en_fr.xlf)", g8Tests);
+
+  // ----------------------------------------------------
+  // Test Group 9: End-to-End on Example 3 (UNDRR Homepage partial)
+  // ----------------------------------------------------
+  const g9Tests = [];
+  const startIdx9 = window.__TEST_RESULTS__.tests.length;
+
+  const res3 = await fetch("examples/undrr-homepage_en_fr_partial.xlf");
+  const xml3 = await res3.text();
+  const file3 = XE.parse(xml3, "undrr-homepage_en_fr_partial.xlf");
+  win.XEState.file = file3;
+  win.XEState.tr = file3.units.map(u => u.segs.map((s, n) => u.loaded[n] || ""));
+
+  const allSegs3 = win.getTranslatableSegments({ onlyTodo: false });
+  const todoSegs3 = win.getTranslatableSegments({ onlyTodo: true });
+  assert(allSegs3.length > todoSegs3.length, "Example 3 partial file has both translated and untranslated segments");
+  assert(todoSegs3.length > 0, "Example 3 has pending todo segments");
+
+  for (let i = startIdx9; i < window.__TEST_RESULTS__.tests.length; i++) g9Tests.push(window.__TEST_RESULTS__.tests[i]);
+  renderGroup("9. End-to-End File 3 (undrr-homepage_en_fr_partial.xlf)", g9Tests);
+
+  // Summary Update
+  const summaryEl = document.getElementById("summary");
+  const total = window.__TEST_RESULTS__.total;
+  const passed = window.__TEST_RESULTS__.passed;
+  const failed = window.__TEST_RESULTS__.failed;
+  summaryEl.className = "summary " + (failed === 0 ? "pass" : "fail");
+  summaryEl.textContent = (failed === 0 ? "✓ ALL TESTS PASSED: " : "✗ TESTS FAILED: ") + passed + " / " + total + " passed (" + failed + " failures).";
+
+  // Notify runner server if running via CLI test runner
+  try {
+    await fetch("/__test_done__", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(window.__TEST_RESULTS__)
+    });
+  } catch (e) {}
+}
+
+window.addEventListener("DOMContentLoaded", runTests);
+</script>
+</body>
+</html>

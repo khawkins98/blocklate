@@ -65,13 +65,26 @@ The whole app is `index.html`, with no build step. Serve the folder with any sta
 
 To add an example, put the file in `examples/` and add it to the `EXAMPLES` list near the end of `index.html`.
 
-### Commit messages
+### Testing
+
+Run the automated AI reconciliation and parser test suite:
+
+```sh
+npm test
+```
+
+Or open `test-runner.html` in any web browser via a local static server.
+
+### Commit messages & Pull Requests
 
 This repo keeps AI attribution trailers (such as `Co-Authored-By: Claude …`) out of commit messages. Turn on the hook once per clone:
 
 ```sh
 git config core.hooksPath .githooks
 ```
+
+Since the repository uses squash merging into `main`, PR titles become the commit subject line on `main`. Keep PR titles in imperative mood (e.g. `Add ...`, `Fix ...`, `Enhance ...`) under 72 characters, without prefixes like `feature/` or `WIP:`.
+
 
 Record changes in [CHANGELOG.md](CHANGELOG.md).
 
