@@ -260,7 +260,8 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
       <li><b>Open</b> the .xlf file you were sent (or drag it onto this page). Nothing is uploaded: the file stays on your computer.</li>
       <li><b>Type your translation</b> in the box next to each English line. Page layout code is hidden from you and put back automatically.</li>
       <li>Some lines contain small orange markers like <span class="chip">1</span>…<span class="chip">/1</span>. They mark a link or bold text. Keep the markers in your translation, around the words that should be linked or bold. Click a marker on the English side to insert it.</li>
-      <li>Your work is saved in this browser as you type. When you are done, press <b>Download translated file</b> and send that file back.</li>
+      <li>For your own files, drafts are saved in this browser as you type. Reopen the same original file here to recover them; example edits are not saved. Download a copy to keep or share your work.</li>
+      <li>Press <b>Download translated file</b> and send that .xlf back. Marker problems block download; empty lines keep the source text if you choose <b>Download anyway</b>. The site editor uploads the returned file on the Drupal job's review page.</li>
     </ol>
     <p class="hint">Tip: Ctrl + Enter (⌘ + Enter on Mac) jumps to the next line that still needs translating.</p>
   </details>
@@ -376,14 +377,14 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
         <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap">
           <div style="display:flex;align-items:center;gap:8px">
             <span style="color:var(--ok);font-size:18px;font-weight:700" aria-hidden="true">✓</span>
-            <span><strong>Prompt ready on clipboard!</strong> Paste it directly into your AI tool below.</span>
+            <span><strong>Take the prompt to your AI tool.</strong> Copy it in the Prompt step, or download it as text.</span>
           </div>
           <button type="button" class="btn btn-quiet" id="aiRecopyBtn" style="font-size:13px;font-weight:700">Copy prompt again</button>
         </div>
       </div>
 
       <div class="ai-pane-intro">
-        <p>Open your preferred AI assistant, paste the copied prompt, and copy its translated response.</p>
+        <p>Open your preferred AI assistant, paste the prompt, and copy its translated response. Pasting sends the included text and custom rules to that service.</p>
       </div>
       <div class="ai-links">
         <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" class="ai-link-btn">
@@ -505,7 +506,7 @@ details.tech p { color: var(--muted); font-size: 14px; margin: 6px 0 10px }
           <li>Click <b>Review in Editor</b> to check your translations alongside the live page preview.</li>
           <li>AI-imported segments are marked with an <b>AI Draft</b> badge, which automatically clears as you edit.</li>
           <li>If any orange formatting markers like <code>{1}</code> were flagged, select the translated text and click the marker chip on the English side to wrap it.</li>
-          <li>You can click <b>Undo AI Import</b> in the top notification banner at any time if you want to revert back.</li>
+          <li><b>Undo AI Import</b> in the notification banner restores the snapshot from before the latest import, replacing later edits too. Download a copy first if you want to keep those edits.</li>
           <li>When satisfied, press <b>Download translated file</b> to get your finalized XLIFF file for Drupal.</li>
         </ol>
       </div>

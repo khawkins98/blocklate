@@ -29,6 +29,7 @@ All notable changes to Blocklate are listed here. The format follows [Keep a Cha
 
 ### Changed
 
+- Clarified translator/Drupal handoff, draft recovery and optional AI review/undo; moved contributor instructions into a dedicated guide and aligned in-app help.
 - Fixed code fence stripping in `parseAITranslation` to strip fences anywhere in pasted text, preventing ` ``` ` and outro text from corrupting the final segment.
 - Clarified marker validation message for line break `{br}` count mismatches (e.g. "appears once but should appear 2 times" rather than reporting missing when partially present).
 - Added ellipsis truncation with full tooltip on Reconciliation Inspector marker issue badges to prevent table distortion on long warnings.
