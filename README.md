@@ -4,7 +4,7 @@ Blocklate is a small browser tool for translating XLIFF files exported from Drup
 
 Translators see only the readable text. HTML tags, Gutenberg block comments and layout code stay hidden, and are put back unchanged when the translated file is downloaded.
 
-Everything runs in the browser. Blocklate does not upload your XLIFF file.
+Everything runs in the browser. Files are never uploaded anywhere.
 
 **[Use Blocklate](https://khawkins98.github.io/blocklate/)**
 
