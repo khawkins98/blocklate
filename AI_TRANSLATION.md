@@ -10,13 +10,14 @@ Download a copy first if you want to keep the current translations separately.
    if needed. Use **Copy Prompt** or **Download .txt**. If clipboard copying fails,
    select and copy the prompt text manually.
 3. Choose **Next: Open AI Tool →**, open your preferred assistant and paste the
-   prompt. This sends its text and custom rules to that external service; Blocklate does not call an
-   AI API. Keep the `[ID]` line prefixes and `{1}…{/1}` / `{br}` formatting markers
-   in the response. Return with the translated response copied or saved as text.
+   prompt. This sends its text and custom rules to that external service;
+   Blocklate does not call an AI API. Keep the `[ID]` line prefixes and
+   `{1}…{/1}` / `{br}` formatting markers in the response. Copy the translated response or save it as text, then return
+   to Blocklate.
 4. Choose **Next: Paste Translation →** and paste into **Paste Back**, or drop a
-   `.txt` response. Inspect **Missing** and **Issues only** in the reconciliation
-   table. For a continued response, use **+ Append Chunk (for long AI outputs)**
-   and **Append Lines**. A later chunk can replace an earlier response for the
+   `.txt` response. Use the **Missing** and **Issues only** filters to review the
+   reconciliation table. For a continued response, use
+   **+ Append Chunk (for long AI outputs)** and **Append Lines**. A later chunk can replace an earlier response for the
    same line ID.
 5. Keep **Preserve existing manual translations in the editor** checked to protect
    filled lines, including translations loaded from the file. Choose

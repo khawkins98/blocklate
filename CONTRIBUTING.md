@@ -18,15 +18,15 @@ To add an example, put it in `examples/` and add it to `EXAMPLES` near the end o
 
 ## Test changes
 
-In another terminal, run:
+Tests need Node.js, Google Chrome at
+`/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`, and port 8999 free.
+No `npm install` is needed. In another terminal, run:
 
 ```sh
 npm test
 ```
 
-This needs Node.js, Google Chrome at
-`/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`, and port 8999 free.
-It launches the browser suite through `test-runner.js`; no `npm install` is needed.
+This launches the browser suite through `test-runner.js`.
 On another platform, serve the folder and open `/test-runner.html` in your browser
 instead. Wait for its final summary. Tests cover markers, AI-response parsing,
 prompt generation and example-file serialization; they do not call real AI tools

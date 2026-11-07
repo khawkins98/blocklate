@@ -23,9 +23,9 @@ to examples are not saved.
    keep the source text if you choose **Download anyway**.
 
 For your own files, drafts are saved in this browser. Reopen the same original
-file here to recover them. Browser storage can be cleared or unavailable; download
-a copy to keep or share your work. You can reopen a downloaded, partly translated
-file to continue on another browser or computer.
+file in this browser to recover your draft. Browser storage can be cleared or
+unavailable; download a copy to keep or share your work. You can reopen a downloaded, partly translated
+file in another browser or on another computer to continue.
 
 **Ctrl+Enter** (**⌘+Enter** on Mac) jumps to the next line needing translation.
 
